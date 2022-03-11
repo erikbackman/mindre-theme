@@ -31,7 +31,7 @@
   "Default foreground color"
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-highlight "#CBCBCB" ;; Very Light Grey
+(defcustom smooth-white-highlight "#0c0f12" ;; Very Light Grey
   "Highlight color is used to highlight part of the screen."
   :type 'color :group 'smooth-white)
 
@@ -47,7 +47,7 @@
   "Salient color is used for information that are important."
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-strong "#000000" ;; Black
+(defcustom smooth-white-strong "#1F2E36" ;; Black
   "Strong color is used for information of a structural nature."
   :type 'color :group 'smooth-white)
 
@@ -132,7 +132,7 @@ background color that is barely perceptible."
   :group nil)
 
 (defun smooth-white ()
-    "smooth-white theme"
+  "smooth-white theme"
   
   (interactive)
 
@@ -180,7 +180,7 @@ background color that is barely perceptible."
    
    ;; --- Base ---------------------------------------------------------   
    `(cursor ((t (:foreground ,smooth-white-background
-		 :background ,smooth-white-foreground))
+			     :background ,smooth-white-foreground))
              ))
 
    `(default ((t (:background ,smooth-white-background
@@ -195,12 +195,12 @@ background color that is barely perceptible."
    `(smooth-white-faded ((t (:foreground ,smooth-white-faded))))
 
    `(smooth-white-faded-i ((t (:foreground ,smooth-white-background
-			       :background ,smooth-white-faded))))
+					   :background ,smooth-white-faded))))
    
    `(smooth-white-default ((t (:foreground ,smooth-white-foreground))))
 
    `(smooth-white-default-i ((t (:foreground ,smooth-white-background
-                              :background ,smooth-white-foreground))))
+					     :background ,smooth-white-foreground))))
 
    
    `(smooth-white-salient ((t (:foreground ,smooth-white-salient))))
@@ -215,37 +215,39 @@ background color that is barely perceptible."
    `(smooth-white-popout ((t (:foreground ,smooth-white-popout))))
 
    `(smooth-white-popout-i ((t (:foreground ,smooth-white-background
-                             :background ,smooth-white-popout))))
+					    :background ,smooth-white-popout))))
    
    `(smooth-white-critical ((t (:foreground ,smooth-white-background
-                             :background ,smooth-white-critical))))
+					    :background ,smooth-white-critical))))
 
    `(smooth-white-critical-i ((t (:foreground ,smooth-white-critical
-			       ;; :background ,smooth-white-background
+					      ;; :background ,smooth-white-background
 					      ))))
    
    ;; --- Header & mode line -------------------------------------------
    
-   `(mode-line ((t (:foreground ,smooth-white-background
-                         :background "#212121"
-                         :box (:line-width 3
-			       :color "#212121"
-			       :style nil)))))
+   `(mode-line ((t (     :foreground "white"
+                         :background "#1F2E36"
+                         :box (:line-width 4
+					;:color "#212121"
+					   :color nil
+					   :style nil)))))
    
    `(mode-line-highlight ((t (:inherit smooth-white-popout))))
    `(mode-line-buffer-id ((t (:weight regular))))
    `(mode-line-emphasis  ((t (:weight regular))))
 			   
    `(mode-line-inactive ((t (:foreground ,smooth-white-background
-                                  :background "#727272"
-                                  :box (:line-width 3
-					:color "#727272"
-					:style nil)))))
+					 :background "#6B7B85"
+					 :box (:line-width 4
+					;:color "#727272"
+							   :color nil
+							   :style nil)))))
 
    `(header-line ((t (:foreground ,smooth-white-foreground
-                           :background ,smooth-white-subtle
-                           :inherit nil
-                           :box nil))))
+				  :background ,smooth-white-subtle
+				  :inherit nil
+				  :box nil))))
 
    ;; --- Structural ---------------------------------------------------
    '(bold                        ((t (:inherit smooth-white-strong))))
@@ -298,7 +300,7 @@ background color that is barely perceptible."
    `(window-divider                ((t (:foreground ,smooth-white-background))))
    '(window-divider-first-pixel    ((t (:inherit window-divider))))
    '(window-divider-last-pixel     ((t (:inherit window-divider))))
-   `(vertical-border               ((t (:foreground ,smooth-white-background))))
+   `(vertical-border               ((t (:foreground ,smooth-white-faded))))
 
    ;; --- Tab bar ------------------------------------------------------
    '(tab-bar                       ((t (:inherit default))))
@@ -344,35 +346,35 @@ background color that is barely perceptible."
    '(custom-variable-obsolete      ((t (:inherit smooth-white-faded))))
 
    ;; --- Company tooltip ----------------------------------------------
-    '(company-tooltip                      ((t (:inherit smooth-white-subtle))))
-    '(company-tooltip-mouse                ((t (:inherit smooth-white-faded-i))))
-    '(company-tooltip-selection            ((t (:inherit smooth-white-salient-i))))
+   '(company-tooltip                      ((t (:inherit smooth-white-subtle))))
+   '(company-tooltip-mouse                ((t (:inherit smooth-white-faded-i))))
+   '(company-tooltip-selection            ((t (:inherit smooth-white-salient-i))))
 
-    '(company-scrollbar-fg                 ((t (:inherit smooth-white-default-i))))
-    '(company-scrollbar-bg                 ((t (:inherit smooth-white-faded-i))))
+   '(company-scrollbar-fg                 ((t (:inherit smooth-white-default-i))))
+   '(company-scrollbar-bg                 ((t (:inherit smooth-white-faded-i))))
 
-    '(company-tooltip-common               ((t (:inherit smooth-white-strong))))
-    '(company-tooltip-common-selection     ((t (:inherit smooth-white-salient-i
-                                                :weight normal))))
-    '(company-tooltip-annotation           ((t (:inherit smooth-white-default))))
-    '(company-tooltip-annotation-selection ((t (:inherit smooth-white-subtle))))
+   '(company-tooltip-common               ((t (:inherit smooth-white-strong))))
+   '(company-tooltip-common-selection     ((t (:inherit smooth-white-salient-i
+							:weight normal))))
+   '(company-tooltip-annotation           ((t (:inherit smooth-white-default))))
+   '(company-tooltip-annotation-selection ((t (:inherit smooth-white-subtle))))
 
    
    ;; --- Buttons ------------------------------------------------------
    `(custom-buttona
      ((t (:foreground ,smooth-white-faded
-               :background ,smooth-white-highlight
-               :box nil))))
+		      :background ,smooth-white-highlight
+		      :box nil))))
 
    `(custom-button-mouse
      ((t (:foreground ,smooth-white-foreground
-	       :background ,smooth-white-subtle
-               :box nil))))
+		      :background ,smooth-white-subtle
+		      :box nil))))
 
    `(custom-button-pressed
      ((t (:foreground ,smooth-white-background
-	       :background ,smooth-white-foreground
-               :box nil))
+		      :background ,smooth-white-foreground
+		      :box nil))
       
       )
      )
@@ -516,7 +518,7 @@ background color that is barely perceptible."
    '(org-document-info-keyword               ((t (:inherit (smooth-white-faded fixed-pitch)))))
    '(org-document-title                      ((t (:inherit smooth-white-faded))))
    '(org-done                                ((t (:inherit smooth-white-default))))
-   '(org-drawer                              ((t (:inherit smooth-white-faded))))
+   '(org-drawer                              ((t (:inherit (smooth-white-faded fixed-pitch)))))
    '(org-ellipsis                            ((t (:inherit smooth-white-faded))))
    '(org-footnote                            ((t (:inherit smooth-white-faded))))
    '(org-formula                             ((t (:inherit smooth-white-faded))))
@@ -539,13 +541,13 @@ background color that is barely perceptible."
    '(org-mode-line-clock                     ((t (:inherit smooth-white-faded))))
    '(org-mode-line-clock-overrun             ((t (:inherit smooth-white-faded))))
    '(org-priority                            ((t (:inherit smooth-white-faded))))
-   '(org-property-value                      ((t (:inherit smooth-white-faded))))
+   '(org-property-value                      ((t (:inherit (smooth-white-faded fixed-pitch)))))
    '(org-quote                               ((t (:inherit smooth-white-faded))))
    '(org-scheduled                           ((t (:inherit smooth-white-faded))))
    '(org-scheduled-previously                ((t (:inherit smooth-white-faded))))
    '(org-scheduled-today                     ((t (:inherit smooth-white-faded))))
    '(org-sexp-date                           ((t (:inherit smooth-white-faded))))
-   '(org-special-keyword                     ((t (:inherit smooth-white-faded))))
+   '(org-special-keyword                     ((t (:inherit (smooth-white-faded fixed-pitch)))))
    '(org-table                               ((t (:inherit smooth-white-faded))))
    '(org-tag                                 ((t (:inherit smooth-white-popout))))
    '(org-tag-group                           ((t (:inherit smooth-white-faded))))
@@ -560,159 +562,158 @@ background color that is barely perceptible."
 
    ;; --- Mu4e ---------------------------------------------------------
    '(mu4e-attach-number-face                ((t (:inherit smooth-white-strong))))
-   '(mu4e-cited-1-face                       ((t (:inherit smooth-white-faded))))
-   '(mu4e-cited-2-face                       ((t (:inherit smooth-white-faded))))
-   '(mu4e-cited-3-face                       ((t (:inherit smooth-white-faded))))
-   '(mu4e-cited-4-face                       ((t (:inherit smooth-white-faded))))
-   '(mu4e-cited-5-face                       ((t (:inherit smooth-white-faded))))
-   '(mu4e-cited-6-face                       ((t (:inherit smooth-white-faded))))
-   '(mu4e-cited-7-face                       ((t (:inherit smooth-white-faded))))
-   '(mu4e-compose-header-face                ((t (:inherit smooth-white-faded))))
-   '(mu4e-compose-separator-face             ((t (:inherit smooth-white-faded))))
-   '(mu4e-contact-face                     ((t (:inherit smooth-white-salient))))
-   '(mu4e-context-face                       ((t (:inherit smooth-white-faded))))
-   '(mu4e-draft-face                         ((t (:inherit smooth-white-faded))))
+   '(mu4e-cited-1-face                      ((t (:inherit smooth-white-faded))))
+   '(mu4e-cited-2-face                      ((t (:inherit smooth-white-faded))))
+   '(mu4e-cited-3-face                      ((t (:inherit smooth-white-faded))))
+   '(mu4e-cited-4-face                      ((t (:inherit smooth-white-faded))))
+   '(mu4e-cited-5-face                      ((t (:inherit smooth-white-faded))))
+   '(mu4e-cited-6-face                      ((t (:inherit smooth-white-faded))))
+   '(mu4e-cited-7-face                      ((t (:inherit smooth-white-faded))))
+   '(mu4e-compose-header-face               ((t (:inherit smooth-white-faded))))
+   '(mu4e-compose-separator-face            ((t (:inherit smooth-white-faded))))
+   '(mu4e-contact-face                      ((t (:inherit smooth-white-salient))))
+   '(mu4e-context-face                      ((t (:inherit smooth-white-faded))))
+   '(mu4e-draft-face                        ((t (:inherit smooth-white-faded))))
    '(mu4e-flagged-face                      ((t (:inherit smooth-white-popout))))
-   '(mu4e-footer-face                        ((t (:inherit smooth-white-faded))))
-   '(mu4e-forwarded-face                   ((t (:inherit smooth-white-default))))
-   '(mu4e-header-face                      ((t (:inherit smooth-white-default))))
-   '(mu4e-header-highlight-face                ((t (:inherit highlight))))
+   '(mu4e-footer-face                       ((t (:inherit smooth-white-faded))))
+   '(mu4e-forwarded-face                    ((t (:inherit smooth-white-default))))
+   '(mu4e-header-face                       ((t (:inherit smooth-white-default))))
+   '(mu4e-header-highlight-face             ((t (:inherit highlight))))
    '(mu4e-header-key-face                   ((t (:inherit smooth-white-strong))))
-   '(mu4e-header-marks-face                  ((t (:inherit smooth-white-faded))))
+   '(mu4e-header-marks-face                 ((t (:inherit smooth-white-faded))))
    '(mu4e-header-title-face                 ((t (:inherit smooth-white-strong))))
-   '(mu4e-header-value-face                ((t (:inherit smooth-white-default))))
+   '(mu4e-header-value-face                 ((t (:inherit smooth-white-default))))
    '(mu4e-highlight-face                    ((t (:inherit smooth-white-popout))))
-   '(mu4e-link-face                        ((t (:inherit smooth-white-salient))))
-   '(mu4e-modeline-face                      ((t (:inherit smooth-white-faded))))
-   '(mu4e-moved-face                         ((t (:inherit smooth-white-faded))))
-   '(mu4e-ok-face                            ((t (:inherit smooth-white-faded))))
-   '(mu4e-region-code                        ((t (:inherit smooth-white-faded))))
-   '(mu4e-replied-face                     ((t (:inherit smooth-white-default))))
-   '(mu4e-special-header-value-face        ((t (:inherit smooth-white-default))))
-   '(mu4e-system-face                        ((t (:inherit smooth-white-faded))))
+   '(mu4e-link-face                         ((t (:inherit smooth-white-salient))))
+   '(mu4e-modeline-face                     ((t (:inherit smooth-white-faded))))
+   '(mu4e-moved-face                        ((t (:inherit smooth-white-faded))))
+   '(mu4e-ok-face                           ((t (:inherit smooth-white-faded))))
+   '(mu4e-region-code                       ((t (:inherit smooth-white-faded))))
+   '(mu4e-replied-face                      ((t (:inherit smooth-white-default))))
+   '(mu4e-special-header-value-face         ((t (:inherit smooth-white-default))))
+   '(mu4e-system-face                       ((t (:inherit smooth-white-faded))))
    '(mu4e-title-face                        ((t (:inherit smooth-white-strong))))
-   '(mu4e-trashed-face                       ((t (:inherit smooth-white-faded))))
+   '(mu4e-trashed-face                      ((t (:inherit smooth-white-faded))))
    '(mu4e-unread-face                       ((t (:inherit smooth-white-strong))))
-   '(mu4e-url-number-face                    ((t (:inherit smooth-white-faded))))
-   '(mu4e-view-body-face                   ((t (:inherit smooth-white-default))))
+   '(mu4e-url-number-face                   ((t (:inherit smooth-white-faded))))
+   '(mu4e-view-body-face                    ((t (:inherit smooth-white-default))))
    '(mu4e-warning-face                      ((t (:inherit smooth-white-popout))))
 
    ;; --- Elfeed -------------------------------------------------------
-    '(elfeed-log-date-face                    ((t (:inherit smooth-white-faded))))
-    '(elfeed-log-info-level-face            ((t (:inherit smooth-white-default))))
-    '(elfeed-log-debug-level-face           ((t (:inherit smooth-white-default))))
-    '(elfeed-log-warn-level-face             ((t (:inherit smooth-white-popout))))
-    '(elfeed-log-error-level-face            ((t (:inherit smooth-white-popout))))
-    '(elfeed-search-tag-face                  ((t (:inherit smooth-white-faded))))
-    '(elfeed-search-date-face                 ((t (:inherit smooth-white-faded))))
-    '(elfeed-search-feed-face               ((t (:inherit smooth-white-salient))))
-    '(elfeed-search-filter-face               ((t (:inherit smooth-white-faded))))
-    '(elfeed-search-last-update-face        ((t (:inherit smooth-white-salient))))
-    '(elfeed-search-title-face              ((t (:inherit smooth-white-default))))
-    '(elfeed-search-tag-face                  ((t (:inherit smooth-white-faded))))
-    '(elfeed-search-unread-count-face        ((t (:inherit smooth-white-strong))))
-    '(elfeed-search-unread-title-face        ((t (:inherit smooth-white-strong))))
+   '(elfeed-log-date-face                   ((t (:inherit smooth-white-faded))))
+   '(elfeed-log-info-level-face             ((t (:inherit smooth-white-default))))
+   '(elfeed-log-debug-level-face            ((t (:inherit smooth-white-default))))
+   '(elfeed-log-warn-level-face             ((t (:inherit smooth-white-popout))))
+   '(elfeed-log-error-level-face            ((t (:inherit smooth-white-popout))))
+   '(elfeed-search-tag-face                 ((t (:inherit smooth-white-faded))))
+   '(elfeed-search-date-face                ((t (:inherit smooth-white-faded))))
+   '(elfeed-search-feed-face                ((t (:inherit smooth-white-salient))))
+   '(elfeed-search-filter-face              ((t (:inherit smooth-white-faded))))
+   '(elfeed-search-last-update-face         ((t (:inherit smooth-white-salient))))
+   '(elfeed-search-title-face               ((t (:inherit smooth-white-default))))
+   '(elfeed-search-tag-face                 ((t (:inherit smooth-white-faded))))
+   '(elfeed-search-unread-count-face        ((t (:inherit smooth-white-strong))))
+   '(elfeed-search-unread-title-face        ((t (:inherit smooth-white-strong))))
 
-    ;; --- Deft --------------------------------------------------------
-    '(deft-filter-string-error-face         ((t (:inherit smooth-white-popout))))
-    '(deft-filter-string-face              ((t (:inherit smooth-white-default))))
-    '(deft-header-face                     ((t (:inherit smooth-white-salient))))
-    '(deft-separator-face                    ((t (:inherit smooth-white-faded))))
-    '(deft-summary-face                      ((t (:inherit smooth-white-faded))))
-    '(deft-time-face                       ((t (:inherit smooth-white-salient))))
-    '(deft-title-face                       ((t (:inherit smooth-white-strong))))
+   ;; --- Deft --------------------------------------------------------
+   '(deft-filter-string-error-face         ((t (:inherit smooth-white-popout))))
+   '(deft-filter-string-face               ((t (:inherit smooth-white-default))))
+   '(deft-header-face                      ((t (:inherit smooth-white-salient))))
+   '(deft-separator-face                   ((t (:inherit smooth-white-faded))))
+   '(deft-summary-face                     ((t (:inherit smooth-white-faded))))
+   '(deft-time-face                        ((t (:inherit smooth-white-salient))))
+   '(deft-title-face                       ((t (:inherit smooth-white-strong))))
 
-    ;; --- Restructured text -------------------------------------------
-    '(rst-adornment                           ((t (:inherit smooth-white-faded))))
-    '(rst-block                             ((t (:inherit smooth-white-default))))
-    '(rst-comment                             ((t (:inherit smooth-white-faded))))
-    '(rst-definition                        ((t (:inherit smooth-white-salient))))
-    '(rst-directive                         ((t (:inherit smooth-white-salient))))
-    '(rst-emphasis1                           ((t (:inherit smooth-white-faded))))
-    '(rst-emphasis2                          ((t (:inherit smooth-white-strong))))
-    '(rst-external                          ((t (:inherit smooth-white-salient))))
-    '(rst-level-1                            ((t (:inherit smooth-white-strong))))
-    '(rst-level-2                            ((t (:inherit smooth-white-strong))))
-    '(rst-level-3                            ((t (:inherit smooth-white-strong))))
-    '(rst-level-4                            ((t (:inherit smooth-white-strong))))
-    '(rst-level-5                            ((t (:inherit smooth-white-strong))))
-    '(rst-level-6                            ((t (:inherit smooth-white-strong))))
-    '(rst-literal                           ((t (:inherit smooth-white-salient))))
-    '(rst-reference                         ((t (:inherit smooth-white-salient))))
-    '(rst-transition                        ((t (:inherit smooth-white-default))))
-
-
-    ;; --- Markdown ----------------------------------------------------
-    '(markdown-blockquote-face              ((t (:inherit smooth-white-default))))
-    '(markdown-bold-face                     ((t (:inherit smooth-white-strong))))
-    '(markdown-code-face                    ((t (:inherit smooth-white-default))))
-    '(markdown-comment-face                   ((t (:inherit smooth-white-faded))))
-    '(markdown-footnote-marker-face         ((t (:inherit smooth-white-default))))
-    '(markdown-footnote-text-face           ((t (:inherit smooth-white-default))))
-    '(markdown-gfm-checkbox-face            ((t (:inherit smooth-white-default))))
-    '(markdown-header-delimiter-face          ((t (:inherit smooth-white-faded))))
-    '(markdown-header-face                   ((t (:inherit smooth-white-strong))))
-    '(markdown-header-face-1                 ((t (:inherit smooth-white-strong))))
-    '(markdown-header-face-2                 ((t (:inherit smooth-white-strong))))
-    '(markdown-header-face-3                 ((t (:inherit smooth-white-strong))))
-    '(markdown-header-face-4                 ((t (:inherit smooth-white-strong))))
-    '(markdown-header-face-5                 ((t (:inherit smooth-white-strong))))
-    '(markdown-header-face-6                ((t (:inherit smooth-white-strong))))
-    '(markdown-header-rule-face             ((t (:inherit smooth-white-default))))
-    '(markdown-highlight-face               ((t (:inherit smooth-white-default))))
-    '(markdown-hr-face                      ((t (:inherit smooth-white-default))))
-    '(markdown-html-attr-name-face          ((t (:inherit smooth-white-default))))
-    '(markdown-html-attr-value-face         ((t (:inherit smooth-white-default))))
-    '(markdown-html-entity-face             ((t (:inherit smooth-white-default))))
-    '(markdown-html-tag-delimiter-face      ((t (:inherit smooth-white-default))))
-    '(markdown-html-tag-name-face           ((t (:inherit smooth-white-default))))
-    '(markdown-inline-code-face              ((t (:inherit smooth-white-popout))))
-    '(markdown-italic-face                    ((t (:inherit smooth-white-faded))))
-    '(markdown-language-info-face           ((t (:inherit smooth-white-default))))
-    '(markdown-language-keyword-face        ((t (:inherit smooth-white-default))))
-    '(markdown-line-break-face              ((t (:inherit smooth-white-default))))
-    '(markdown-link-face                    ((t (:inherit smooth-white-salient))))
-    '(markdown-link-title-face              ((t (:inherit smooth-white-default))))
-    '(markdown-list-face                      ((t (:inherit smooth-white-faded))))
-    '(markdown-markup-face                    ((t (:inherit smooth-white-faded))))
-    '(markdown-math-face                    ((t (:inherit smooth-white-default))))
-    '(markdown-metadata-key-face              ((t (:inherit smooth-white-faded))))
-    '(markdown-metadata-value-face            ((t (:inherit smooth-white-faded))))
-    '(markdown-missing-link-face            ((t (:inherit smooth-white-default))))
-    '(markdown-plain-url-face               ((t (:inherit smooth-white-default))))
-    '(markdown-pre-face                     ((t (:inherit smooth-white-default))))
-    '(markdown-reference-face               ((t (:inherit smooth-white-salient))))
-    '(markdown-strike-through-face            ((t (:inherit smooth-white-faded))))
-    '(markdown-table-face                   ((t (:inherit smooth-white-default))))
-    '(markdown-url-face                     ((t (:inherit smooth-white-salient))))
+   ;; --- Restructured text -------------------------------------------
+   '(rst-adornment                         ((t (:inherit smooth-white-faded))))
+   '(rst-block                             ((t (:inherit smooth-white-default))))
+   '(rst-comment                           ((t (:inherit smooth-white-faded))))
+   '(rst-definition                        ((t (:inherit smooth-white-salient))))
+   '(rst-directive                         ((t (:inherit smooth-white-salient))))
+   '(rst-emphasis1                         ((t (:inherit smooth-white-faded))))
+   '(rst-emphasis2                         ((t (:inherit smooth-white-strong))))
+   '(rst-external                          ((t (:inherit smooth-white-salient))))
+   '(rst-level-1                           ((t (:inherit smooth-white-strong))))
+   '(rst-level-2                           ((t (:inherit smooth-white-strong))))
+   '(rst-level-3                           ((t (:inherit smooth-white-strong))))
+   '(rst-level-4                           ((t (:inherit smooth-white-strong))))
+   '(rst-level-5                           ((t (:inherit smooth-white-strong))))
+   '(rst-level-6                           ((t (:inherit smooth-white-strong))))
+   '(rst-literal                           ((t (:inherit smooth-white-salient))))
+   '(rst-reference                         ((t (:inherit smooth-white-salient))))
+   '(rst-transition                        ((t (:inherit smooth-white-default))))
 
 
-    ;; --- Terminal ----------------------------------------------------
-    '(term-bold        ((t (:inherit smooth-white-strong))))
-    '(term-color-black ((t (:inherit default))))
-    '(term-color-blue ((t (:foreground "#42A5F5"   ;; material color blue L400
-                           :background "#BBDEFB"))))  ;; material color blue L100
-    '(term-color-cyan ((t (:foreground "#26C6DA"   ;; material color cyan L400
-                           :background "#B2EBF2"))))  ;; material color cyan L100
-    '(term-color-green ((t (:foreground "#66BB6A"   ;; material color green L400
-                            :background "#C8E6C9"))))  ;; material color green L100
-    '(term-color-magenta ((t (:foreground "#AB47BC"   ;; material color purple L400
-                              :background "#E1BEE7"))))  ;; material color purple L100
-    '(term-color-red ((t (:foreground "#EF5350"   ;; material color red L400
-                          :background "#FFCDD2"))))  ;; material color red L100
-    '(term-color-yellow ((t (:foreground "#FFEE58"    ;; material color yellow L400
-                             :background "#FFF9C4")))) ;; material color yellow L100
+   ;; --- Markdown ----------------------------------------------------
+   '(markdown-blockquote-face              ((t (:inherit smooth-white-default))))
+   '(markdown-bold-face                    ((t (:inherit smooth-white-strong))))
+   '(markdown-code-face                    ((t (:inherit smooth-white-default))))
+   '(markdown-comment-face                 ((t (:inherit smooth-white-faded))))
+   '(markdown-footnote-marker-face         ((t (:inherit smooth-white-default))))
+   '(markdown-footnote-text-face           ((t (:inherit smooth-white-default))))
+   '(markdown-gfm-checkbox-face            ((t (:inherit smooth-white-default))))
+   '(markdown-header-delimiter-face        ((t (:inherit smooth-white-faded))))
+   '(markdown-header-face                  ((t (:inherit smooth-white-strong))))
+   '(markdown-header-face-1                ((t (:inherit smooth-white-strong))))
+   '(markdown-header-face-2                ((t (:inherit smooth-white-strong))))
+   '(markdown-header-face-3                ((t (:inherit smooth-white-strong))))
+   '(markdown-header-face-4                ((t (:inherit smooth-white-strong))))
+   '(markdown-header-face-5                ((t (:inherit smooth-white-strong))))
+   '(markdown-header-face-6                ((t (:inherit smooth-white-strong))))
+   '(markdown-header-rule-face             ((t (:inherit smooth-white-default))))
+   '(markdown-highlight-face               ((t (:inherit smooth-white-default))))
+   '(markdown-hr-face                      ((t (:inherit smooth-white-default))))
+   '(markdown-html-attr-name-face          ((t (:inherit smooth-white-default))))
+   '(markdown-html-attr-value-face         ((t (:inherit smooth-white-default))))
+   '(markdown-html-entity-face             ((t (:inherit smooth-white-default))))
+   '(markdown-html-tag-delimiter-face      ((t (:inherit smooth-white-default))))
+   '(markdown-html-tag-name-face           ((t (:inherit smooth-white-default))))
+   '(markdown-inline-code-face             ((t (:inherit smooth-white-popout))))
+   '(markdown-italic-face                  ((t (:inherit smooth-white-faded))))
+   '(markdown-language-info-face           ((t (:inherit smooth-white-default))))
+   '(markdown-language-keyword-face        ((t (:inherit smooth-white-default))))
+   '(markdown-line-break-face              ((t (:inherit smooth-white-default))))
+   '(markdown-link-face                    ((t (:inherit smooth-white-salient))))
+   '(markdown-link-title-face              ((t (:inherit smooth-white-default))))
+   '(markdown-list-face                    ((t (:inherit smooth-white-faded))))
+   '(markdown-markup-face                  ((t (:inherit smooth-white-faded))))
+   '(markdown-math-face                    ((t (:inherit smooth-white-default))))
+   '(markdown-metadata-key-face            ((t (:inherit smooth-white-faded))))
+   '(markdown-metadata-value-face          ((t (:inherit smooth-white-faded))))
+   '(markdown-missing-link-face            ((t (:inherit smooth-white-default))))
+   '(markdown-plain-url-face               ((t (:inherit smooth-white-default))))
+   '(markdown-pre-face                     ((t (:inherit smooth-white-default))))
+   '(markdown-reference-face               ((t (:inherit smooth-white-salient))))
+   '(markdown-strike-through-face          ((t (:inherit smooth-white-faded))))
+   '(markdown-table-face                   ((t (:inherit smooth-white-default))))
+   '(markdown-url-face                     ((t (:inherit smooth-white-salient))))
 
-    ;; --- Haskell ----------------------------------------------------
-    '(haskell-font-lock-keywords
-      ((t (:foreground "#AB47BC"   ;; material color purple L400
-		       ))))
-    '(haskell-constructor-face ((t (:foreground "#42A5F5"   ;; material color blue L400
-				))))
-    '(font-lock-type-face ((t (:foreground "#42A5F5"   ;; material color blue L400
-				))))
-    `(haskell-pragma-face ((t (:foreground ,smooth-white-highlight))))
-    )
+
+   ;; --- Terminal ----------------------------------------------------
+   '(term-bold                             ((t (:inherit smooth-white-strong))))
+   '(term-color-black                      ((t (:inherit default))))
+   '(term-color-blue                       ((t (:foreground "#42A5F5"
+						:background "#BBDEFB"))))
+   '(term-color-cyan                       ((t (:foreground "#26C6DA"
+						:background "#B2EBF2"))))
+   '(term-color-green                      ((t (:foreground "#66BB6A"
+						:background "#C8E6C9"))))
+   '(term-color-magenta                    ((t (:foreground "#AB47BC"
+						:background "#E1BEE7"))))
+   '(term-color-red                        ((t (:foreground "#EF5350"
+						:background "#FFCDD2"))))
+   '(term-color-yellow                     ((t (:foreground "#966544"
+						:background "#FFF9C4"))))
+
+   ;; --- Haskell ----------------------------------------------------
+   '(haskell-font-lock-keywords ((t (:foreground "#AB47BC"))))
+   '(haskell-constructor-face   ((t (:foreground "#42A5F5"))))
+   '(font-lock-type-face        ((t (:foreground "#42A5F5"))))
+   `(haskell-pragma-face        ((t (:foreground ,smooth-white-highlight))))
+
+   ;; --- Nix ----------------------------------------------------
+   `(nix-attribute-face ((t (:foreground ,smooth-white-foreground :bold t))))
+   )
   )
 
 ;;;###autoload
