@@ -31,7 +31,7 @@
   "Default foreground color"
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-highlight "#0c0f12" ;; Very Light Grey
+(defcustom smooth-white-highlight "#d4d4d4" ;; Very Light Grey
   "Highlight color is used to highlight part of the screen."
   :type 'color :group 'smooth-white)
 
@@ -229,8 +229,8 @@ background color that is barely perceptible."
    `(mode-line ((t (     :foreground "white"
                          :background "#1F2E36"
                          :box (:line-width 4
-					;:color "#212121"
-					   :color nil
+					;color "#212121"
+					   :color ,smooth-white-background
 					   :style nil)))))
    
    `(mode-line-highlight ((t (:inherit smooth-white-popout))))
@@ -241,7 +241,7 @@ background color that is barely perceptible."
 					 :background "#6B7B85"
 					 :box (:line-width 4
 					;:color "#727272"
-							   :color nil
+							   :color ,smooth-white-background
 							   :style nil)))))
 
    `(header-line ((t (:foreground ,smooth-white-foreground
@@ -505,8 +505,8 @@ background color that is barely perceptible."
    '(org-block-begin-line                    ((t (:inherit smooth-white-faded))))
    '(org-block-end-line                      ((t (:inherit smooth-white-faded))))
    '(org-checkbox                            ((t (:inherit (smooth-white-faded fixed-pitch)))))
-   '(org-checkbox-statistics-done            ((t (:inherit smooth-white-faded))))
-   '(org-checkbox-statistics-todo            ((t (:inherit smooth-white-faded))))
+   '(org-checkbox-statistics-done            ((t (:inherit (smooth-white-faded fixed-pitch)))))
+   '(org-checkbox-statistics-todo            ((t (:inherit (smooth-white-faded fixed-pitch)))))
    '(org-clock-overlay                       ((t (:inherit smooth-white-faded))))
    '(org-code                                ((t (:inherit smooth-white-faded))))
    '(org-column                              ((t (:inherit smooth-white-faded))))
