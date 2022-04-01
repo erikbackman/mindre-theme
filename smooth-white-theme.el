@@ -27,15 +27,15 @@
   "Default background color"
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-foreground "#37474F" ;; Blue Grey / L800
+(defcustom smooth-white-foreground "#37474F"
   "Default foreground color"
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-highlight "#CFD8DC" ;; Very Light Blue Grey
+(defcustom smooth-white-highlight "#CFD8DC"
   "Highlight color is used to highlight part of the screen."
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-highlight-alt "#ECEFF1" ;; Even Lighter Blue Grey
+(defcustom smooth-white-highlight-alt "#ECEFF1"
   "Lighter highlight color used to highlight part of the screen."
   :type 'color :group 'smooth-white)
 
@@ -56,15 +56,15 @@
   "Default yellow color"
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-subtle "#ECEFF1" ;; Blue Grey / L50
+(defcustom smooth-white-subtle "#ECEFF1"
   "Subtle color is used to suggest a physical area on the screen."
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-faded "#B0BEC5" ;; Blue Grey / L200
+(defcustom smooth-white-faded "#B0BEC5"
   "Faded face is for information that are less important."
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-salient "#673AB7" ;; Deep Purple / L500
+(defcustom smooth-white-salient "#673AB7"
   "Salient color is used for information that are important."
   :type 'color :group 'smooth-white)
 
@@ -72,15 +72,15 @@
   "Alt Salient color is used for information that are important"
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-strong "#1F2E36" ;; Black
+(defcustom smooth-white-strong "#1F2E36"
   "Strong color is used for information of a structural nature."
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-popout "#000" ;; Deep Orange
+(defcustom smooth-white-popout "#000"
   "Popout colour is used for information that needs attention."
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-critical "#FF6F00" ;; Amber / L900
+(defcustom smooth-white-critical "#FF6F00"
   "Critical face is for information that requires immediate action."
   :type 'color :group 'smooth-white)
 
