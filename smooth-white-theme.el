@@ -31,8 +31,29 @@
   "Default foreground color"
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-highlight "#d4d4d4" ;; Very Light Grey
+(defcustom smooth-white-highlight "#CFD8DC" ;; Very Light Blue Grey
   "Highlight color is used to highlight part of the screen."
+  :type 'color :group 'smooth-white)
+
+(defcustom smooth-white-highlight-alt "#ECEFF1" ;; Even Lighter Blue Grey
+  "Lighter highlight color used to highlight part of the screen."
+  :type 'color :group 'smooth-white)
+
+(defcustom smooth-white-yellow "#966544"
+  "Default yellow color"
+  :type 'color :group 'smooth-white)
+
+;; TODO Fix ok, warning, error
+(defcustom smooth-white-ok "#966544"
+  "Default yellow color"
+  :type 'color :group 'smooth-white)
+
+(defcustom smooth-white-warning "#966544"
+  "Default yellow color"
+  :type 'color :group 'smooth-white)
+
+(defcustom smooth-white-error "#966544"
+  "Default yellow color"
   :type 'color :group 'smooth-white)
 
 (defcustom smooth-white-subtle "#ECEFF1" ;; Blue Grey / L50
@@ -47,11 +68,15 @@
   "Salient color is used for information that are important."
   :type 'color :group 'smooth-white)
 
+(defcustom smooth-white-salient-alt "#9E358F"
+  "Alt Salient color is used for information that are important"
+  :type 'color :group 'smooth-white)
+
 (defcustom smooth-white-strong "#1F2E36" ;; Black
   "Strong color is used for information of a structural nature."
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-popout "#966544" ;; Deep Orange
+(defcustom smooth-white-popout "#000" ;; Deep Orange
   "Popout colour is used for information that needs attention."
   :type 'color :group 'smooth-white)
 
@@ -131,50 +156,27 @@ background color that is barely perceptible."
   "Default highligt face."
   :group nil)
 
+(defface smooth-white-block nil
+  "Default block face"
+  :group nil)
+
+(defvar smooth-white-after-load-hook nil
+  "Hook run after theme has loaded.")
+
 (defun smooth-white ()
   "smooth-white theme"
-  
   (interactive)
-
   (set-foreground-color smooth-white-foreground)
   (set-background-color smooth-white-background)
   (load-theme 'smooth-white t)
-  )
+  (run-hooks 'smooth-white-after-load-hook))
 
 (let ((light     '((background light)))
       (dark      '((background dark)))
       (tty-light '((type tty) (background light)))
       (tty-dark  '((type tty) (background dark))))
 
-  ;; ;; Enforce smooth-white fonts
-  ;; (if smooth-white-fonts-use
-  ;;     (custom-theme-set-faces
-  ;;      'smooth-white
-  ;;      `(default ((,light (:foreground ,smooth-white-light-foreground
-  ;;                          :weight     ,(face-attribute 'smooth-white-mono :weight)
-  ;; 		                   :height     ,(face-attribute 'smooth-white-mono :height)
-  ;;                          :family     ,(face-attribute 'smooth-white-mono :family)))
-  ;;                 (,dark  (:foreground ,smooth-white-dark-foreground
-  ;;                          :weight     ,(face-attribute 'smooth-white-mono :weight)
-  ;; 		                   :height     ,(face-attribute 'smooth-white-mono :height)
-  ;;                          :family     ,(face-attribute 'smooth-white-mono :family)))))
-  ;;      `(smooth-white-strong ((,light (:weight normal))
-  ;; 		              (,dark  (:weight normal))))
-  ;;      `(variable-pitch  ((t (:weight ,(face-attribute 'smooth-white-sans :weight)
-  ;; 				              :height ,(face-attribute 'smooth-white-sans :height)
-  ;; 				              :family ,(face-attribute 'smooth-white-sans :family)))))))
-
-  ;;   ;; Enforce smooth-white fonts
-  ;; (if (not smooth-white-fonts-use)
-  ;;     (custom-theme-set-faces
-  ;;      'smooth-white
-  ;;      `(default ((,light (:foreground ,smooth-white-light-foreground))
-  ;;                 (,dark  (:foreground ,smooth-white-dark-foreground))))
-  ;;      `(smooth-white-strong ((,light (:weight bold))
-  ;; 		              (,dark  (:weight bold))))))
-
-
-  
+  ;; --- Faces ---------------------------------------------------------
   (custom-theme-set-faces
    'smooth-white
    
@@ -185,7 +187,7 @@ background color that is barely perceptible."
 
    `(default ((t (:background ,smooth-white-background
 	  		      :foreground ,smooth-white-foreground))))
-   
+
    `(highlight ((t (:background ,smooth-white-highlight))))
 
    `(smooth-white-subtle ((t (:background ,smooth-white-subtle))))
@@ -210,7 +212,7 @@ background color that is barely perceptible."
    
    `(smooth-white-strong-i ((t (:foreground ,smooth-white-background
 					    :background ,smooth-white-strong
-					    :weight normal))))
+					    :weight bold))))
 
    `(smooth-white-popout ((t (:foreground ,smooth-white-popout))))
 
@@ -223,7 +225,9 @@ background color that is barely perceptible."
    `(smooth-white-critical-i ((t (:foreground ,smooth-white-critical
 					      ;; :background ,smooth-white-background
 					      ))))
-   
+
+   `(smooth-white-block ((t (:background "#f2f2f2"
+					 :foreground ,smooth-white-foreground))))
    ;; --- Header & mode line -------------------------------------------
    
    `(mode-line ((t (     :foreground "white"
@@ -232,13 +236,15 @@ background color that is barely perceptible."
 					;color "#212121"
 					   :color ,smooth-white-background
 					   :style nil)))))
-   
-   `(mode-line-highlight ((t (:inherit smooth-white-popout))))
-   `(mode-line-buffer-id ((t (:weight regular))))
-   `(mode-line-emphasis  ((t (:weight regular))))
-			   
+
+   `(mode-line-highlight ((t (:inherit nil :background nil
+				       :box nil))))
+   `(mode-line-buffer-id ((t (:weight regular :background nil))))
+   `(mode-line-emphasis  ((t (:weight regular :background nil))))
+   			   
    `(mode-line-inactive ((t (:foreground ,smooth-white-background
 					 :background "#6B7B85"
+					 
 					 :box (:line-width 4
 					;:color "#727272"
 							   :color ,smooth-white-background
@@ -250,7 +256,7 @@ background color that is barely perceptible."
 				  :box nil))))
 
    ;; --- Structural ---------------------------------------------------
-   '(bold                        ((t (:inherit smooth-white-strong))))
+   '(bold                        ((t (:inherit smooth-white-strong :weight bold))))
    '(italic                      ((t (:slant italic))))
    '(italic                      ((t (:inherit smooth-white-faded))))
    '(bold-italic                 ((t (:inherit smooth-white-strong))))
@@ -295,6 +301,10 @@ background color that is barely perceptible."
    '(tty-menu-disabled-face        ((t (:inherit smooth-white-faded-i))))
    '(tty-menu-enabled-face         ((t (:inherit smooth-white-default-i))))
    '(tty-menu-selected-face        ((t (:inherit smooth-white-salient-i))))
+
+   ;; --- Eshell ----------------------------------------------------
+
+   '(eshell-prompt ((t (:inherit smooth-white-default))))
    
    ;; --- Windows divider ----------------------------------------------
    `(window-divider                ((t (:foreground ,smooth-white-background))))
@@ -317,11 +327,11 @@ background color that is barely perceptible."
    ;; --- Font lock ----------------------------------------------------
    '(font-lock-comment-face        ((t (:inherit smooth-white-faded))))
    '(font-lock-doc-face            ((t (:inherit smooth-white-faded))))
-   '(font-lock-string-face         ((t (:inherit smooth-white-popout))))
+   `(font-lock-string-face         ((t (:foreground ,smooth-white-yellow))))
    '(font-lock-constant-face       ((t (:inherit smooth-white-strong))))
    '(font-lock-warning-face        ((t (:inherit smooth-white-popout))))
    '(font-lock-function-name-face  ((t (:inherit smooth-white-strong))))
-   '(font-lock-variable-name-face  ((t (:inherit smooth-white-strong))))
+   `(font-lock-variable-name-face  ((t (:inherit smooth-white-strong))))
    '(font-lock-builtin-face        ((t (:inherit smooth-white-salient))))
    '(font-lock-type-face           ((t (:inherit smooth-white-salient))))
    '(font-lock-keyword-face        ((t (:inherit smooth-white-salient))))
@@ -361,7 +371,7 @@ background color that is barely perceptible."
 
    
    ;; --- Buttons ------------------------------------------------------
-   `(custom-buttona
+   `(custom-button
      ((t (:foreground ,smooth-white-faded
 		      :background ,smooth-white-highlight
 		      :box nil))))
@@ -421,7 +431,6 @@ background color that is barely perceptible."
 
    ;; --- Popup --------------------------------------------------------
 
-
    '(popup-face                       ((t (:inherit highlight))))
    '(popup-isearch-match              ((t (:inherit smooth-white-popout))))
    '(popup-menu-face                  ((t (:inherit smooth-white-subtle))))
@@ -475,8 +484,18 @@ background color that is barely perceptible."
    
    ;; --- Fly spell ----------------------------------------------------
    '(flyspell-duplicate             ((t (:inherit smooth-white-popout))))
-   '(flyspell-incorrect             ((t (:inherit smooth-white-popout))))
+   '(flyspell-incorrect             ((t (:inherit smooth-white-popout
+						  :underline "red"))))
 
+   ;; --- Fly make ----------------------------------------------------
+   ;; TODO: Fix these
+   `(flymake-error                  ((t (:foreground "red" :background nil))))
+   `(flymake-warning                ((t (:foreground "orange" :background nil))))
+   `(flymake-note                   ((t (:foreground "orange" :background nil))))
+   `(compilation-error              ((t (:foreground "red" :background nil))))
+   `(compilation-warning            ((t (:foreground "orange" :background nil))))
+   `(compilation-mode-line-run      ((t (:inherit smooth-white-foreground))))
+   
    ;; --- Org agenda ---------------------------------------------------
    '(org-agenda-calendar-event      ((t (:inherit smooth-white-default))))
    '(org-agenda-calendar-sexp       ((t (:inherit smooth-white-salient))))
@@ -501,14 +520,14 @@ background color that is barely perceptible."
 
    ;; --- Org ----------------------------------------------------------
    '(org-archived                            ((t (:inherit smooth-white-faded))))
-   '(org-block                               ((t (:inherit highlight))))
-   '(org-block-begin-line                    ((t (:inherit smooth-white-faded))))
-   '(org-block-end-line                      ((t (:inherit smooth-white-faded))))
+   '(org-block                               ((t (:inherit (smooth-white-block fixed-pitch)))))
+   '(org-block-begin-line                    ((t (:inherit (smooth-white-faded fixed-pitch)))))
+   '(org-block-end-line                      ((t (:inherit (smooth-white-faded fixed-pitch)))))
    '(org-checkbox                            ((t (:inherit (smooth-white-faded fixed-pitch)))))
    '(org-checkbox-statistics-done            ((t (:inherit (smooth-white-faded fixed-pitch)))))
    '(org-checkbox-statistics-todo            ((t (:inherit (smooth-white-faded fixed-pitch)))))
    '(org-clock-overlay                       ((t (:inherit smooth-white-faded))))
-   '(org-code                                ((t (:inherit smooth-white-faded))))
+   '(org-code                                ((t (:inherit (smooth-white-faded fixed-pitch)))))
    '(org-column                              ((t (:inherit smooth-white-faded))))
    '(org-column-title                        ((t (:inherit smooth-white-faded))))
    '(org-date                                ((t (:inherit smooth-white-faded))))
@@ -548,7 +567,7 @@ background color that is barely perceptible."
    '(org-scheduled-today                     ((t (:inherit smooth-white-faded))))
    '(org-sexp-date                           ((t (:inherit smooth-white-faded))))
    '(org-special-keyword                     ((t (:inherit (smooth-white-faded fixed-pitch)))))
-   '(org-table                               ((t (:inherit smooth-white-faded))))
+   '(org-table                               ((t (:inherit (smooth-white-default fixed-pitch)))))
    '(org-tag                                 ((t (:inherit smooth-white-popout))))
    '(org-tag-group                           ((t (:inherit smooth-white-faded))))
    '(org-target                              ((t (:inherit smooth-white-faded))))
@@ -712,7 +731,12 @@ background color that is barely perceptible."
    `(haskell-pragma-face        ((t (:foreground ,smooth-white-highlight))))
 
    ;; --- Nix ----------------------------------------------------
-   `(nix-attribute-face ((t (:foreground ,smooth-white-foreground :bold t))))
+   `(nix-attribute-face ((t (:foreground ,smooth-white-foreground :bold nil))))
+   
+   ;; --- Sh ----------------------------------------------------
+   `(sh-quoted-exec ((t (:foreground ,smooth-white-salient-alt))))
+
+   ;;
    )
   )
 
