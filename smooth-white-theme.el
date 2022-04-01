@@ -1,7 +1,7 @@
 ;;; smooth-white-theme.el --- smooth-white -*- lexical-binding: t -*-
 ;; ---------------------------------------------------------------------
 ;; GNU Emacs / smooth white
-;; Copyright (C) 2020-2021 - ebn developers 
+;; Copyright (C) 2020-2021 - ebn
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
