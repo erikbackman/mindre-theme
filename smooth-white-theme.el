@@ -23,7 +23,7 @@
 (defgroup smooth-white nil
   "smooth-white")
 
-(defcustom smooth-white-background "#F5F5F5"
+(defcustom smooth-white-background "#e5e9f0"
   "Default background color"
   :type 'color :group 'smooth-white)
 
@@ -64,7 +64,7 @@
   "Faded face is for information that are less important."
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-salient "#673AB7"
+(defcustom smooth-white-salient "#7b71a9"
   "Salient color is used for information that are important."
   :type 'color :group 'smooth-white)
 
@@ -231,7 +231,7 @@ background color that is barely perceptible."
    ;; --- Header & mode line -------------------------------------------
    
    `(mode-line ((t (     :foreground "white"
-                         :background "#1F2E36"
+                         :background "#2E3440"
                          :box (:line-width 4
 					;color "#212121"
 					   :color ,smooth-white-background
@@ -492,8 +492,8 @@ background color that is barely perceptible."
    `(flymake-error                  ((t (:foreground "red" :background nil))))
    `(flymake-warning                ((t (:foreground "orange" :background nil))))
    `(flymake-note                   ((t (:foreground "orange" :background nil))))
-   `(compilation-error              ((t (:foreground "red" :background nil))))
-   `(compilation-warning            ((t (:foreground "orange" :background nil))))
+   `(compilation-error              ((t (:foreground "#BF616A" :background nil))))
+   `(compilation-warning            ((t (:foreground "#EBCB8B" :background nil))))
    `(compilation-mode-line-run      ((t (:inherit smooth-white-foreground))))
    
    ;; --- Org agenda ---------------------------------------------------
@@ -725,8 +725,8 @@ background color that is barely perceptible."
 						:background "#FFF9C4"))))
 
    ;; --- Haskell ----------------------------------------------------
-   '(haskell-font-lock-keywords ((t (:foreground "#AB47BC"))))
-   '(haskell-constructor-face   ((t (:foreground "#42A5F5"))))
+   '(haskell-font-lock-keywords ((t (:foreground "#7b71a9"))))
+   '(haskell-constructor-face   ((t (:foreground "#3192aa"))))
    '(font-lock-type-face        ((t (:foreground "#42A5F5"))))
    `(haskell-pragma-face        ((t (:foreground ,smooth-white-highlight))))
 
