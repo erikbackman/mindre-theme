@@ -80,7 +80,7 @@
   "Popout colour is used for information that needs attention."
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-critical "#FF6F00"
+(defcustom smooth-white-critical "#BF616A"
   "Critical face is for information that requires immediate action."
   :type 'color :group 'smooth-white)
 
@@ -230,25 +230,18 @@ background color that is barely perceptible."
 					 :foreground ,smooth-white-foreground))))
    ;; --- Header & mode line -------------------------------------------
    
-   `(mode-line ((t (     :foreground "white"
-                         :background "#2E3440"
-                         :box (:line-width 4
-					;color "#212121"
-					   :color ,smooth-white-background
-					   :style nil)))))
+   `(mode-line ((t ( :foreground "white"
+		     :background "#2E3440"
+                     :box (:line-width 1 :color "#2E3440" :style nil) ))))
 
    `(mode-line-highlight ((t (:inherit nil :background nil
 				       :box nil))))
    `(mode-line-buffer-id ((t (:weight regular :background nil))))
    `(mode-line-emphasis  ((t (:weight regular :background nil))))
    			   
-   `(mode-line-inactive ((t (:foreground ,smooth-white-background
-					 :background "#6B7B85"
-					 
-					 :box (:line-width 4
-					;:color "#727272"
-							   :color ,smooth-white-background
-							   :style nil)))))
+   `(mode-line-inactive ((t ( :foreground ,smooth-white-background
+			      :background "#4C566A"
+			      :box (:line-width 1 :color "#4C566A" :style nil) ))))
 
    `(header-line ((t (:foreground ,smooth-white-foreground
 				  :background ,smooth-white-subtle
@@ -279,9 +272,7 @@ background color that is barely perceptible."
    '(minibuffer-prompt             ((t (:inherit smooth-white-strong))))
    '(isearch                       ((t (:inherit smooth-white-strong))))
    '(isearch-fail                  ((t (:inherit smooth-white-faded))))
-   '(show-paren-match              ((t (:inherit nil
-						 :weight bold
-						 :foreground "#AB47BC"))))
+   '(show-paren-match              ((t (:inherit nil :weight bold :foreground "#AB47BC"))))
    '(show-paren-mismatch           ((t (:inherit smooth-white-critical))))
    '(lazy-highlight                ((t (:inherit smooth-white-subtle))))
    '(trailing-whitespace           ((t (:inherit smooth-white-subtle))))
@@ -485,12 +476,12 @@ background color that is barely perceptible."
    ;; --- Fly spell ----------------------------------------------------
    '(flyspell-duplicate             ((t (:inherit smooth-white-popout))))
    '(flyspell-incorrect             ((t (:inherit smooth-white-popout
-						  :underline "red"))))
+						  :underline "#BF616A"))))
 
    ;; --- Fly make ----------------------------------------------------
    ;; TODO: Fix these
-   `(flymake-error                  ((t (:foreground "red" :background nil))))
-   `(flymake-warning                ((t (:foreground "orange" :background nil))))
+   `(flymake-error                  ((t (:foreground "#BF616A" :background nil))))
+   `(flymake-warning                ((t (:foreground "#EBCB8B" :background nil))))
    `(flymake-note                   ((t (:foreground "orange" :background nil))))
    `(compilation-error              ((t (:foreground "#BF616A" :background nil))))
    `(compilation-warning            ((t (:foreground "#EBCB8B" :background nil))))
@@ -735,7 +726,6 @@ background color that is barely perceptible."
    
    ;; --- Sh ----------------------------------------------------
    `(sh-quoted-exec ((t (:foreground ,smooth-white-salient-alt))))
-
    ;;
    )
   )
