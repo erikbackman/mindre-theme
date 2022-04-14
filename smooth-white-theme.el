@@ -23,7 +23,7 @@
 (defgroup smooth-white nil
   "smooth-white")
 
-(defcustom smooth-white-background "#e5e9f0"
+(defcustom smooth-white-background "#F5F5F5"
   "Default background color"
   :type 'color :group 'smooth-white)
 
