@@ -209,7 +209,7 @@ background color that is barely perceptible."
 
    `(smooth-white-salient-i ((t (:foreground ,smooth-white-background
 					     :background ,smooth-white-salient))))
-   
+   `(smooth-white-strong   ((t (:foreground "#161c20"))))
    `(smooth-white-strong-i ((t (:foreground ,smooth-white-background
 					    :background ,smooth-white-strong
 					    :weight bold))))
@@ -536,7 +536,7 @@ background color that is barely perceptible."
    '(org-hide                                ((t (:inherit smooth-white-subtle-i))))
    '(org-indent                              ((t (:inherit smooth-white-subtle-i))))
    '(org-latex-and-related                   ((t (:inherit smooth-white-faded))))
-   '(org-level-1                             ((t (:inherit smooth-white-strong :weight bold))))
+   '(org-level-1                             ((t (:inherit smooth-white-strong))))
    '(org-level-2                             ((t (:inherit smooth-white-strong))))
    '(org-level-3                             ((t (:inherit smooth-white-strong))))
    '(org-level-4                             ((t (:inherit smooth-white-strong))))
@@ -563,7 +563,7 @@ background color that is barely perceptible."
    '(org-tag-group                           ((t (:inherit smooth-white-faded))))
    '(org-target                              ((t (:inherit smooth-white-faded))))
    '(org-time-grid                           ((t (:inherit smooth-white-faded))))
-   '(org-todo                                ((t (:inherit smooth-white-salient))))
+   '(org-todo                                ((t (:inherit (smooth-white-salient smooth-white-strong)))))
    '(org-upcoming-deadline                   ((t (:inherit smooth-white-default))))
    '(org-verbatim                            ((t (:inherit smooth-white-popout))))
    '(org-verse                               ((t (:inherit smooth-white-faded))))
@@ -720,6 +720,7 @@ background color that is barely perceptible."
    '(haskell-constructor-face   ((t (:foreground "#00625D"))))
    '(font-lock-type-face        ((t (:foreground "#42A5F5"))))
    `(haskell-pragma-face        ((t (:foreground ,smooth-white-highlight))))
+   `(haskell-operator-face      ((t (:inherit smooth-white-default))))
 
    ;; --- Nix ----------------------------------------------------
    `(nix-attribute-face ((t (:foreground ,smooth-white-foreground :bold nil))))
