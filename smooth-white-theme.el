@@ -64,7 +64,7 @@
   "Faded face is for information that are less important."
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-salient "#7b71a9"
+(defcustom smooth-white-salient "#673AB7"
   "Salient color is used for information that are important."
   :type 'color :group 'smooth-white)
 
@@ -318,7 +318,7 @@ background color that is barely perceptible."
    ;; --- Font lock ----------------------------------------------------
    '(font-lock-comment-face        ((t (:inherit smooth-white-faded))))
    '(font-lock-doc-face            ((t (:inherit smooth-white-faded))))
-   `(font-lock-string-face         ((t (:foreground ,smooth-white-yellow))))
+   `(font-lock-string-face         ((t (:foreground "#62543E"))))
    '(font-lock-constant-face       ((t (:inherit smooth-white-strong))))
    '(font-lock-warning-face        ((t (:inherit smooth-white-popout))))
    '(font-lock-function-name-face  ((t (:inherit smooth-white-strong))))
@@ -717,7 +717,7 @@ background color that is barely perceptible."
 
    ;; --- Haskell ----------------------------------------------------
    '(haskell-font-lock-keywords ((t (:foreground "#7b71a9"))))
-   '(haskell-constructor-face   ((t (:foreground "#3192aa"))))
+   '(haskell-constructor-face   ((t (:foreground "#00625D"))))
    '(font-lock-type-face        ((t (:foreground "#42A5F5"))))
    `(haskell-pragma-face        ((t (:foreground ,smooth-white-highlight))))
 
