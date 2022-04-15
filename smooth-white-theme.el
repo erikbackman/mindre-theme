@@ -48,11 +48,11 @@
   "Default yellow color"
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-warning "#966544"
+(defcustom smooth-white-warning "#EBCB8B"
   "Default yellow color"
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-error "#966544"
+(defcustom smooth-white-error "#BF616A"
   "Default yellow color"
   :type 'color :group 'smooth-white)
 
@@ -72,7 +72,7 @@
   "Alt Salient color is used for information that are important"
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-strong "#273237"
+(defcustom smooth-white-strong "#81A1C1"
   "Strong color is used for information of a structural nature."
   :type 'color :group 'smooth-white)
 
@@ -263,7 +263,7 @@ background color that is barely perceptible."
    ;; --- Semantic -----------------------------------------------------
    '(shadow                        ((t (:inherit smooth-white-faded))))
    '(success                       ((t (:inherit smooth-white-salient))))
-   '(warning                       ((t (:inherit smooth-white-popout))))
+   '(warning                       ((t (:inherit smooth-white-warning))))
    '(error                         ((t (:inherit smooth-white-critical))))
    '(match                         ((t (:inherit smooth-white-popout))))
 
@@ -423,6 +423,7 @@ background color that is barely perceptible."
    ;; --- Eglot --------------------------------------------------------
    '(eglot-mode-line                ((t (:foreground "white"))))
    '(eglot-mode-line-none-face      ((t (:foreground "white"))))
+   '(eglot-highlight-symbol-face    ((t (:inherit underline))))
 
    ;; --- Popup --------------------------------------------------------
    '(popup-face                       ((t (:inherit highlight))))
@@ -474,6 +475,18 @@ background color that is barely perceptible."
    '(outline-6                      ((t (:inherit smooth-white-strong))))
    '(outline-7                      ((t (:inherit smooth-white-strong))))
    '(outline-8                      ((t (:inherit smooth-white-strong))))
+
+      ;; --- Ivy --------------------------------------------------------
+   `(ivy-minibuffer-match-face-1    ((t (:inherit (smooth-white-strong bold)))))
+   `(ivy-minibuffer-match-face-2    ((t (:inherit (smooth-white-strong bold)))))
+   `(ivy-minibuffer-match-face-3    ((t (:inherit (smooth-white-strong bold)))))
+   `(ivy-minibuffer-match-face-4    ((t (:inherit (smooth-white-strong bold)))))
+
+   ;; --- Orderless ------------------------------------------------------
+   '(orderless-match-face-0         ((t (:inherit (smooth-white-strong bold)))))
+   '(orderless-match-face-1         ((t (:inherit (smooth-white-strong bold)))))
+   '(orderless-match-face-2         ((t (:inherit (smooth-white-strong bold)))))
+   '(orderless-match-face-3         ((t (:inherit (smooth-white-strong bold)))))
 
    ;; --- Fly spell ----------------------------------------------------
    '(flyspell-duplicate             ((t (:inherit smooth-white-popout))))
@@ -624,18 +637,6 @@ background color that is barely perceptible."
    '(elfeed-search-tag-face                 ((t (:inherit smooth-white-faded))))
    '(elfeed-search-unread-count-face        ((t (:inherit smooth-white-strong))))
    '(elfeed-search-unread-title-face        ((t (:inherit smooth-white-strong))))
-
-   ;; --- Ivy --------------------------------------------------------
-   `(ivy-minibuffer-match-face-1   ((t (:inherit smooth-white-popout))))
-   `(ivy-minibuffer-match-face-2   ((t (:inherit smooth-white-popout))))
-   `(ivy-minibuffer-match-face-3   ((t (:inherit smooth-white-popout))))
-   `(ivy-minibuffer-match-face-4   ((t (:inherit smooth-white-popout))))
-
-   ;; --- Orderless  --------------------------------------------------------
-   `(orderless-match-face-0 ((t (:inherit smooth-white-popout))))
-   `(orderless-match-face-1 ((t (:inherit smooth-white-popout))))
-   `(orderless-match-face-2 ((t (:inherit smooth-white-popout))))
-   `(orderless-match-face-3 ((t (:inherit smooth-white-popout))))
 
    ;; --- Deft --------------------------------------------------------
    '(deft-filter-string-error-face         ((t (:inherit smooth-white-popout))))
