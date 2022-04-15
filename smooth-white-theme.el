@@ -530,7 +530,6 @@ background color that is barely perceptible."
    '(org-agenda-restriction-lock    ((t (:inherit smooth-white-faded))))
    '(org-agenda-structure           ((t (:inherit smooth-white-strong))))
 
-
    ;; --- Org ----------------------------------------------------------
    '(org-archived                            ((t (:inherit smooth-white-faded))))
    '(org-block                               ((t (:inherit (smooth-white-block fixed-pitch)))))
@@ -590,7 +589,6 @@ background color that is barely perceptible."
    '(org-verbatim                            ((t (:inherit smooth-white-popout))))
    '(org-verse                               ((t (:inherit smooth-white-faded))))
    '(org-warning                             ((t (:inherit smooth-white-popout))))
-
 
    ;; --- Mu4e ---------------------------------------------------------
    '(mu4e-attach-number-face                ((t (:inherit smooth-white-strong))))
@@ -671,6 +669,18 @@ background color that is barely perceptible."
    '(elfeed-search-unread-count-face        ((t (:inherit smooth-white-strong))))
    '(elfeed-search-unread-title-face        ((t (:inherit smooth-white-strong))))
 
+   ;; --- Ivy --------------------------------------------------------
+   `(ivy-minibuffer-match-face-1   ((t (:inherit smooth-white-popout))))
+   `(ivy-minibuffer-match-face-2   ((t (:inherit smooth-white-popout))))
+   `(ivy-minibuffer-match-face-3   ((t (:inherit smooth-white-popout))))
+   `(ivy-minibuffer-match-face-4   ((t (:inherit smooth-white-popout))))
+
+   ;; --- Orderless  --------------------------------------------------------
+   `(orderless-match-face-0 ((t (:inherit smooth-white-popout))))
+   `(orderless-match-face-1 ((t (:inherit smooth-white-popout))))
+   `(orderless-match-face-2 ((t (:inherit smooth-white-popout))))
+   `(orderless-match-face-3 ((t (:inherit smooth-white-popout))))
+
    ;; --- Deft --------------------------------------------------------
    '(deft-filter-string-error-face         ((t (:inherit smooth-white-popout))))
    '(deft-filter-string-face               ((t (:inherit smooth-white-default))))
@@ -698,7 +708,6 @@ background color that is barely perceptible."
    '(rst-literal                           ((t (:inherit smooth-white-salient))))
    '(rst-reference                         ((t (:inherit smooth-white-salient))))
    '(rst-transition                        ((t (:inherit smooth-white-default))))
-
 
    ;; --- Markdown ----------------------------------------------------
    '(markdown-blockquote-face              ((t (:inherit smooth-white-default))))
