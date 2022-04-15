@@ -476,6 +476,12 @@ background color that is barely perceptible."
    '(outline-6                      ((t (:inherit smooth-white-strong))))
    '(outline-7                      ((t (:inherit smooth-white-strong))))
    '(outline-8                      ((t (:inherit smooth-white-strong))))
+
+   ;; --- Orderless ------------------------------------------------------
+   '(orderless-match-face-0         ((t (:inherit (smooth-white-strong bold)))))
+   '(orderless-match-face-1         ((t (:inherit (smooth-white-strong bold)))))
+   '(orderless-match-face-2         ((t (:inherit (smooth-white-strong bold)))))
+   '(orderless-match-face-3         ((t (:inherit (smooth-white-strong bold)))))
    
    ;; --- Fly spell ----------------------------------------------------
    '(flyspell-duplicate             ((t (:inherit smooth-white-popout))))
