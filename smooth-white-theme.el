@@ -360,7 +360,9 @@ background color that is barely perceptible."
    '(company-tooltip-annotation           ((t (:inherit smooth-white-default))))
    '(company-tooltip-annotation-selection ((t (:inherit smooth-white-subtle))))
 
-   
+   ;; --- Corfu  --------------------------------------------------------
+   `(corfu-current                        ((t (:inherit highlight))))
+
    ;; --- Buttons ------------------------------------------------------
    `(custom-button
      ((t (:foreground ,smooth-white-faded
