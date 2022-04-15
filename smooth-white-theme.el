@@ -249,7 +249,6 @@ background color that is barely perceptible."
 				       :box nil))))
    `(mode-line-buffer-id ((t (:weight regular :background nil))))
    `(mode-line-emphasis  ((t (:weight regular :background nil))))
-   			   
    `(mode-line-inactive ((t ( :foreground "white"
 			      :background ,smooth-white-background-dark-2
 			      :box (:line-width 1 :color ,smooth-white-background-dark-2 :style nil) ))))
@@ -480,6 +479,7 @@ background color that is barely perceptible."
    '(message-mml                    ((t (:inherit smooth-white-popout))))
    '(message-separator              ((t (:inherit smooth-white-faded))))
 
+
    ;; --- Outline ------------------------------------------------------
    '(outline-1                      ((t (:inherit smooth-white-strong))))
    '(outline-2                      ((t (:inherit smooth-white-strong))))
@@ -495,7 +495,7 @@ background color that is barely perceptible."
    '(orderless-match-face-1         ((t (:inherit (smooth-white-strong bold)))))
    '(orderless-match-face-2         ((t (:inherit (smooth-white-strong bold)))))
    '(orderless-match-face-3         ((t (:inherit (smooth-white-strong bold)))))
-   
+
    ;; --- Fly spell ----------------------------------------------------
    '(flyspell-duplicate             ((t (:inherit smooth-white-popout))))
    '(flyspell-incorrect             ((t (:inherit smooth-white-popout
@@ -630,19 +630,43 @@ background color that is barely perceptible."
    '(mu4e-view-body-face                    ((t (:inherit smooth-white-default))))
    '(mu4e-warning-face                      ((t (:inherit smooth-white-popout))))
 
+   ;; --- Notmuch -------------------------------------------------------
+   `(notmuch-crypto-decryption            ((t (:inherit smooth-white-strong))))
+   `(notmuch-crypto-part-header           ((t (:inherit smooth-white-strong))))
+   `(notmuch-crypto-signature-bad         ((t (:inherit smooth-white-error))))
+   `(notmuch-crypto-signature-good        ((t (:inherit smooth-white-ok))))
+   `(notmuch-crypto-signature-good-key    ((t (:inherit smooth-white-ok))))
+   `(notmuch-crypto-signature-unknown     ((t (:inherit smooth-white-warning))))
+   `(notmuch-search-count                 ((t (:inherit smooth-white-faded))))
+   `(notmuch-search-unread-face           ((t (:inherit smooth-white-strong))))
+   `(notmuch-search-date                  ((t (:inherit smooth-white-default))))
+   `(notmuch-search-matching-authors      ((t (:inherit smooth-white-salient))))
+   `(notmuch-search-non-matching-authors  ((t (:inherit smooth-white-faded))))
+   `(notmuch-search-subject               ((t (:inherit smooth-white-default))))
+   `(notmuch-tag-added                    ((t (:inherit smooth-white-verbatim :underline t))))
+   `(notmuch-tag-deleted                  ((t (:inherit smooth-white-verbatim :strike-through t))))
+   `(notmuch-tag-face                     ((t (:inherit smooth-white-verbatim))))
+   `(notmuch-tag-flagged                  ((t (:inherit smooth-white-strong))))
+   `(notmuch-tag-unread                   ((t (:inherit smooth-white-strong))))
+   `(notmuch-tree-match-author-face       ((t (:inherit smooth-white-salient))))
+   `(notmuch-tree-match-subject-face      ((t (:inherit smooth-white-default))))
+   `(notmuch-tree-match-date-face         ((t (:inherit smooth-white-default))))
+   `(notmuch-tree-match-tag-face          ((t (:inherit smooth-white-verbatim))))
+   `(notmuch-tree-no-match-face           ((t (:inherit smooth-white-faded))))
+   `(notmuch-tree-no-match-date-face      ((t (:inherit smooth-white-default))))
+
    ;; --- Elfeed -------------------------------------------------------
    '(elfeed-log-date-face                   ((t (:inherit smooth-white-faded))))
    '(elfeed-log-info-level-face             ((t (:inherit smooth-white-default))))
    '(elfeed-log-debug-level-face            ((t (:inherit smooth-white-default))))
    '(elfeed-log-warn-level-face             ((t (:inherit smooth-white-popout))))
    '(elfeed-log-error-level-face            ((t (:inherit smooth-white-popout))))
-   '(elfeed-search-tag-face                 ((t (:inherit smooth-white-faded))))
-   '(elfeed-search-date-face                ((t (:inherit smooth-white-faded))))
+   '(elfeed-search-tag-face                 ((t (:inherit smooth-white-verbatim))))
+   '(elfeed-search-date-face                ((t (:inherit smooth-white-default))))
    '(elfeed-search-feed-face                ((t (:inherit smooth-white-salient))))
    '(elfeed-search-filter-face              ((t (:inherit smooth-white-faded))))
    '(elfeed-search-last-update-face         ((t (:inherit smooth-white-salient))))
    '(elfeed-search-title-face               ((t (:inherit smooth-white-default))))
-   '(elfeed-search-tag-face                 ((t (:inherit smooth-white-faded))))
    '(elfeed-search-unread-count-face        ((t (:inherit smooth-white-strong))))
    '(elfeed-search-unread-title-face        ((t (:inherit smooth-white-strong))))
 
