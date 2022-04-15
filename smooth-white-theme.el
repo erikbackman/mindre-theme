@@ -27,6 +27,14 @@
   "Default background color"
   :type 'color :group 'smooth-white)
 
+(defcustom smooth-white-background-dark-1 "#2E3440"
+  "Default dark background"
+  :type 'color :group 'smooth-white)
+
+(defcustom smooth-white-background-dark-2 "#4C566A"
+  "Lighter dark background "
+  :type 'color :group 'smooth-white)
+
 (defcustom smooth-white-foreground "#37474F"
   "Default foreground color"
   :type 'color :group 'smooth-white)
@@ -43,7 +51,6 @@
   "Default yellow color"
   :type 'color :group 'smooth-white)
 
-;; TODO Fix ok, warning, error
 (defcustom smooth-white-ok "#966544"
   "Default yellow color"
   :type 'color :group 'smooth-white)
@@ -68,8 +75,12 @@
   "Salient color is used for information that are important."
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-salient-alt "#9E358F"
+(defcustom smooth-white-salient-alt "#00625D"
   "Alt Salient color is used for information that are important"
+  :type 'color :group 'smooth-white)
+
+(defcustom smooth-white-verbatim "#62543E"
+  "Color used for things like strings."
   :type 'color :group 'smooth-white)
 
 (defcustom smooth-white-strong "#81A1C1"
@@ -231,17 +242,16 @@ background color that is barely perceptible."
    ;; --- Header & mode line -------------------------------------------
 
    `(mode-line ((t ( :foreground "white"
-		     :background "#2E3440"
-                     :box (:line-width 1 :color "#2E3440" :style nil) ))))
+		     :background ,smooth-white-background-dark-1
+                     :box (:line-width 1 :color ,smooth-white-background-dark-2 :style nil) ))))
 
    `(mode-line-highlight ((t (:inherit nil :background nil
 				       :box nil))))
    `(mode-line-buffer-id ((t (:weight regular :background nil))))
    `(mode-line-emphasis  ((t (:weight regular :background nil))))
-
-   `(mode-line-inactive ((t ( :foreground ,smooth-white-background
-			      :background "#4C566A"
-			      :box (:line-width 1 :color "#4C566A" :style nil) ))))
+   `(mode-line-inactive ((t ( :foreground "white"
+			      :background ,smooth-white-background-dark-2
+			      :box (:line-width 1 :color ,smooth-white-background-dark-2 :style nil) ))))
 
    `(header-line ((t (:foreground ,smooth-white-foreground
 				  :background ,smooth-white-subtle
@@ -318,7 +328,7 @@ background color that is barely perceptible."
    ;; --- Font lock ----------------------------------------------------
    '(font-lock-comment-face        ((t (:inherit smooth-white-faded))))
    '(font-lock-doc-face            ((t (:inherit smooth-white-faded))))
-   `(font-lock-string-face         ((t (:foreground "#62543E"))))
+   `(font-lock-string-face         ((t (:foreground ,smooth-white-verbatim))))
    '(font-lock-constant-face       ((t (:inherit smooth-white-strong))))
    '(font-lock-warning-face        ((t (:inherit smooth-white-popout))))
    '(font-lock-function-name-face  ((t (:inherit smooth-white-strong))))
@@ -628,21 +638,21 @@ background color that is barely perceptible."
    `(notmuch-crypto-signature-unknown     ((t (:inherit smooth-white-warning))))
    `(notmuch-search-count                 ((t (:inherit smooth-white-faded))))
    `(notmuch-search-unread-face           ((t (:inherit smooth-white-strong))))
-   `(notmuch-search-date                  ((t (:foreground "#00625D"))))
+   `(notmuch-search-date                  ((t (:inherit smooth-white-default))))
    `(notmuch-search-matching-authors      ((t (:inherit smooth-white-salient))))
    `(notmuch-search-non-matching-authors  ((t (:inherit smooth-white-faded))))
    `(notmuch-search-subject               ((t (:inherit smooth-white-default))))
-   `(notmuch-tag-added                    ((t (:foreground "#62543E" :underline t))))
-   `(notmuch-tag-deleted                  ((t (:foreground "#62543E" :strike-through t))))
-   `(notmuch-tag-face                     ((t (:foreground "#62543E"))))
+   `(notmuch-tag-added                    ((t (:inherit smooth-white-verbatim :underline t))))
+   `(notmuch-tag-deleted                  ((t (:inherit smooth-white-verbatim :strike-through t))))
+   `(notmuch-tag-face                     ((t (:inherit smooth-white-verbatim))))
    `(notmuch-tag-flagged                  ((t (:inherit smooth-white-strong))))
    `(notmuch-tag-unread                   ((t (:inherit smooth-white-strong))))
    `(notmuch-tree-match-author-face       ((t (:inherit smooth-white-salient))))
    `(notmuch-tree-match-subject-face      ((t (:inherit smooth-white-default))))
-   `(notmuch-tree-match-date-face         ((t (:foreground "#00625D"))))
-   `(notmuch-tree-match-tag-face          ((t (:foreground "#62543E"))))
+   `(notmuch-tree-match-date-face         ((t (:inherit smooth-white-default))))
+   `(notmuch-tree-match-tag-face          ((t (:inherit smooth-white-verbatim))))
    `(notmuch-tree-no-match-face           ((t (:inherit smooth-white-faded))))
-   `(notmuch-tree-no-match-date-face      ((t (:foreground "#00625D"))))
+   `(notmuch-tree-no-match-date-face      ((t (:inherit smooth-white-default))))
 
    ;; --- Elfeed -------------------------------------------------------
    '(elfeed-log-date-face                   ((t (:inherit smooth-white-faded))))
@@ -650,13 +660,12 @@ background color that is barely perceptible."
    '(elfeed-log-debug-level-face            ((t (:inherit smooth-white-default))))
    '(elfeed-log-warn-level-face             ((t (:inherit smooth-white-popout))))
    '(elfeed-log-error-level-face            ((t (:inherit smooth-white-popout))))
-   '(elfeed-search-tag-face                 ((t (:foreground "#62543E"))))
-   '(elfeed-search-date-face                ((t (:foreground "#00625D"))))
+   '(elfeed-search-tag-face                 ((t (:inherit smooth-white-verbatim))))
+   '(elfeed-search-date-face                ((t (:inherit smooth-white-default))))
    '(elfeed-search-feed-face                ((t (:inherit smooth-white-salient))))
    '(elfeed-search-filter-face              ((t (:inherit smooth-white-faded))))
    '(elfeed-search-last-update-face         ((t (:inherit smooth-white-salient))))
    '(elfeed-search-title-face               ((t (:inherit smooth-white-default))))
-   '(elfeed-search-tag-face                 ((t (:foreground "#62543E"))))
    '(elfeed-search-unread-count-face        ((t (:inherit smooth-white-strong))))
    '(elfeed-search-unread-title-face        ((t (:inherit smooth-white-strong))))
 
@@ -733,7 +742,6 @@ background color that is barely perceptible."
    '(markdown-table-face                   ((t (:inherit smooth-white-default))))
    '(markdown-url-face                     ((t (:inherit smooth-white-salient))))
 
-
    ;; --- Terminal ----------------------------------------------------
    '(term-bold                             ((t (:inherit smooth-white-strong))))
    '(term-color-black                      ((t (:inherit default))))
@@ -752,8 +760,8 @@ background color that is barely perceptible."
 
    ;; --- Haskell ----------------------------------------------------
    '(haskell-font-lock-keywords ((t (:foreground "#7b71a9"))))
-   '(haskell-constructor-face   ((t (:foreground "#00625D"))))
-   '(font-lock-type-face        ((t (:foreground "#42A5F5"))))
+   `(haskell-constructor-face   ((t (:foreground ,smooth-white-salient-alt))))
+   `(font-lock-type-face        ((t (:foreground ,smooth-white-salient))))
    `(haskell-pragma-face        ((t (:foreground ,smooth-white-highlight))))
    `(haskell-operator-face      ((t (:inherit smooth-white-default))))
 
