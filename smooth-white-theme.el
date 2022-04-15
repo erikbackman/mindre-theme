@@ -83,7 +83,7 @@
   "Color used for things like strings."
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-strong "#81A1C1"
+(defcustom smooth-white-strong "#161c20"
   "Strong color is used for information of a structural nature."
   :type 'color :group 'smooth-white)
 
@@ -220,7 +220,7 @@ background color that is barely perceptible."
 
    `(smooth-white-salient-i ((t (:foreground ,smooth-white-background
 					     :background ,smooth-white-salient))))
-   `(smooth-white-strong   ((t (:foreground "#161c20"))))
+   `(smooth-white-strong   ((t (:foreground ,smooth-white-strong))))
    `(smooth-white-strong-i ((t (:foreground ,smooth-white-background
 					    :background ,smooth-white-strong
 					    :weight bold))))
