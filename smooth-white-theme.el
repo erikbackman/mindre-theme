@@ -179,8 +179,8 @@ background color that is barely perceptible."
   ;; --- Faces ---------------------------------------------------------
   (custom-theme-set-faces
    'smooth-white
-   
-   ;; --- Base ---------------------------------------------------------   
+
+   ;; --- Base ---------------------------------------------------------
    `(cursor ((t (:foreground ,smooth-white-background
 			     :background ,smooth-white-foreground))
              ))
@@ -193,18 +193,18 @@ background color that is barely perceptible."
    `(smooth-white-subtle ((t (:background ,smooth-white-subtle))))
 
    `(smooth-white-subtle-i ((t (:foreground ,smooth-white-subtle))))
-   
+
    `(smooth-white-faded ((t (:foreground ,smooth-white-faded))))
 
    `(smooth-white-faded-i ((t (:foreground ,smooth-white-background
 					   :background ,smooth-white-faded))))
-   
+
    `(smooth-white-default ((t (:foreground ,smooth-white-foreground))))
 
    `(smooth-white-default-i ((t (:foreground ,smooth-white-background
 					     :background ,smooth-white-foreground))))
 
-   
+
    `(smooth-white-salient ((t (:foreground ,smooth-white-salient))))
 
    `(smooth-white-salient-i ((t (:foreground ,smooth-white-background
@@ -218,7 +218,7 @@ background color that is barely perceptible."
 
    `(smooth-white-popout-i ((t (:foreground ,smooth-white-background
 					    :background ,smooth-white-popout))))
-   
+
    `(smooth-white-critical ((t (:foreground ,smooth-white-background
 					    :background ,smooth-white-critical))))
 
@@ -229,7 +229,7 @@ background color that is barely perceptible."
    `(smooth-white-block ((t (:background "#f2f2f2"
 					 :foreground ,smooth-white-foreground))))
    ;; --- Header & mode line -------------------------------------------
-   
+
    `(mode-line ((t ( :foreground "white"
 		     :background "#2E3440"
                      :box (:line-width 1 :color "#2E3440" :style nil) ))))
@@ -238,7 +238,7 @@ background color that is barely perceptible."
 				       :box nil))))
    `(mode-line-buffer-id ((t (:weight regular :background nil))))
    `(mode-line-emphasis  ((t (:weight regular :background nil))))
-   			   
+
    `(mode-line-inactive ((t ( :foreground ,smooth-white-background
 			      :background "#4C566A"
 			      :box (:line-width 1 :color "#4C566A" :style nil) ))))
@@ -259,7 +259,7 @@ background color that is barely perceptible."
    '(link                        ((t (:inherit smooth-white-salient))))
    '(fixed-pitch                 ((t (:inherit default))))
    '(fixed-pitch-serif           ((t (:inherit default))))
-   
+
    ;; --- Semantic -----------------------------------------------------
    '(shadow                        ((t (:inherit smooth-white-faded))))
    '(success                       ((t (:inherit smooth-white-salient))))
@@ -287,7 +287,7 @@ background color that is barely perceptible."
    '(help-argument-name            ((t (:inherit smooth-white-faded))))
    '(tabulated-list-fake-header    ((t (:inherit smooth-white-strong))))
    '(tool-bar                      ((t (:inherit smooth-white-faded-i))))
- 
+
    ;; --- TTY faces ----------------------------------------------------
    '(tty-menu-disabled-face        ((t (:inherit smooth-white-faded-i))))
    '(tty-menu-enabled-face         ((t (:inherit smooth-white-default-i))))
@@ -296,7 +296,7 @@ background color that is barely perceptible."
    ;; --- Eshell ----------------------------------------------------
 
    '(eshell-prompt ((t (:inherit smooth-white-default))))
-   
+
    ;; --- Windows divider ----------------------------------------------
    `(window-divider                ((t (:foreground ,smooth-white-background))))
    '(window-divider-first-pixel    ((t (:inherit window-divider))))
@@ -308,13 +308,13 @@ background color that is barely perceptible."
    '(tab-bar-tab                   ((t (:inherit default))))
    '(tab-bar-tab-inactive          ((t (:inherit smooth-white-faded))))
    '(tab-line                      ((t (:inherit default))))
-   
+
    ;; --- Line numbers -------------------------------------------------
    '(line-number                  ((t (:inherit smooth-white-faded))))
    '(line-number-current-line     ((t (:inherit default))))
    `(line-number-major-tick       ((t (:inherit smooth-white-faded))))
    '(line-number-minor-tick       ((t (:inherit smooth-white-faded))))
-   
+
    ;; --- Font lock ----------------------------------------------------
    '(font-lock-comment-face        ((t (:inherit smooth-white-faded))))
    '(font-lock-doc-face            ((t (:inherit smooth-white-faded))))
@@ -360,7 +360,7 @@ background color that is barely perceptible."
    '(company-tooltip-annotation           ((t (:inherit smooth-white-default))))
    '(company-tooltip-annotation-selection ((t (:inherit smooth-white-subtle))))
 
-   
+
    ;; --- Buttons ------------------------------------------------------
    `(custom-button
      ((t (:foreground ,smooth-white-faded
@@ -376,7 +376,7 @@ background color that is barely perceptible."
      ((t (:foreground ,smooth-white-background
 		      :background ,smooth-white-foreground
 		      :box nil))
-      
+
       )
      )
 
@@ -448,7 +448,7 @@ background color that is barely perceptible."
    '(diff-refine-changed            ((t (:inherit smooth-white-popout))))
    '(diff-refine-removed            ((t (:inherit smooth-white-faded
 						  :strike-through t))))
-   
+
    ;; --- Message ------------------------------------------------------
    '(message-cited-text-1           ((t (:inherit smooth-white-faded))))
    '(message-cited-text-2           ((t (:inherit smooth-white-faded))))
@@ -465,7 +465,7 @@ background color that is barely perceptible."
    '(message-mml                    ((t (:inherit smooth-white-popout))))
    '(message-separator              ((t (:inherit smooth-white-faded))))
 
-   
+
    ;; --- Outline ------------------------------------------------------
    '(outline-1                      ((t (:inherit smooth-white-strong))))
    '(outline-2                      ((t (:inherit smooth-white-strong))))
@@ -475,7 +475,7 @@ background color that is barely perceptible."
    '(outline-6                      ((t (:inherit smooth-white-strong))))
    '(outline-7                      ((t (:inherit smooth-white-strong))))
    '(outline-8                      ((t (:inherit smooth-white-strong))))
-   
+
    ;; --- Fly spell ----------------------------------------------------
    '(flyspell-duplicate             ((t (:inherit smooth-white-popout))))
    '(flyspell-incorrect             ((t (:inherit smooth-white-popout
@@ -489,7 +489,7 @@ background color that is barely perceptible."
    `(compilation-error              ((t (:foreground "#BF616A" :background nil))))
    `(compilation-warning            ((t (:foreground "#EBCB8B" :background nil))))
    `(compilation-mode-line-run      ((t (:inherit smooth-white-foreground))))
-   
+
    ;; --- Org agenda ---------------------------------------------------
    '(org-agenda-calendar-event      ((t (:inherit smooth-white-default))))
    '(org-agenda-calendar-sexp       ((t (:inherit smooth-white-salient))))
@@ -612,19 +612,44 @@ background color that is barely perceptible."
    '(mu4e-view-body-face                    ((t (:inherit smooth-white-default))))
    '(mu4e-warning-face                      ((t (:inherit smooth-white-popout))))
 
+   ;; --- Notmuch -------------------------------------------------------
+   `(notmuch-crypto-decryption            ((t (:inherit smooth-white-strong))))
+   `(notmuch-crypto-part-header           ((t (:inherit smooth-white-strong))))
+   `(notmuch-crypto-signature-bad         ((t (:inherit smooth-white-error))))
+   `(notmuch-crypto-signature-good        ((t (:inherit smooth-white-ok))))
+   `(notmuch-crypto-signature-good-key    ((t (:inherit smooth-white-ok))))
+   `(notmuch-crypto-signature-unknown     ((t (:inherit smooth-white-warning))))
+   `(notmuch-search-count                 ((t (:inherit smooth-white-faded))))
+   `(notmuch-search-unread-face           ((t (:inherit smooth-white-strong))))
+   `(notmuch-search-date                  ((t (:foreground "#00625D"))))
+   `(notmuch-search-matching-authors      ((t (:inherit smooth-white-salient))))
+   `(notmuch-search-non-matching-authors  ((t (:inherit smooth-white-faded))))
+   `(notmuch-search-subject               ((t (:inherit smooth-white-default))))
+   `(notmuch-tag-added                    ((t (:foreground "#62543E" :underline t))))
+   `(notmuch-tag-deleted                  ((t (:foreground "#62543E" :strike-through t))))
+   `(notmuch-tag-face                     ((t (:foreground "#62543E"))))
+   `(notmuch-tag-flagged                  ((t (:inherit smooth-white-strong))))
+   `(notmuch-tag-unread                   ((t (:inherit smooth-white-strong))))
+   `(notmuch-tree-match-author-face       ((t (:inherit smooth-white-salient))))
+   `(notmuch-tree-match-subject-face      ((t (:inherit smooth-white-default))))
+   `(notmuch-tree-match-date-face         ((t (:foreground "#00625D"))))
+   `(notmuch-tree-match-tag-face          ((t (:foreground "#62543E"))))
+   `(notmuch-tree-no-match-face           ((t (:inherit smooth-white-faded))))
+   `(notmuch-tree-no-match-date-face      ((t (:foreground "#00625D"))))
+
    ;; --- Elfeed -------------------------------------------------------
    '(elfeed-log-date-face                   ((t (:inherit smooth-white-faded))))
    '(elfeed-log-info-level-face             ((t (:inherit smooth-white-default))))
    '(elfeed-log-debug-level-face            ((t (:inherit smooth-white-default))))
    '(elfeed-log-warn-level-face             ((t (:inherit smooth-white-popout))))
    '(elfeed-log-error-level-face            ((t (:inherit smooth-white-popout))))
-   '(elfeed-search-tag-face                 ((t (:inherit smooth-white-faded))))
-   '(elfeed-search-date-face                ((t (:inherit smooth-white-faded))))
+   '(elfeed-search-tag-face                 ((t (:foreground "#62543E"))))
+   '(elfeed-search-date-face                ((t (:foreground "#00625D"))))
    '(elfeed-search-feed-face                ((t (:inherit smooth-white-salient))))
    '(elfeed-search-filter-face              ((t (:inherit smooth-white-faded))))
    '(elfeed-search-last-update-face         ((t (:inherit smooth-white-salient))))
    '(elfeed-search-title-face               ((t (:inherit smooth-white-default))))
-   '(elfeed-search-tag-face                 ((t (:inherit smooth-white-faded))))
+   '(elfeed-search-tag-face                 ((t (:foreground "#62543E"))))
    '(elfeed-search-unread-count-face        ((t (:inherit smooth-white-strong))))
    '(elfeed-search-unread-title-face        ((t (:inherit smooth-white-strong))))
 
@@ -727,7 +752,7 @@ background color that is barely perceptible."
 
    ;; --- Nix ----------------------------------------------------
    `(nix-attribute-face ((t (:foreground ,smooth-white-foreground :bold nil))))
-   
+
    ;; --- Sh ----------------------------------------------------
    `(sh-quoted-exec ((t (:foreground ,smooth-white-salient-alt))))
    ;;
