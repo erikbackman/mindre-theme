@@ -27,6 +27,14 @@
   "Default background color"
   :type 'color :group 'smooth-white)
 
+(defcustom smooth-white-background-dark-1 "#2E3440"
+  "Default dark background"
+  :type 'color :group 'smooth-white)
+
+(defcustom smooth-white-background-dark-2 "#4C566A"
+  "Lighter dark background "
+  :type 'color :group 'smooth-white)
+
 (defcustom smooth-white-foreground "#37474F"
   "Default foreground color"
   :type 'color :group 'smooth-white)
@@ -43,7 +51,6 @@
   "Default yellow color"
   :type 'color :group 'smooth-white)
 
-;; TODO Fix ok, warning, error
 (defcustom smooth-white-ok "#966544"
   "Default yellow color"
   :type 'color :group 'smooth-white)
@@ -68,8 +75,12 @@
   "Salient color is used for information that are important."
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-salient-alt "#9E358F"
+(defcustom smooth-white-salient-alt "#00625D"
   "Alt Salient color is used for information that are important"
+  :type 'color :group 'smooth-white)
+
+(defcustom smooth-white-verbatim "#62543E"
+  "Color used for things like strings."
   :type 'color :group 'smooth-white)
 
 (defcustom smooth-white-strong "#81A1C1"
@@ -231,17 +242,17 @@ background color that is barely perceptible."
    ;; --- Header & mode line -------------------------------------------
    
    `(mode-line ((t ( :foreground "white"
-		     :background "#2E3440"
-                     :box (:line-width 1 :color "#2E3440" :style nil) ))))
+		     :background ,smooth-white-background-dark-1
+                     :box (:line-width 1 :color ,smooth-white-background-dark-2 :style nil) ))))
 
    `(mode-line-highlight ((t (:inherit nil :background nil
 				       :box nil))))
    `(mode-line-buffer-id ((t (:weight regular :background nil))))
    `(mode-line-emphasis  ((t (:weight regular :background nil))))
    			   
-   `(mode-line-inactive ((t ( :foreground ,smooth-white-background
-			      :background "#4C566A"
-			      :box (:line-width 1 :color "#4C566A" :style nil) ))))
+   `(mode-line-inactive ((t ( :foreground "white"
+			      :background ,smooth-white-background-dark-2
+			      :box (:line-width 1 :color ,smooth-white-background-dark-2 :style nil) ))))
 
    `(header-line ((t (:foreground ,smooth-white-foreground
 				  :background ,smooth-white-subtle
@@ -318,7 +329,7 @@ background color that is barely perceptible."
    ;; --- Font lock ----------------------------------------------------
    '(font-lock-comment-face        ((t (:inherit smooth-white-faded))))
    '(font-lock-doc-face            ((t (:inherit smooth-white-faded))))
-   `(font-lock-string-face         ((t (:foreground "#62543E"))))
+   `(font-lock-string-face         ((t (:foreground ,smooth-white-verbatim))))
    '(font-lock-constant-face       ((t (:inherit smooth-white-strong))))
    '(font-lock-warning-face        ((t (:inherit smooth-white-popout))))
    '(font-lock-function-name-face  ((t (:inherit smooth-white-strong))))
@@ -708,7 +719,6 @@ background color that is barely perceptible."
    '(markdown-table-face                   ((t (:inherit smooth-white-default))))
    '(markdown-url-face                     ((t (:inherit smooth-white-salient))))
 
-
    ;; --- Terminal ----------------------------------------------------
    '(term-bold                             ((t (:inherit smooth-white-strong))))
    '(term-color-black                      ((t (:inherit default))))
@@ -727,8 +737,8 @@ background color that is barely perceptible."
 
    ;; --- Haskell ----------------------------------------------------
    '(haskell-font-lock-keywords ((t (:foreground "#7b71a9"))))
-   '(haskell-constructor-face   ((t (:foreground "#00625D"))))
-   '(font-lock-type-face        ((t (:foreground "#42A5F5"))))
+   `(haskell-constructor-face   ((t (:foreground ,smooth-white-salient-alt))))
+   `(font-lock-type-face        ((t (:foreground ,smooth-white-salient))))
    `(haskell-pragma-face        ((t (:foreground ,smooth-white-highlight))))
    `(haskell-operator-face      ((t (:inherit smooth-white-default))))
 
