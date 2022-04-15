@@ -72,7 +72,7 @@
   "Alt Salient color is used for information that are important"
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-strong "#1F2E36"
+(defcustom smooth-white-strong "#273237"
   "Strong color is used for information of a structural nature."
   :type 'color :group 'smooth-white)
 
@@ -249,7 +249,7 @@ background color that is barely perceptible."
 				  :box nil))))
 
    ;; --- Structural ---------------------------------------------------
-   '(bold                        ((t (:inherit smooth-white-strong :weight bold))))
+   '(bold                        ((t (:inherit smooth-white-strong :weight semibold))))
    '(italic                      ((t (:slant italic))))
    '(italic                      ((t (:inherit smooth-white-faded))))
    '(bold-italic                 ((t (:inherit smooth-white-strong))))
@@ -527,12 +527,12 @@ background color that is barely perceptible."
    '(org-document-info                       ((t (:inherit smooth-white-faded))))
    '(org-document-info-keyword               ((t (:inherit (smooth-white-faded fixed-pitch)))))
    '(org-document-title                      ((t (:inherit smooth-white-faded))))
-   '(org-done                                ((t (:inherit smooth-white-default))))
+   '(org-done                                ((t (:inherit smooth-white-faded))))
    '(org-drawer                              ((t (:inherit (smooth-white-faded fixed-pitch)))))
    '(org-ellipsis                            ((t (:inherit smooth-white-faded))))
    '(org-footnote                            ((t (:inherit smooth-white-faded))))
    '(org-formula                             ((t (:inherit smooth-white-faded))))
-   '(org-headline-done                       ((t (:inherit smooth-white-faded))))
+   '(org-headline-done                       ((t (:foreground "#6a7276"))))
    '(org-hide                                ((t (:inherit smooth-white-subtle-i))))
    '(org-indent                              ((t (:inherit smooth-white-subtle-i))))
    '(org-latex-and-related                   ((t (:inherit smooth-white-faded))))
