@@ -420,6 +420,9 @@ background color that is barely perceptible."
    '(epa-validity-medium            ((t (:inherit smooth-white-default))))
    '(epa-validity-low               ((t (:inherit smooth-white-faded))))
 
+   ;; --- Eglot --------------------------------------------------------
+   '(eglot-mode-line                ((t (:foreground "white"))))
+   '(eglot-mode-line-none-face      ((t (:foreground "white"))))
    ;; --- Popup --------------------------------------------------------
 
    '(popup-face                       ((t (:inherit highlight))))
