@@ -48,11 +48,11 @@
   "Default yellow color"
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-warning "#966544"
+(defcustom smooth-white-warning "#EBCB8B"
   "Default yellow color"
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-error "#966544"
+(defcustom smooth-white-error "#BF616A"
   "Default yellow color"
   :type 'color :group 'smooth-white)
 
@@ -263,7 +263,7 @@ background color that is barely perceptible."
    ;; --- Semantic -----------------------------------------------------
    '(shadow                        ((t (:inherit smooth-white-faded))))
    '(success                       ((t (:inherit smooth-white-salient))))
-   '(warning                       ((t (:inherit smooth-white-popout))))
+   '(warning                       ((t (:inherit smooth-white-warning))))
    '(error                         ((t (:inherit smooth-white-critical))))
    '(match                         ((t (:inherit smooth-white-popout))))
 
@@ -423,8 +423,9 @@ background color that is barely perceptible."
    ;; --- Eglot --------------------------------------------------------
    '(eglot-mode-line                ((t (:foreground "white"))))
    '(eglot-mode-line-none-face      ((t (:foreground "white"))))
+   '(eglot-highlight-symbol-face    ((t (:inherit underline))))
+   
    ;; --- Popup --------------------------------------------------------
-
    '(popup-face                       ((t (:inherit highlight))))
    '(popup-isearch-match              ((t (:inherit smooth-white-popout))))
    '(popup-menu-face                  ((t (:inherit smooth-white-subtle))))
