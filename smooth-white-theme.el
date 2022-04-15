@@ -72,7 +72,7 @@
   "Alt Salient color is used for information that are important"
   :type 'color :group 'smooth-white)
 
-(defcustom smooth-white-strong "#273237"
+(defcustom smooth-white-strong "#81A1C1"
   "Strong color is used for information of a structural nature."
   :type 'color :group 'smooth-white)
 
