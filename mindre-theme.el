@@ -267,8 +267,9 @@ background color that is barely perceptible."
  '(fringe                      ((t (:inherit (mindre-faded)))))
  '(hl-line                     ((t (:inherit highlight))))
  '(link                        ((t (:inherit mindre-salient))))
- '(fixed-pitch                 ((t (:inherit default))))
- '(fixed-pitch-serif           ((t (:inherit default))))
+ ;; TODO: Add option for turning mixed-fonts on/off
+ ;'(fixed-pitch                 ((t (:inherit default))))
+ ;'(fixed-pitch-serif           ((t (:inherit default))))
 
  ;; --- Semantic -----------------------------------------------------
  '(shadow                        ((t (:inherit mindre-faded))))
