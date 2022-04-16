@@ -7,8 +7,8 @@ Mindre (which is the Swedish word for "less") tries to strike a good balance bet
 **This is very much a work in progress and things may change drastically at any time.**
 
 # Manual installation
-1. Copy mindre-theme.el to a path in your custom-theme-load-path.
-2. Add a `(load-theme 'mindre)` to your init file (either ~/.emacs or ~/.emacs.d/init.el).
+1. Copy mindre-theme.el to a path in your `custom-theme-load-path`.
+2. Add a `(mindre)` to your init file (either ~/.emacs or ~/.emacs.d/init.el).
 # Manual installation (use-package)
 1. Copy mindre-theme.el to `~/.emacs.d/themes`
 2. Add the following snippet to your init file
