@@ -1,5 +1,7 @@
 ![](../assets/mindre-logo.png)
 
-I wanted a theme that looks close to ink on paper and this is my attempt at creating an almost monochrome theme with a splash of color but without becoming a color-soup.
+When putting down ideas or solving problems on paper we seldom use a lot of colors, so why do we need our editor to look like a christmas tree?
 
-**Note that this is very much a work in progress and things may change drastically at any point until I got something I'm happy with**
+Mindre (which is the Swedish word for "less") tries to strike a good balance between usability and minimalism by almost being a monochrome theme but with a splash of color.
+
+**This is very much a work in progress and things may change drastically at any time.**
