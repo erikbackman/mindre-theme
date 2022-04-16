@@ -171,6 +171,10 @@ background color that is barely perceptible."
   "Default block face"
   :group nil)
 
+(defface mindre-verbatim nil
+  "Face used for things like strings"
+  :group nil)
+
 (defvar mindre-after-load-hook nil
   "Hook run after theme has loaded.")
 
@@ -236,7 +240,8 @@ background color that is barely perceptible."
    `(mindre-critical-i ((t (:foreground ,mindre-critical
 					      ;; :background ,mindre-background
 					      ))))
-
+   `(mindre-verbatim ((t (:foreground ,mindre-verbatim))))
+   
    `(mindre-block ((t (:background "#f2f2f2"
 					 :foreground ,mindre-foreground))))
    ;; --- Header & mode line -------------------------------------------
