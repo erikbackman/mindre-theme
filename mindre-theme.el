@@ -295,7 +295,7 @@ background color that is barely perceptible."
  '(secondary-selection           ((t (:inherit mindre-subtle))))
  '(completions-annotations       ((t (:inherit mindre-faded))))
  '(completions-common-part       ((t (:inherit mindre-faded))))
- '(completions-first-difference  ((t (:inherit default))))
+ '(completions-first-difference  ((t (:inherit mindre-strong bold))))
  '(tooltip                       ((t (:inherit mindre-subtle))))
  '(read-multiple-choice-face     ((t (:inherit mindre-strong))))
  '(nobreak-hyphen                ((t (:inherit mindre-popout))))
@@ -501,7 +501,6 @@ background color that is barely perceptible."
  '(orderless-match-face-1         ((t (:inherit (mindre-strong bold)))))
  '(orderless-match-face-2         ((t (:inherit (mindre-strong bold)))))
  '(orderless-match-face-3         ((t (:inherit (mindre-strong bold)))))
- '(orderless-filter)
 
  ;; --- Fly spell ----------------------------------------------------
  '(flyspell-duplicate             ((t (:inherit mindre-popout))))
