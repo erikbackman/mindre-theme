@@ -677,12 +677,6 @@ background color that is barely perceptible."
  `(ivy-minibuffer-match-face-3   ((t (:inherit mindre-popout))))
  `(ivy-minibuffer-match-face-4   ((t (:inherit mindre-popout))))
 
- ;; --- Orderless  --------------------------------------------------------
- `(orderless-match-face-0 ((t (:inherit mindre-popout))))
- `(orderless-match-face-1 ((t (:inherit mindre-popout))))
- `(orderless-match-face-2 ((t (:inherit mindre-popout))))
- `(orderless-match-face-3 ((t (:inherit mindre-popout))))
-
  ;; --- Deft --------------------------------------------------------
  '(deft-filter-string-error-face         ((t (:inherit mindre-popout))))
  '(deft-filter-string-face               ((t (:inherit mindre-default))))
