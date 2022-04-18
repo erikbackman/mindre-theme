@@ -436,11 +436,16 @@ background color that is barely perceptible."
  '(epa-validity-medium            ((t (:inherit mindre-default))))
  '(epa-validity-low               ((t (:inherit mindre-faded))))
 
+ ;; --- Dired --------------------------------------------------------
+ '(dired-directory                ((t (:inherit (mindre-strong)))))
+ '(dired-symlink                  ((t (:slant italic))))
+; '(dired-mark                     ((t (:foreground "#BF616A"))))
+ '(dired-marked                   ((t (:foreground "#BF616A"))))
+ 
  ;; --- Eglot --------------------------------------------------------
  '(eglot-mode-line                ((t (:foreground "white"))))
  '(eglot-mode-line-none-face      ((t (:foreground "white"))))
  '(eglot-highlight-symbol-face    ((t (:inherit underline))))
- 
 
  ;; --- Popup --------------------------------------------------------
  '(popup-face                       ((t (:inherit highlight))))
