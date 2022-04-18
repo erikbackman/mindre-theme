@@ -71,7 +71,7 @@
   "Faded face is for information that are less important."
   :type 'color :group 'mindre)
 
-(defcustom mindre-salient "#673AB7"
+(defcustom mindre-salient "#5e429f"
   "Salient color is used for information that are important."
   :type 'color :group 'mindre)
 
@@ -79,7 +79,7 @@
   "Alt Salient color is used for information that are important"
   :type 'color :group 'mindre)
 
-(defcustom mindre-verbatim "#62543E"
+(defcustom mindre-verbatim "#54433a"
   "Color used for things like strings."
   :type 'color :group 'mindre)
 
@@ -131,6 +131,10 @@ directory, etc."
 To suggest the information is of the same nature but important,
 the face uses a different hue with approximately the same
 intensity as the default face. This is typically used for links."
+  :group nil)
+
+(defface mindre-salient-alt nil
+  "Alternative Salient face"
   :group nil)
 
 (defface mindre-salient-i nil
@@ -216,6 +220,7 @@ background color that is barely perceptible."
 
 
  `(mindre-salient ((t (:foreground ,mindre-salient))))
+ `(mindre-salient-alt ((t (:foreground ,mindre-salient-alt))))
 
  `(mindre-salient-i ((t (:foreground ,mindre-background
 				     :background ,mindre-salient))))
@@ -335,7 +340,7 @@ background color that is barely perceptible."
  '(font-lock-function-name-face  ((t (:inherit mindre-strong))))
  `(font-lock-variable-name-face  ((t (:inherit mindre-strong))))
  '(font-lock-builtin-face        ((t (:inherit mindre-salient))))
- '(font-lock-type-face           ((t (:inherit mindre-salient))))
+ '(font-lock-type-face           ((t (:inherit (mindre-salient-alt)))))
  '(font-lock-keyword-face        ((t (:inherit mindre-salient))))
 
  ;; --- Custom edit --------------------------------------------------
@@ -496,6 +501,7 @@ background color that is barely perceptible."
  '(orderless-match-face-1         ((t (:inherit (mindre-strong bold)))))
  '(orderless-match-face-2         ((t (:inherit (mindre-strong bold)))))
  '(orderless-match-face-3         ((t (:inherit (mindre-strong bold)))))
+ '(orderless-filter)
 
  ;; --- Fly spell ----------------------------------------------------
  '(flyspell-duplicate             ((t (:inherit mindre-popout))))
@@ -537,9 +543,9 @@ background color that is barely perceptible."
  '(org-block                               ((t (:inherit (mindre-block fixed-pitch)))))
  '(org-block-begin-line                    ((t (:inherit (mindre-faded fixed-pitch)))))
  '(org-block-end-line                      ((t (:inherit (mindre-faded fixed-pitch)))))
- '(org-checkbox                            ((t (:inherit (mindre-faded fixed-pitch)))))
+ '(org-checkbox                            ((t (:inherit (mindre-default fixed-pitch)))))
  '(org-checkbox-statistics-done            ((t (:inherit (mindre-faded fixed-pitch)))))
- '(org-checkbox-statistics-todo            ((t (:inherit (mindre-faded fixed-pitch)))))
+ '(org-checkbox-statistics-todo            ((t (:inherit (mindre-default fixed-pitch)))))
  '(org-clock-overlay                       ((t (:inherit mindre-faded))))
  '(org-code                                ((t (:inherit (mindre-faded fixed-pitch)))))
  '(org-column                              ((t (:inherit mindre-faded))))
@@ -549,7 +555,7 @@ background color that is barely perceptible."
  '(org-default                             ((t (:inherit mindre-faded))))
  '(org-document-info                       ((t (:inherit mindre-faded))))
  '(org-document-info-keyword               ((t (:inherit (mindre-faded fixed-pitch)))))
- '(org-document-title                      ((t (:inherit mindre-faded))))
+ '(org-document-title                      ((t (:inherit mindre-strong))))
  '(org-done                                ((t (:inherit mindre-faded))))
  '(org-drawer                              ((t (:inherit (mindre-faded fixed-pitch)))))
  '(org-ellipsis                            ((t (:inherit mindre-faded))))
