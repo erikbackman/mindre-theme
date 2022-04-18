@@ -32,7 +32,7 @@
   :type 'color :group 'mindre)
 
 (defcustom mindre-background-dark-2 "#4C566A"
-  "Lighter dark background "
+  "Lighter dark background"
   :type 'color :group 'mindre)
 
 (defcustom mindre-foreground "#37474F"
@@ -47,22 +47,6 @@
   "Lighter highlight color used to highlight part of the screen."
   :type 'color :group 'mindre)
 
-(defcustom mindre-yellow "#966544"
-  "Default yellow color"
-  :type 'color :group 'mindre)
-
-(defcustom mindre-ok "#966544"
-  "Default yellow color"
-  :type 'color :group 'mindre)
-
-(defcustom mindre-warning "#EBCB8B"
-  "Default yellow color"
-  :type 'color :group 'mindre)
-
-(defcustom mindre-error "#BF616A"
-  "Default yellow color"
-  :type 'color :group 'mindre)
-
 (defcustom mindre-subtle "#ECEFF1"
   "Subtle color is used to suggest a physical area on the screen."
   :type 'color :group 'mindre)
@@ -71,12 +55,23 @@
   "Faded face is for information that are less important."
   :type 'color :group 'mindre)
 
+;; There are three colors used to make certain language constructs stand out
+;; enough for your eyes to notice them without being distracting.
+;; The colors (in order of importance) are:
+;; 1. mindre-salient
+;;    Preferably used for language constructs that acts as the beginning
+;;    or end of a clause, such as if/then/else, when, where etc.
+;; 2. mindre-salient-alt (types)
+;; 3. mindre-verbatim (strings)
+
 (defcustom mindre-salient "#5e429f"
-  "Salient color is used for information that are important."
+  "Salient color is used for information that are important
+Commonly used for keywords."
   :type 'color :group 'mindre)
 
 (defcustom mindre-salient-alt "#00625D"
-  "Alt Salient color is used for information that are important"
+  "Alt Salient color is used for information that are important
+Commonly used for types"
   :type 'color :group 'mindre)
 
 (defcustom mindre-verbatim "#54433a"
@@ -89,6 +84,19 @@
 
 (defcustom mindre-popout "#000"
   "Popout colour is used for information that needs attention."
+  :type 'color :group 'mindre)
+
+;; TODO: Pick a better color for mindre-ok
+(defcustom mindre-ok "#966544"
+  "Default yellow color"
+  :type 'color :group 'mindre)
+
+(defcustom mindre-warning "#EBCB8B"
+  "Default yellow color"
+  :type 'color :group 'mindre)
+
+(defcustom mindre-error "#BF616A"
+  "Default yellow color"
   :type 'color :group 'mindre)
 
 (defcustom mindre-critical "#BF616A"
@@ -116,21 +124,14 @@ attention through the popout effect."
   "Popout face inversed." :group nil)
 
 (defface mindre-strong nil
-  "Strong face is used for information of a structural nature.
-It has to be the same color as the default color and only the
-weight differs by one level (e.g., light/regular or
-regular/bold). IT is generally used for titles, keywords,
-directory, etc."
+  "Strong face is used for information of a structural nature."
   :group nil)
 
 (defface mindre-strong-i nil
   "Strong face inversed." :group nil)
 
 (defface mindre-salient nil
-  "Salient face is used for information that are important.
-To suggest the information is of the same nature but important,
-the face uses a different hue with approximately the same
-intensity as the default face. This is typically used for links."
+  "Salient face is used for information that are important."
   :group nil)
 
 (defface mindre-salient-alt nil
@@ -141,11 +142,7 @@ intensity as the default face. This is typically used for links."
   "Strong face inversed." :group nil)
 
 (defface mindre-faded nil
-  "Faded face is for information that are less important.
-It is made by using the same hue as the default but with a lesser
-intensity than the default. It can be used for comments,
-secondary information and also replace italic (which is generally
-abused anyway)."
+  "Faded face is for information that are less important."
   :group nil)
 
 (defface mindre-faded-i nil
@@ -756,6 +753,7 @@ background color that is barely perceptible."
  '(markdown-url-face                     ((t (:inherit mindre-salient))))
 
  ;; --- Terminal ----------------------------------------------------
+ ;; TODO: Pick new colors
  '(term-bold                             ((t (:inherit mindre-strong))))
  '(term-color-black                      ((t (:inherit default))))
  '(term-color-blue                       ((t (:foreground "#42A5F5"
@@ -772,7 +770,6 @@ background color that is barely perceptible."
 							  :background "#FFF9C4"))))
 
  ;; --- Haskell ----------------------------------------------------
- '(haskell-font-lock-keywords ((t (:foreground "#7b71a9"))))
  `(haskell-constructor-face   ((t (:foreground ,mindre-salient-alt))))
  `(font-lock-type-face        ((t (:foreground ,mindre-salient))))
  `(haskell-pragma-face        ((t (:foreground ,mindre-highlight))))
@@ -785,7 +782,6 @@ background color that is barely perceptible."
  `(sh-quoted-exec ((t (:foreground ,mindre-salient-alt))))
  ;;
  )
-
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
