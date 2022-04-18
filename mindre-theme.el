@@ -753,21 +753,21 @@ background color that is barely perceptible."
  '(markdown-url-face                     ((t (:inherit mindre-salient))))
 
  ;; --- Terminal ----------------------------------------------------
- ;; TODO: Pick new colors
+ ;; TODO: Not yet decided on these
  '(term-bold                             ((t (:inherit mindre-strong))))
  '(term-color-black                      ((t (:inherit default))))
- '(term-color-blue                       ((t (:foreground "#42A5F5"
-							  :background "#BBDEFB"))))
- '(term-color-cyan                       ((t (:foreground "#26C6DA"
-							  :background "#B2EBF2"))))
- '(term-color-green                      ((t (:foreground "#66BB6A"
-							  :background "#C8E6C9"))))
- '(term-color-magenta                    ((t (:foreground "#AB47BC"
-							  :background "#E1BEE7"))))
- '(term-color-red                        ((t (:foreground "#EF5350"
-							  :background "#FFCDD2"))))
- '(term-color-yellow                     ((t (:foreground "#966544"
-							  :background "#FFF9C4"))))
+ '(term-color-blue                       ((t (:foreground "#0b58a0"
+							  :background "#0b58a0"))))
+ '(term-color-cyan                       ((t (:foreground "#006678"
+							  :background "#006678"))))
+ '(term-color-green                      ((t (:foreground "#00625D"
+							  :background "#00625D"))))
+ '(term-color-magenta                    ((t (:foreground "#5e429f"
+							  :background "#5e429f"))))
+ '(term-color-red                        ((t (:foreground "#C74B50"
+							  :background "#C74B50"))))
+ '(term-color-yellow                     ((t (:foreground "#F8B400"
+							  :background "#F8B400"))))
 
  ;; --- Haskell ----------------------------------------------------
  `(haskell-constructor-face   ((t (:foreground ,mindre-salient-alt))))
