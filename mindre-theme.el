@@ -238,7 +238,7 @@ background color that is barely perceptible."
 				      ;; :background ,mindre-background
 				      ))))
  `(mindre-verbatim ((t (:foreground ,mindre-verbatim))))
- 
+
  `(mindre-block ((t (:background "#f2f2f2"
 				 :foreground ,mindre-foreground))))
  ;; --- Header & mode line -------------------------------------------
@@ -441,7 +441,7 @@ background color that is barely perceptible."
  '(dired-symlink                  ((t (:slant italic))))
 ; '(dired-mark                     ((t (:foreground "#BF616A"))))
  '(dired-marked                   ((t (:foreground "#BF616A"))))
- 
+
  ;; --- Eglot --------------------------------------------------------
  '(eglot-mode-line                ((t (:foreground "white"))))
  '(eglot-mode-line-none-face      ((t (:foreground "white"))))
@@ -684,6 +684,20 @@ background color that is barely perceptible."
  `(ivy-minibuffer-match-face-2   ((t (:inherit mindre-popout))))
  `(ivy-minibuffer-match-face-3   ((t (:inherit mindre-popout))))
  `(ivy-minibuffer-match-face-4   ((t (:inherit mindre-popout))))
+
+ ;; --- Rainbow delimeters ------------------------------------------
+ '(rainbow-delimiters-depth-1-face  ((t (:foreground "#b9bbbc"))))
+ '(rainbow-delimiters-depth-2-face  ((t (:foreground "#a2a4a6"))))
+ '(rainbow-delimiters-depth-3-face  ((t (:foreground "#8b8e90"))))
+ '(rainbow-delimiters-depth-4-face  ((t (:foreground "#737779"))))
+ '(rainbow-delimiters-depth-5-face  ((t (:foreground "#5c6063"))))
+ '(rainbow-delimiters-depth-6-face  ((t (:foreground "#45494d"))))
+ '(rainbow-delimiters-depth-7-face  ((t (:foreground "#2d3336"))))
+ '(rainbow-delimiters-depth-8-face  ((t (:inherit mindre-strong))))
+ '(rainbow-delimiters-depth-9-face  ((t (:inherit mindre-strong))))
+ '(rainbow-delimiters-depth-10-face ((t (:inherit mindre-strong))))
+ '(rainbow-delimiters-depth-11-face ((t (:inherit mindre-strong))))
+ '(rainbow-delimiters-depth-12-face ((t (:inherit mindre-strong))))
 
  ;; --- Deft --------------------------------------------------------
  '(deft-filter-string-error-face         ((t (:inherit mindre-popout))))
