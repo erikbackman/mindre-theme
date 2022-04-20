@@ -139,7 +139,8 @@ attention through the popout effect."
   :group nil)
 
 (defface mindre-salient-i nil
-  "Strong face inversed." :group nil)
+  "Strong face inversed."
+  :group nil)
 
 (defface mindre-faded nil
   "Faded face is for information that are less important."
@@ -376,6 +377,9 @@ background color that is barely perceptible."
  ;; --- Corfu  --------------------------------------------------------
  `(corfu-current                        ((t (:inherit highlight))))
 
+ ;; --- Vertico  --------------------------------------------------------
+ `(vertico-current                      ((t (:inherit highlight))))
+ 
  ;; --- Buttons ------------------------------------------------------
  `(custom-button
    ((t (:foreground ,mindre-faded
