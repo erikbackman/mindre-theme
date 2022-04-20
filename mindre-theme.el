@@ -426,8 +426,8 @@ background color that is barely perceptible."
  ;; --- Dired --------------------------------------------------------
  '(dired-directory                ((t (:inherit (mindre-strong)))))
  '(dired-symlink                  ((t (:slant italic))))
-; '(dired-mark                     ((t (:foreground "#BF616A"))))
- '(dired-marked                   ((t (:foreground "#BF616A"))))
+ '(dired-marked                   ((t (:inherit mindre-salient))))
+ `(dired-broken-symlink           ((t (:slant italic :strike-through "#BF616A"))))
 
  ;; --- Eglot --------------------------------------------------------
  '(eglot-mode-line                ((t (:foreground "white"))))
