@@ -1,7 +1,7 @@
-;;; mindre-theme.el --- mindre -*- lexical-binding: t -*-
+;;; mindre-theme.el --- Minimal, light theme -*- lexical-binding: t -*-
 ;; ---------------------------------------------------------------------
 ;; GNU Emacs / mindre
-;; Copyright (C) 2022 - ebn
+;; Copyright (C) 2022 - Erik Bäckman
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -16,6 +16,27 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ;; ---------------------------------------------------------------------
+
+;;; Commentary:
+;;
+;; While studying mathematics I realized how much I appreciated the artistic
+;; aspect of solving problems with pen an paper and so I wanted an Emacs theme
+;; that had a similar look.
+;;
+;; Mindre-theme should be be mostly monochrome with a few muted colors where
+;; it makes sense.
+;;
+;; Three colors are used to make certain language constructs stand out
+;; enough for your eyes to notice them without being distracting.
+;; The colors (in order of importance) are:
+;; 1. mindre-salient
+;;    Preferably used for language constructs that acts as the beginning
+;;    or end of a clause, such as if/then/else, when, where etc.
+;; 2. mindre-salient-alt (types)
+;; 3. mindre-verbatim (strings)
+
+
+;;; Code:
 
 (deftheme mindre
   "mindre Theme")
@@ -54,15 +75,6 @@
 (defcustom mindre-faded "#B0BEC5"
   "Faded face is for information that are less important."
   :type 'color :group 'mindre)
-
-;; There are three colors used to make certain language constructs stand out
-;; enough for your eyes to notice them without being distracting.
-;; The colors (in order of importance) are:
-;; 1. mindre-salient
-;;    Preferably used for language constructs that acts as the beginning
-;;    or end of a clause, such as if/then/else, when, where etc.
-;; 2. mindre-salient-alt (types)
-;; 3. mindre-verbatim (strings)
 
 (defcustom mindre-salient "#5e429f"
   "Salient color is used for information that are important
@@ -174,8 +186,7 @@ Commonly used for types"
 
  ;; --- Base ---------------------------------------------------------
  `(cursor ((t (:foreground ,mindre-background
-			   :background ,mindre-foreground))
-           ))
+			   :background ,mindre-foreground))))
 
  `(default ((t (:background ,mindre-background
 	  		    :foreground ,mindre-foreground))))
