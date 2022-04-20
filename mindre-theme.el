@@ -82,10 +82,6 @@ Commonly used for types"
   "Strong color is used for information of a structural nature."
   :type 'color :group 'mindre)
 
-(defcustom mindre-popout "#000"
-  "Popout colour is used for information that needs attention."
-  :type 'color :group 'mindre)
-
 ;; TODO: Pick a better color for mindre-ok
 (defcustom mindre-ok "#966544"
   "Default yellow color"
@@ -112,16 +108,6 @@ color, typically a shade of red. It must be used scarcely."
 
 (defface mindre-critical-i nil
   "Critical face inversed." :group nil)
-
-(defface mindre-popout nil
-  "Popout face is used for information that needs attention.
-To achieve such effect, the hue of the face has to be
-sufficiently different from other faces such that it attracts
-attention through the popout effect."
-  :group nil)
-
-(defface mindre-popout-i nil
-  "Popout face inversed." :group nil)
 
 (defface mindre-strong nil
   "Strong face is used for information of a structural nature."
@@ -229,9 +215,6 @@ background color that is barely perceptible."
 
  `(mindre-popout ((t (:foreground ,mindre-popout))))
 
- `(mindre-popout-i ((t (:foreground ,mindre-background
-				    :background ,mindre-popout))))
-
  `(mindre-critical ((t (:foreground ,mindre-background
 				    :background ,mindre-critical))))
 
@@ -279,7 +262,7 @@ background color that is barely perceptible."
  '(success                       ((t (:inherit mindre-salient))))
  '(warning                       ((t (:inherit mindre-warning))))
  '(error                         ((t (:inherit mindre-critical))))
- '(match                         ((t (:inherit mindre-popout))))
+ '(match                         ((t (:inherit mindre-strong))))
 
  ;; --- General ------------------------------------------------------
  '(buffer-menu-buffer            ((t (:inherit mindre-strong))))
@@ -296,8 +279,8 @@ background color that is barely perceptible."
  '(completions-first-difference  ((t (:inherit mindre-strong bold))))
  '(tooltip                       ((t (:inherit mindre-subtle))))
  '(read-multiple-choice-face     ((t (:inherit mindre-strong))))
- '(nobreak-hyphen                ((t (:inherit mindre-popout))))
- '(nobreak-space                 ((t (:inherit mindre-popout))))
+ '(nobreak-hyphen                ((t (:inherit mindre-strong))))
+ '(nobreak-space                 ((t (:inherit mindre-strong))))
  '(help-argument-name            ((t (:inherit mindre-faded))))
  '(tabulated-list-fake-header    ((t (:inherit mindre-strong))))
  '(tool-bar                      ((t (:inherit mindre-faded-i))))
@@ -334,7 +317,7 @@ background color that is barely perceptible."
  '(font-lock-doc-face            ((t (:inherit mindre-faded))))
  `(font-lock-string-face         ((t (:foreground ,mindre-verbatim))))
  '(font-lock-constant-face       ((t (:inherit mindre-strong))))
- '(font-lock-warning-face        ((t (:inherit mindre-popout))))
+ `(font-lock-warning-face        ((t (:foreground ,mindre-warning))))
  '(font-lock-function-name-face  ((t (:inherit mindre-strong))))
  `(font-lock-variable-name-face  ((t (:inherit mindre-strong))))
  '(font-lock-builtin-face        ((t (:inherit mindre-salient))))
@@ -354,7 +337,7 @@ background color that is barely perceptible."
  '(custom-modified               ((t (:inherit mindre-salient))))
  '(custom-face-tag               ((t (:inherit mindre-strong))))
  '(custom-variable-tag           ((t (:inherit mindre-strong))))
- '(custom-invalid                ((t (:inherit mindre-popout))))
+ '(custom-invalid                ((t (:inherit mindre-strong))))
  '(custom-visibility             ((t (:inherit mindre-salient))))
  '(custom-state                  ((t (:inherit mindre-salient))))
  '(custom-link                   ((t (:inherit mindre-salient))))
@@ -434,7 +417,7 @@ background color that is barely perceptible."
  '(epa-field-body                 ((t (:inherit mindre-default))))
  '(epa-field-name                 ((t (:inherit mindre-strong))))
  '(epa-mark                       ((t (:inherit mindre-salient))))
- '(epa-string                     ((t (:inherit mindre-popout))))
+ '(epa-string                     ((t (:inherit mindre-strong))))
  '(epa-validity-disabled          ((t (:inherit mindre-faded))))
  '(epa-validity-high              ((t (:inherit mindre-strong))))
  '(epa-validity-medium            ((t (:inherit mindre-default))))
@@ -453,7 +436,7 @@ background color that is barely perceptible."
 
  ;; --- Popup --------------------------------------------------------
  '(popup-face                       ((t (:inherit highlight))))
- '(popup-isearch-match              ((t (:inherit mindre-popout))))
+ '(popup-isearch-match              ((t (:inherit mindre-strong))))
  '(popup-menu-face                  ((t (:inherit mindre-subtle))))
  '(popup-menu-mouse-face            ((t (:inherit mindre-faded-i))))
  '(popup-menu-selection-face        ((t (:inherit mindre-salient-i))))
@@ -461,18 +444,18 @@ background color that is barely perceptible."
  '(popup-scroll-bar-background-face ((t (:inherit mindre-subtle))))
  '(popup-scroll-bar-foreground-face ((t (:inherit mindre-subtle))))
  '(popup-summary-face               ((t (:inherit mindre-faded))))
- '(popup-tip-face                   ((t (:inherit mindre-popout-i))))
+ '(popup-tip-face                   ((t (:inherit mindre-strong-i))))
 
  ;; --- Diff ---------------------------------------------------------
  '(diff-header                    ((t (:inherit mindre-faded))))
  '(diff-file-header               ((t (:inherit mindre-strong))))
  '(diff-context                   ((t (:inherit mindre-default))))
  '(diff-removed                   ((t (:inherit mindre-faded))))
- '(diff-changed                   ((t (:inherit mindre-popout))))
+ '(diff-changed                   ((t (:inherit mindre-strong))))
  '(diff-added                     ((t (:inherit mindre-salient))))
  '(diff-refine-added              ((t (:inherit (mindre-salient
                                                  mindre-strong)))))
- '(diff-refine-changed            ((t (:inherit mindre-popout))))
+ '(diff-refine-changed            ((t (:inherit mindre-strong))))
  '(diff-refine-removed            ((t (:inherit mindre-faded
 						:strike-through t))))
 
@@ -489,7 +472,7 @@ background color that is barely perceptible."
  '(message-header-subject         ((t (:inherit mindre-salient))))
  '(message-header-to              ((t (:inherit mindre-salient))))
  '(message-header-xheader         ((t (:inherit mindre-default))))
- '(message-mml                    ((t (:inherit mindre-popout))))
+ '(message-mml                    ((t (:inherit mindre-strong))))
  '(message-separator              ((t (:inherit mindre-faded))))
 
 
@@ -510,8 +493,8 @@ background color that is barely perceptible."
  '(orderless-match-face-3         ((t (:inherit (mindre-strong bold)))))
 
  ;; --- Fly spell ----------------------------------------------------
- '(flyspell-duplicate             ((t (:inherit mindre-popout))))
- '(flyspell-incorrect             ((t (:inherit mindre-popout
+ '(flyspell-duplicate             ((t (:inherit mindre-strong))))
+ '(flyspell-incorrect             ((t (:inherit mindre-strong
 						:underline "#BF616A"))))
 
  ;; --- Fly make ----------------------------------------------------
@@ -594,15 +577,15 @@ background color that is barely perceptible."
  '(org-sexp-date                           ((t (:inherit mindre-faded))))
  '(org-special-keyword                     ((t (:inherit (mindre-faded fixed-pitch)))))
  '(org-table                               ((t (:inherit (mindre-default fixed-pitch)))))
- '(org-tag                                 ((t (:inherit mindre-popout))))
+ '(org-tag                                 ((t (:inherit mindre-strong))))
  '(org-tag-group                           ((t (:inherit mindre-faded))))
  '(org-target                              ((t (:inherit mindre-faded))))
  '(org-time-grid                           ((t (:inherit mindre-faded))))
  '(org-todo                                ((t (:inherit (mindre-salient mindre-strong)))))
  '(org-upcoming-deadline                   ((t (:inherit mindre-default))))
- '(org-verbatim                            ((t (:inherit mindre-popout))))
+ '(org-verbatim                            ((t (:inherit mindre-strong))))
  '(org-verse                               ((t (:inherit mindre-faded))))
- '(org-warning                             ((t (:inherit mindre-popout))))
+ '(org-warning                             ((t (:inherit mindre-strong))))
 
  ;; --- Mu4e ---------------------------------------------------------
  '(mu4e-attach-number-face                ((t (:inherit mindre-strong))))
@@ -618,7 +601,7 @@ background color that is barely perceptible."
  '(mu4e-contact-face                      ((t (:inherit mindre-salient))))
  '(mu4e-context-face                      ((t (:inherit mindre-faded))))
  '(mu4e-draft-face                        ((t (:inherit mindre-faded))))
- '(mu4e-flagged-face                      ((t (:inherit mindre-popout))))
+ '(mu4e-flagged-face                      ((t (:inherit mindre-strong))))
  '(mu4e-footer-face                       ((t (:inherit mindre-faded))))
  '(mu4e-forwarded-face                    ((t (:inherit mindre-default))))
  '(mu4e-header-face                       ((t (:inherit mindre-default))))
@@ -627,7 +610,7 @@ background color that is barely perceptible."
  '(mu4e-header-marks-face                 ((t (:inherit mindre-faded))))
  '(mu4e-header-title-face                 ((t (:inherit mindre-strong))))
  '(mu4e-header-value-face                 ((t (:inherit mindre-default))))
- '(mu4e-highlight-face                    ((t (:inherit mindre-popout))))
+ '(mu4e-highlight-face                    ((t (:inherit mindre-strong))))
  '(mu4e-link-face                         ((t (:inherit mindre-salient))))
  '(mu4e-modeline-face                     ((t (:inherit mindre-faded))))
  '(mu4e-moved-face                        ((t (:inherit mindre-faded))))
@@ -641,7 +624,7 @@ background color that is barely perceptible."
  '(mu4e-unread-face                       ((t (:inherit mindre-strong))))
  '(mu4e-url-number-face                   ((t (:inherit mindre-faded))))
  '(mu4e-view-body-face                    ((t (:inherit mindre-default))))
- '(mu4e-warning-face                      ((t (:inherit mindre-popout))))
+ '(mu4e-warning-face                      ((t (:inherit mindre-strong))))
 
  ;; --- Notmuch -------------------------------------------------------
  `(notmuch-crypto-decryption            ((t (:inherit mindre-strong))))
@@ -672,8 +655,8 @@ background color that is barely perceptible."
  '(elfeed-log-date-face                   ((t (:inherit mindre-faded))))
  '(elfeed-log-info-level-face             ((t (:inherit mindre-default))))
  '(elfeed-log-debug-level-face            ((t (:inherit mindre-default))))
- '(elfeed-log-warn-level-face             ((t (:inherit mindre-popout))))
- '(elfeed-log-error-level-face            ((t (:inherit mindre-popout))))
+ '(elfeed-log-warn-level-face             ((t (:inherit mindre-strong))))
+ '(elfeed-log-error-level-face            ((t (:inherit mindre-strong))))
  '(elfeed-search-tag-face                 ((t (:inherit mindre-verbatim))))
  '(elfeed-search-date-face                ((t (:inherit mindre-default))))
  '(elfeed-search-feed-face                ((t (:inherit mindre-salient))))
@@ -684,10 +667,10 @@ background color that is barely perceptible."
  '(elfeed-search-unread-title-face        ((t (:inherit mindre-strong))))
 
  ;; --- Ivy --------------------------------------------------------
- `(ivy-minibuffer-match-face-1   ((t (:inherit mindre-popout))))
- `(ivy-minibuffer-match-face-2   ((t (:inherit mindre-popout))))
- `(ivy-minibuffer-match-face-3   ((t (:inherit mindre-popout))))
- `(ivy-minibuffer-match-face-4   ((t (:inherit mindre-popout))))
+ `(ivy-minibuffer-match-face-1   ((t (:inherit mindre-strong))))
+ `(ivy-minibuffer-match-face-2   ((t (:inherit mindre-strong))))
+ `(ivy-minibuffer-match-face-3   ((t (:inherit mindre-strong))))
+ `(ivy-minibuffer-match-face-4   ((t (:inherit mindre-strong))))
 
  ;; --- Rainbow delimeters ------------------------------------------
  '(rainbow-delimiters-depth-1-face  ((t (:foreground "#b9bbbc"))))
@@ -704,7 +687,7 @@ background color that is barely perceptible."
  '(rainbow-delimiters-depth-12-face ((t (:inherit mindre-strong))))
 
  ;; --- Deft --------------------------------------------------------
- '(deft-filter-string-error-face         ((t (:inherit mindre-popout))))
+ '(deft-filter-string-error-face         ((t (:inherit mindre-strong))))
  '(deft-filter-string-face               ((t (:inherit mindre-default))))
  '(deft-header-face                      ((t (:inherit mindre-salient))))
  '(deft-separator-face                   ((t (:inherit mindre-faded))))
@@ -755,7 +738,7 @@ background color that is barely perceptible."
  '(markdown-html-entity-face             ((t (:inherit mindre-default))))
  '(markdown-html-tag-delimiter-face      ((t (:inherit mindre-default))))
  '(markdown-html-tag-name-face           ((t (:inherit mindre-default))))
- '(markdown-inline-code-face             ((t (:inherit mindre-popout))))
+ '(markdown-inline-code-face             ((t (:inherit mindre-strong))))
  '(markdown-italic-face                  ((t (:inherit mindre-faded))))
  '(markdown-language-info-face           ((t (:inherit mindre-default))))
  '(markdown-language-keyword-face        ((t (:inherit mindre-faded))))
