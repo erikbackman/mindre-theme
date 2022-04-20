@@ -100,10 +100,7 @@ Commonly used for types"
   :type 'color :group 'mindre)
 
 (defface mindre-critical nil
-  "Critical face is for information that requires immediate action.
-It should be of high constrast when compared to other faces. This
-can be realized (for example) by setting an intense background
-color, typically a shade of red. It must be used scarcely."
+  "Critical face is for information that requires immediate action."
   :group nil)
 
 (defface mindre-critical-i nil
@@ -136,10 +133,7 @@ color, typically a shade of red. It must be used scarcely."
   "Faded face inversed." :group nil)
 
 (defface mindre-subtle nil
-  "Subtle face is used to suggest a physical area on the screen.
-It is important to not disturb too strongly the reading of
-information and this can be made by setting a very light
-background color that is barely perceptible."
+  "Subtle face is used to suggest a physical area on the screen."
   :group nil)
 
 (defface mindre-subtle-i nil
