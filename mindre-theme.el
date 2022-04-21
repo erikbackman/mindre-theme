@@ -297,6 +297,12 @@ Commonly used for types"
 
  '(eshell-prompt ((t (:inherit mindre-default))))
 
+ ;; --- ERC ----------------------------------------------------
+ '(erc-prompt-face ((t (:inhert mindre-default))))
+ '(erc-timestamp-face ((t (:inhert mindre-faded))))
+ '(erc-notice-face ((t (:inherit mindre-salient))))
+ '(erc-current-nick-face ((t (:inherit mindre-strong))))
+ 
  ;; --- Windows divider ----------------------------------------------
  `(window-divider                ((t (:foreground ,mindre-background))))
  '(window-divider-first-pixel    ((t (:inherit window-divider))))
