@@ -218,8 +218,6 @@ Commonly used for types"
 				    :background ,mindre-strong
 				    :weight bold))))
 
- `(mindre-popout ((t (:foreground ,mindre-popout))))
-
  `(mindre-critical ((t (:foreground ,mindre-background
 				    :background ,mindre-critical))))
 
