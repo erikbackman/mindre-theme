@@ -31,3 +31,8 @@ Add the following snippet to your init file
 (use-package mindre-theme
   :straight (:host github :repo "erikbackman/mindre-theme"))
 ```
+
+# ~~Frequently~~ asked questions
+- **What fonts are used in the logo/screenshots?**
+
+  Sarasa Mono (It's basically Iosevka) and CMU Concrete
