@@ -91,11 +91,12 @@ Commonly used for types"
   :type 'color :group 'mindre)
 
 ;; TODO: Pick a better color for mindre-ok
-(defcustom mindre-ok "#966544"
+(defcustom mindre-ok "#537469"
   "Default yellow color."
   :type 'color :group 'mindre)
 
-(defcustom mindre-warning "#EBCB8B"
+;efbd06
+(defcustom mindre-warning "#deb887"
   "Default yellow color."
   :type 'color :group 'mindre)
 
@@ -494,7 +495,7 @@ Commonly used for types"
  '(orderless-match-face-3         ((t (:inherit (mindre-strong bold)))))
 
  ;; --- Flyspell ----------------------------------------------------
- '(flyspell-duplicate             ((t (:inherit mindre-strong))))
+ '(flyspell-duplicate             ((t (:inherit mindre-warning))))
  '(flyspell-incorrect             ((t (:inherit mindre-strong :underline (:style wave :color ,mindre-error)))))
 
  ;; --- Flymake ----------------------------------------------------
