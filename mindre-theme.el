@@ -637,7 +637,7 @@ Commonly used for types"
  `(notmuch-crypto-signature-good-key    ((t (:inherit mindre-ok))))
  `(notmuch-crypto-signature-unknown     ((t (:inherit mindre-warning))))
  `(notmuch-search-count                 ((t (:inherit mindre-faded))))
- `(notmuch-search-unread-face           ((t (:inherit mindre-strong))))
+ `(notmuch-search-unread-face           ((t (:weight semibold))))
  `(notmuch-search-date                  ((t (:inherit mindre-default))))
  `(notmuch-search-matching-authors      ((t (:inherit mindre-salient))))
  `(notmuch-search-non-matching-authors  ((t (:inherit mindre-faded))))
