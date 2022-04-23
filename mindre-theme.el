@@ -39,25 +39,25 @@
 ;;; Code:
 
 (deftheme mindre
-  "mindre Theme")
+  "Mindre theme.")
 
 (defgroup mindre nil
-  "mindre")
+  "Mindre theme properties.")
 
 (defcustom mindre-background "#F5F5F5"
-  "Default background color"
+  "Default background color."
   :type 'color :group 'mindre)
 
 (defcustom mindre-background-dark-1 "#2E3440"
-  "Default dark background"
+  "Default dark background."
   :type 'color :group 'mindre)
 
 (defcustom mindre-background-dark-2 "#4C566A"
-  "Lighter dark background"
+  "Lighter dark background."
   :type 'color :group 'mindre)
 
 (defcustom mindre-foreground "#37474F"
-  "Default foreground color"
+  "Default foreground color."
   :type 'color :group 'mindre)
 
 (defcustom mindre-highlight "#CFD8DC"
@@ -77,12 +77,12 @@
   :type 'color :group 'mindre)
 
 (defcustom mindre-salient "#5e429f"
-  "Salient color is used for information that are important
+  "Salient color is used for information that are important.
 Commonly used for keywords."
   :type 'color :group 'mindre)
 
 (defcustom mindre-salient-alt "#00625D"
-  "Alt Salient color is used for information that are important
+  "Alt Salient color is used for information that are important.
 Commonly used for types"
   :type 'color :group 'mindre)
 
@@ -96,15 +96,15 @@ Commonly used for types"
 
 ;; TODO: Pick a better color for mindre-ok
 (defcustom mindre-ok "#966544"
-  "Default yellow color"
+  "Default yellow color."
   :type 'color :group 'mindre)
 
 (defcustom mindre-warning "#EBCB8B"
-  "Default yellow color"
+  "Default yellow color."
   :type 'color :group 'mindre)
 
 (defcustom mindre-error "#BF616A"
-  "Default yellow color"
+  "Default yellow color."
   :type 'color :group 'mindre)
 
 (defcustom mindre-critical "#BF616A"
@@ -130,7 +130,7 @@ Commonly used for types"
   :group nil)
 
 (defface mindre-salient-alt nil
-  "Alternative Salient face"
+  "Alternative Salient face."
   :group nil)
 
 (defface mindre-salient-i nil
@@ -158,22 +158,22 @@ Commonly used for types"
   "Default face inversed." :group nil)
 
 (defface mindre-highlight nil
-  "Default highligt face."
+  "Default highlight face."
   :group nil)
 
 (defface mindre-block nil
-  "Default block face"
+  "Default block face."
   :group nil)
 
 (defface mindre-verbatim nil
-  "Face used for things like strings"
+  "Face used for things like strings."
   :group nil)
 
 (defvar mindre-after-load-hook nil
   "Hook run after theme has loaded.")
 
 (defun mindre ()
-  "mindre theme"
+  "Load mindre theme."
   (interactive)
   (set-foreground-color mindre-foreground)
   (set-background-color mindre-background)
@@ -204,8 +204,7 @@ Commonly used for types"
 
  `(mindre-default ((t (:foreground ,mindre-foreground))))
 
- `(mindre-default-i ((t (:foreground ,mindre-background
-				     :background ,mindre-foreground))))
+ `(mindre-default-i ((t (:foreground ,mindre-background :background ,mindre-foreground))))
 
 
  `(mindre-salient ((t (:foreground ,mindre-salient))))
@@ -226,8 +225,8 @@ Commonly used for types"
 				      ))))
  `(mindre-verbatim ((t (:foreground ,mindre-verbatim))))
 
- `(mindre-block ((t (:background "#f2f2f2"
-				 :foreground ,mindre-foreground))))
+ `(mindre-block ((t (:background "#f2f2f2" :foreground ,mindre-foreground))))
+
  ;; --- Header & mode line -------------------------------------------
 
  `(mode-line ((t ( :foreground "white"
@@ -352,18 +351,18 @@ Commonly used for types"
  '(custom-link                   ((t (:inherit mindre-salient))))
  '(custom-variable-obsolete      ((t (:inherit mindre-faded))))
 
- ;; --- Company tooltip ----------------------------------------------
+ ;; --- Company  ----------------------------------------------
  '(company-tooltip                      ((t (:inherit mindre-subtle))))
  '(company-tooltip-mouse                ((t (:inherit mindre-faded-i))))
- '(company-tooltip-selection            ((t (:inherit mindre-salient-i))))
-
+ '(company-tooltip-selection            ((t (:inherit highlight))))
  '(company-scrollbar-fg                 ((t (:inherit mindre-default-i))))
  '(company-scrollbar-bg                 ((t (:inherit mindre-faded-i))))
-
  '(company-tooltip-common               ((t (:inherit mindre-strong))))
- '(company-tooltip-common-selection     ((t (:inherit mindre-salient-i
-						      :weight normal))))
- '(company-tooltip-annotation           ((t (:inherit mindre-default))))
+ '(company-tooltip-common-selection     ((t (:inherit mindre-popout))))
+ '(company-tooltip-annotation           ((t (:inherit mindre-faded))))
+ '(company-tooltip-annotation-selection ((t (:inherit mindre-faded))))
+ '(company-tooltip-scrollbar-thumb      ((t (:inherit mindre-default-i))))
+ '(company-tooltip-scrollbar-track      ((t (:inherit mindre-faded-i))))
  '(company-tooltip-annotation-selection ((t (:inherit mindre-subtle))))
 
  ;; --- Corfu  --------------------------------------------------------
@@ -462,11 +461,9 @@ Commonly used for types"
  '(diff-removed                   ((t (:inherit mindre-faded))))
  '(diff-changed                   ((t (:inherit mindre-strong))))
  '(diff-added                     ((t (:inherit mindre-salient))))
- '(diff-refine-added              ((t (:inherit (mindre-salient
-                                                 mindre-strong)))))
+ '(diff-refine-added              ((t (:inherit (mindre-salient mindre-strong)))))
  '(diff-refine-changed            ((t (:inherit mindre-strong))))
- '(diff-refine-removed            ((t (:inherit mindre-faded
-						:strike-through t))))
+ '(diff-refine-removed            ((t (:inherit mindre-faded :strike-through t))))
 
  ;; --- Message ------------------------------------------------------
  '(message-cited-text-1           ((t (:inherit mindre-faded))))
@@ -483,7 +480,6 @@ Commonly used for types"
  '(message-header-xheader         ((t (:inherit mindre-default))))
  '(message-mml                    ((t (:inherit mindre-strong))))
  '(message-separator              ((t (:inherit mindre-faded))))
-
 
  ;; --- Outline ------------------------------------------------------
  '(outline-1                      ((t (:inherit mindre-strong))))
@@ -525,8 +521,7 @@ Commonly used for types"
  '(org-agenda-column-dateline     ((t (:inherit mindre-faded))))
  '(org-agenda-current-time        ((t (:inherit mindre-strong))))
  '(org-agenda-date                ((t (:inherit mindre-salient))))
- '(org-agenda-date-today          ((t (:inherit (mindre-salient
-                                                 mindre-strong)))))
+ '(org-agenda-date-today          ((t (:inherit (mindre-salient mindre-strong)))))
  '(org-agenda-date-weekend        ((t (:inherit mindre-faded))))
  '(org-agenda-diary               ((t (:inherit mindre-faded))))
  '(org-agenda-dimmed-todo-face    ((t (:inherit mindre-faded))))
@@ -807,3 +802,5 @@ Commonly used for types"
                (file-name-as-directory (file-name-directory load-file-name))))
 
 (provide-theme 'mindre)
+
+;;; mindre-theme.el ends here
