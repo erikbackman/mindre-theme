@@ -302,7 +302,7 @@ Commonly used for types"
  '(erc-timestamp-face ((t (:inhert mindre-faded))))
  '(erc-notice-face ((t (:inherit mindre-salient))))
  '(erc-current-nick-face ((t (:inherit mindre-strong))))
- 
+
  ;; --- Windows divider ----------------------------------------------
  `(window-divider                ((t (:foreground ,mindre-background))))
  '(window-divider-first-pixel    ((t (:inherit window-divider))))
@@ -371,7 +371,7 @@ Commonly used for types"
 
  ;; --- Vertico  --------------------------------------------------------
  `(vertico-current                      ((t (:inherit highlight))))
- 
+
  ;; --- Buttons ------------------------------------------------------
  `(custom-button
    ((t (:foreground ,mindre-faded
@@ -503,16 +503,14 @@ Commonly used for types"
 
  ;; --- Fly spell ----------------------------------------------------
  '(flyspell-duplicate             ((t (:inherit mindre-strong))))
- '(flyspell-incorrect             ((t (:inherit mindre-strong
-						:underline "#BF616A"))))
+ '(flyspell-incorrect             ((t (:inherit mindre-strong :underline (:style wave :color ,mindre-error)))))
 
  ;; --- Fly make ----------------------------------------------------
- ;; TODO: Fix these
- `(flymake-error                  ((t (:foreground "#BF616A" :background nil))))
- `(flymake-warning                ((t (:foreground "#EBCB8B" :background nil))))
- `(flymake-note                   ((t (:foreground "orange" :background nil))))
- `(compilation-error              ((t (:foreground "#BF616A" :background nil))))
- `(compilation-warning            ((t (:foreground "#EBCB8B" :background nil))))
+ `(flymake-error                  ((t (:underline (:style wave :color ,mindre-error)))))
+ `(flymake-warning                ((t (:underline (:style wave :color ,mindre-warning)))))
+ `(flymake-note                   ((t (:underline (:style wave :color ,mindre-ok)))))
+ `(compilation-error              ((t (:inherit mindre-error))))
+ `(compilation-warning            ((t (:inherit mindre-warning))))
  `(compilation-mode-line-run      ((t (:inherit mindre-foreground))))
 
  ;; --- Org agenda ---------------------------------------------------
