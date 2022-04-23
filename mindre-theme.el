@@ -501,8 +501,8 @@ Commonly used for types"
  `(flymake-error                  ((t (:underline (:style wave :color ,mindre-error)))))
  `(flymake-warning                ((t (:underline (:style wave :color ,mindre-warning)))))
  `(flymake-note                   ((t (:underline (:style wave :color ,mindre-ok)))))
- `(compilation-error              ((t (:inherit mindre-error))))
- `(compilation-warning            ((t (:inherit mindre-warning))))
+ `(compilation-error              ((t (:foreground ,mindre-error))))
+ `(compilation-warning            ((t (:foreground ,mindre-warning))))
  `(compilation-mode-line-run      ((t (:inherit mindre-foreground))))
 
  ;; --- Flycheck ----------------------------------------------------
