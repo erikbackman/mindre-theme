@@ -227,7 +227,7 @@ Commonly used for types"
 
  `(mode-line ((t ( :foreground "white"
 		   :background ,mindre-background-dark-1
-                   :box (:line-width 1 :color ,mindre-background-dark-2 :style nil) ))))
+                   :box (:line-width 1 :color ,mindre-background-dark-1 :style nil) ))))
 
  `(mode-line-highlight ((t (:inherit nil :background nil
 				     :box nil))))
