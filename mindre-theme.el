@@ -501,17 +501,22 @@ Commonly used for types"
  '(orderless-match-face-2         ((t (:inherit (mindre-strong bold)))))
  '(orderless-match-face-3         ((t (:inherit (mindre-strong bold)))))
 
- ;; --- Fly spell ----------------------------------------------------
+ ;; --- Flyspell ----------------------------------------------------
  '(flyspell-duplicate             ((t (:inherit mindre-strong))))
  '(flyspell-incorrect             ((t (:inherit mindre-strong :underline (:style wave :color ,mindre-error)))))
 
- ;; --- Fly make ----------------------------------------------------
+ ;; --- Flymake ----------------------------------------------------
  `(flymake-error                  ((t (:underline (:style wave :color ,mindre-error)))))
  `(flymake-warning                ((t (:underline (:style wave :color ,mindre-warning)))))
  `(flymake-note                   ((t (:underline (:style wave :color ,mindre-ok)))))
  `(compilation-error              ((t (:inherit mindre-error))))
  `(compilation-warning            ((t (:inherit mindre-warning))))
  `(compilation-mode-line-run      ((t (:inherit mindre-foreground))))
+
+ ;; --- Flycheck ----------------------------------------------------
+ `(flycheck-error                 ((t (:underline (:style wave :color ,mindre-error)))))
+ `(flycheck-warning               ((t (:underline (:style wave :color ,mindre-warning)))))
+ `(flycheck-info                  ((t (:underline (:style wave :color ,mindre-ok)))))
 
  ;; --- Org agenda ---------------------------------------------------
  '(org-agenda-calendar-event      ((t (:inherit mindre-default))))
