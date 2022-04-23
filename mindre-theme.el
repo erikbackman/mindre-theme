@@ -95,7 +95,6 @@ Commonly used for types"
   "Default yellow color."
   :type 'color :group 'mindre)
 
-;efbd06
 (defcustom mindre-warning "#deb887"
   "Default yellow color."
   :type 'color :group 'mindre)
