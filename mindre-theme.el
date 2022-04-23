@@ -64,10 +64,6 @@
   "Highlight color is used to highlight part of the screen."
   :type 'color :group 'mindre)
 
-(defcustom mindre-highlight-alt "#ECEFF1"
-  "Lighter highlight color used to highlight part of the screen."
-  :type 'color :group 'mindre)
-
 (defcustom mindre-subtle "#ECEFF1"
   "Subtle color is used to suggest a physical area on the screen."
   :type 'color :group 'mindre)
@@ -252,8 +248,8 @@ Commonly used for types"
  '(italic                      ((t (:inherit mindre-faded))))
  '(bold-italic                 ((t (:inherit mindre-strong))))
  '(region                      ((t (:inherit highlight))))
- '(fringe                      ((t (:inherit (mindre-faded)))))
- '(hl-line                     ((t (:inherit highlight))))
+ '(fringe                      ((t (:inherit mindre-faded))))
+ '(hl-line                     ((t (:inherit mindre-subtle))))
  '(link                        ((t (:inherit mindre-salient))))
  ;; TODO: Add option for turning mixed-fonts on/off
  ;'(fixed-pitch                 ((t (:inherit default))))
