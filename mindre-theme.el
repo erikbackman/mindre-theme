@@ -539,7 +539,7 @@ Commonly used for types"
  '(org-checkbox-statistics-done            ((t (:inherit (mindre-faded fixed-pitch)))))
  '(org-checkbox-statistics-todo            ((t (:inherit (mindre-default fixed-pitch)))))
  '(org-clock-overlay                       ((t (:inherit mindre-faded))))
- '(org-code                                ((t (:inherit (mindre-faded fixed-pitch)))))
+ '(org-code                                ((t (:inherit (fixed-pitch mindre-block)))))
  '(org-column                              ((t (:inherit mindre-faded))))
  '(org-column-title                        ((t (:inherit mindre-faded))))
  '(org-date                                ((t (:inherit mindre-faded))))
@@ -586,7 +586,7 @@ Commonly used for types"
  '(org-time-grid                           ((t (:inherit mindre-faded))))
  '(org-todo                                ((t (:inherit (mindre-salient mindre-strong)))))
  '(org-upcoming-deadline                   ((t (:inherit mindre-default))))
- '(org-verbatim                            ((t (:inherit mindre-strong))))
+ '(org-verbatim                            ((t (:inherit (mindre-verbatim fixed-pitch)))))
  '(org-verse                               ((t (:inherit mindre-faded))))
  '(org-warning                             ((t (:inherit mindre-strong))))
 
