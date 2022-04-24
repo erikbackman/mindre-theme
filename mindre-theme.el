@@ -495,7 +495,7 @@ Commonly used for types"
 
  ;; --- Flyspell ----------------------------------------------------
  '(flyspell-duplicate             ((t (:inherit mindre-warning))))
- '(flyspell-incorrect             ((t (:inherit mindre-strong :underline (:style wave :color ,mindre-error)))))
+ `(flyspell-incorrect             ((t (:inherit mindre-strong :underline (:style wave :color ,mindre-error)))))
 
  ;; --- Flymake ----------------------------------------------------
  `(flymake-error                  ((t (:underline (:style wave :color ,mindre-error)))))
