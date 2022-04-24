@@ -789,7 +789,9 @@ Commonly used for types"
 
  ;; --- Sh ----------------------------------------------------
  `(sh-quoted-exec ((t (:foreground ,mindre-salient-alt))))
- ;;
+ ;; --- LaTeX ----------------------------------------------------
+ `(font-latex-math-face ((t (:inherit (mindre-default fixed-pitch)))))
+ `(font-latex-script-char-face ((t (:inherit mindre-default))))
  )
 
 ;;;###autoload
