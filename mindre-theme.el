@@ -556,7 +556,7 @@ Commonly used for types"
  '(org-headline-done                       ((t (:foreground "#6a7276"))))
  '(org-hide                                ((t (:inherit mindre-subtle-i))))
  '(org-indent                              ((t (:inherit mindre-subtle-i))))
- '(org-latex-and-related                   ((t (:inherit mindre-faded))))
+ '(org-latex-and-related                   ((t (:inherit (mindre-default)))))
  '(org-level-1                             ((t (:inherit mindre-strong))))
  '(org-level-2                             ((t (:inherit mindre-strong))))
  '(org-level-3                             ((t (:inherit mindre-strong))))
