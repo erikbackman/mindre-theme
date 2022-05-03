@@ -48,15 +48,19 @@
   "Default background color."
   :type 'color :group 'mindre)
 
-(defcustom mindre-background-dark-1 "#2E3440"
+(defcustom mindre-background-dark-1 "#e3e5e8"
   "Default dark background."
   :type 'color :group 'mindre)
 
-(defcustom mindre-background-dark-2 "#4C566A"
+(defcustom mindre-background-dark-2 "#f2f3f5"
   "Lighter dark background."
   :type 'color :group 'mindre)
 
-(defcustom mindre-foreground "#37474F"
+;; 2e3338
+;; 37474F
+;; #181E21
+;; #2e3338
+(defcustom mindre-foreground "#2e3338"
   "Default foreground color."
   :type 'color :group 'mindre)
 
@@ -68,16 +72,28 @@
   "Subtle color is used to suggest a physical area on the screen."
   :type 'color :group 'mindre)
 
+;; #5e6772
 (defcustom mindre-faded "#B0BEC5"
   "Faded face is for information that are less important."
   :type 'color :group 'mindre)
 
-(defcustom mindre-salient "#5e429f"
+;; #58569C
+;; #3A3680
+;; #8433AF
+;; #4F114F
+;; #42218F
+;; #442061
+;; #71368a
+(defcustom mindre-salient "#007e8c"
   "Salient color is used for information that are important.
 Commonly used for keywords."
   :type 'color :group 'mindre)
 
-(defcustom mindre-salient-alt "#00625D"
+;; #10416E
+;; #233854
+;; #1D3A40
+;; #385E69
+(defcustom mindre-salient-alt "#253F5E"
   "Alt Salient color is used for information that are important.
 Commonly used for types"
   :type 'color :group 'mindre)
@@ -86,7 +102,7 @@ Commonly used for types"
   "Color used for things like strings."
   :type 'color :group 'mindre)
 
-(defcustom mindre-strong "#161c20"
+(defcustom mindre-strong "#171A1C"
   "Strong color is used for information of a structural nature."
   :type 'color :group 'mindre)
 
@@ -95,7 +111,7 @@ Commonly used for types"
   "Default yellow color."
   :type 'color :group 'mindre)
 
-(defcustom mindre-warning "#EBCB8B"
+(defcustom mindre-warning "#EDB951"
   "Default yellow color."
   :type 'color :group 'mindre)
 
@@ -221,21 +237,27 @@ Commonly used for types"
 				      ))))
  `(mindre-verbatim ((t (:foreground ,mindre-verbatim))))
 
- `(mindre-block ((t (:background "#f2f2f2" :foreground ,mindre-foreground))))
+ `(mindre-block ((t (:background "#f3f3f2" :foreground ,mindre-foreground :extend t))))
 
  ;; --- Header & mode line -------------------------------------------
 
- `(mode-line ((t ( :foreground "white"
-		   :background ,mindre-background-dark-1
-                   :box (:line-width 1 :color ,mindre-background-dark-1 :style nil) ))))
+ `(mode-line ((t ( :foreground ,mindre-foreground
+		   :background ,mindre-background-dark-2
+                   :box (:style released-button :line-width 1
+				:color ,mindre-subtle
+				)
+		   ))))
 
  `(mode-line-highlight ((t (:inherit nil :background nil
 				     :box nil))))
  `(mode-line-buffer-id ((t (:weight regular :background nil))))
  `(mode-line-emphasis  ((t (:weight regular :background nil))))
- `(mode-line-inactive ((t ( :foreground "white"
-			    :background ,mindre-background-dark-2
-			    :box (:line-width 1 :color ,mindre-background-dark-2 :style nil) ))))
+ `(mode-line-inactive ((t ( :foreground "#535c65"
+			    :background ,mindre-background-dark-1
+			    :box ( :line-width 1
+				   ;:color ,mindre-background-dark-2
+				   :style released-button)
+			    ))))
 
  `(header-line ((t (:foreground ,mindre-foreground
 				:background ,mindre-subtle
@@ -434,10 +456,13 @@ Commonly used for types"
  `(dired-broken-symlink           ((t (:slant italic :strike-through "#BF616A"))))
 
  ;; --- Eglot --------------------------------------------------------
- '(eglot-mode-line                ((t (:foreground "white"))))
- '(eglot-mode-line-none-face      ((t (:foreground "white"))))
+ `(eglot-mode-line                ((t (:foreground ,mindre-foreground))))
+ `(eglot-mode-line-none-face      ((t (:foreground ,mindre-foreground))))
  '(eglot-highlight-symbol-face    ((t (:inherit underline))))
 
+ ;; --- Eww ----------------------------------------------------
+ `(eww-form-submit ((t (:box (:style released-button) :background ,mindre-background-dark-2))))
+ 
  ;; --- Popup --------------------------------------------------------
  '(popup-face                       ((t (:inherit highlight))))
  '(popup-isearch-match              ((t (:inherit mindre-strong))))
@@ -533,8 +558,10 @@ Commonly used for types"
  ;; --- Org ----------------------------------------------------------
  '(org-archived                            ((t (:inherit mindre-faded))))
  '(org-block                               ((t (:inherit (mindre-block fixed-pitch)))))
- '(org-block-begin-line                    ((t (:inherit (mindre-faded fixed-pitch)))))
- '(org-block-end-line                      ((t (:inherit (mindre-faded fixed-pitch)))))
+ `(org-block-begin-line                    ((t (:inherit (mindre-faded fixed-pitch)
+							  :extend t))))
+ `(org-block-end-line                      ((t (:inherit (mindre-faded fixed-pitch)
+							  :extend t))))
  '(org-checkbox                            ((t (:inherit (mindre-default fixed-pitch)))))
  '(org-checkbox-statistics-done            ((t (:inherit (mindre-faded fixed-pitch)))))
  '(org-checkbox-statistics-todo            ((t (:inherit (mindre-default fixed-pitch)))))
@@ -720,7 +747,7 @@ Commonly used for types"
  ;; --- Markdown ----------------------------------------------------
  '(markdown-blockquote-face              ((t (:inherit mindre-default))))
  '(markdown-bold-face                    ((t (:inherit mindre-strong))))
- '(markdown-code-face                    ((t (:inherit mindre-block))))
+ `(markdown-code-face                    ((t (:foreground "black" :extend t))))
  '(markdown-comment-face                 ((t (:inherit mindre-faded))))
  '(markdown-footnote-marker-face         ((t (:inherit mindre-default))))
  '(markdown-footnote-text-face           ((t (:inherit mindre-default))))
@@ -755,7 +782,7 @@ Commonly used for types"
  '(markdown-metadata-value-face          ((t (:inherit mindre-faded))))
  '(markdown-missing-link-face            ((t (:inherit mindre-default))))
  '(markdown-plain-url-face               ((t (:inherit mindre-default))))
- '(markdown-pre-face                     ((t (:inherit mindre-block))))
+ `(markdown-pre-face                     ((t (:background ,mindre-background-dark-2 :extend t))))
  '(markdown-reference-face               ((t (:inherit mindre-salient))))
  '(markdown-strike-through-face          ((t (:inherit mindre-faded))))
  '(markdown-table-face                   ((t (:inherit mindre-default))))
@@ -777,7 +804,7 @@ Commonly used for types"
 							  :background "#C74B50"))))
  '(term-color-yellow                     ((t (:foreground "#F8B400"
 							  :background "#F8B400"))))
-
+ 
  ;; --- Haskell ----------------------------------------------------
  `(haskell-constructor-face   ((t (:foreground ,mindre-salient-alt))))
  `(font-lock-type-face        ((t (:foreground ,mindre-salient))))
