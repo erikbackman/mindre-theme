@@ -169,6 +169,9 @@ Commonly used for types"
 (defvar mindre-after-load-hook nil
   "Hook run after theme has loaded.")
 
+(defcustom mindre-use-more-bold t
+  "Use more bold constructs.")
+
 (defun mindre ()
   "Load mindre theme."
   (interactive)
@@ -209,7 +212,7 @@ Commonly used for types"
 
  `(mindre-salient-i ((t (:foreground ,mindre-background
 				     :background ,mindre-salient))))
- `(mindre-strong   ((t (:foreground ,mindre-strong))))
+ `(mindre-strong   ((t ,(when mindre-use-more-bold '(:weight semibold)))))
  `(mindre-strong-i ((t (:foreground ,mindre-background
 				    :background ,mindre-strong
 				    :weight bold))))
@@ -217,9 +220,7 @@ Commonly used for types"
  `(mindre-critical ((t (:foreground ,mindre-background
 				    :background ,mindre-critical))))
 
- `(mindre-critical-i ((t (:foreground ,mindre-critical
-				      ;; :background ,mindre-background
-				      ))))
+ `(mindre-critical-i ((t (:foreground ,mindre-critical))))
  `(mindre-verbatim ((t (:foreground ,mindre-verbatim))))
 
  `(mindre-block ((t (:background "#f3f3f2" :foreground ,mindre-foreground :extend t))))
@@ -324,7 +325,7 @@ Commonly used for types"
  '(font-lock-constant-face       ((t (:inherit mindre-strong))))
  `(font-lock-warning-face        ((t (:foreground ,mindre-warning))))
  '(font-lock-function-name-face  ((t (:inherit mindre-strong))))
- `(font-lock-variable-name-face  ((t (:inherit mindre-strong))))
+ `(font-lock-variable-name-face  ((t (:inherit mindre-default))))
  '(font-lock-builtin-face        ((t (:inherit mindre-salient))))
  '(font-lock-type-face           ((t (:inherit (mindre-salient-alt)))))
  '(font-lock-keyword-face        ((t (:inherit mindre-salient))))
@@ -429,7 +430,7 @@ Commonly used for types"
  '(epa-validity-low               ((t (:inherit mindre-faded))))
 
  ;; --- Dired --------------------------------------------------------
- '(dired-directory                ((t (:inherit (mindre-strong)))))
+ '(dired-directory                ((t (:inherit (mindre-strong bold)))))
  '(dired-symlink                  ((t (:slant italic))))
  '(dired-marked                   ((t (:inherit mindre-salient))))
  `(dired-broken-symlink           ((t (:slant italic :strike-through "#BF616A"))))
