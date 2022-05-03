@@ -48,12 +48,12 @@
   "Default background color."
   :type 'color :group 'mindre)
 
-(defcustom mindre-background-dark-1 "#e3e5e8"
-  "Default dark background."
+(defcustom mindre-background-dark-1 "#f2f3f5"
+  "Lighter dark background."
   :type 'color :group 'mindre)
 
-(defcustom mindre-background-dark-2 "#f2f3f5"
-  "Lighter dark background."
+(defcustom mindre-background-dark-2 "#e3e5e8"
+  "Default dark background."
   :type 'color :group 'mindre)
 
 (defcustom mindre-foreground "#2e3338"
@@ -228,7 +228,7 @@ Commonly used for types"
  ;; --- Header & mode line -------------------------------------------
 
  `(mode-line ((t (:foreground ,mindre-foreground
-		  :background ,mindre-background-dark-2
+		  :background ,mindre-background-dark-1
                   :box (:style released-button :line-width 1)))))
 
  `(mode-line-highlight ((t (:inherit nil :background nil :box nil))))
@@ -236,7 +236,7 @@ Commonly used for types"
  `(mode-line-emphasis ((t (:weight regular :background nil))))
  
  `(mode-line-inactive ((t (:foreground "#535c65"
-			   :background ,mindre-background-dark-1
+			   :background ,mindre-background-dark-2
 			   :box (:line-width 1 :style released-button)))))
 
  `(header-line ((t (:foreground ,mindre-foreground
