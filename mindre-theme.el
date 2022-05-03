@@ -56,10 +56,6 @@
   "Lighter dark background."
   :type 'color :group 'mindre)
 
-;; 2e3338
-;; 37474F
-;; #181E21
-;; #2e3338
 (defcustom mindre-foreground "#2e3338"
   "Default foreground color."
   :type 'color :group 'mindre)
@@ -77,23 +73,12 @@
   "Faded face is for information that are less important."
   :type 'color :group 'mindre)
 
-;; #58569C
-;; #3A3680
-;; #8433AF
-;; #4F114F
-;; #42218F
-;; #442061
-;; #71368a
-(defcustom mindre-salient "#007e8c"
+(defcustom mindre-salient "#5c3e99"
   "Salient color is used for information that are important.
 Commonly used for keywords."
   :type 'color :group 'mindre)
 
-;; #10416E
-;; #233854
-;; #1D3A40
-;; #385E69
-(defcustom mindre-salient-alt "#253F5E"
+(defcustom mindre-salient-alt "#2e627e"
   "Alt Salient color is used for information that are important.
 Commonly used for types"
   :type 'color :group 'mindre)
@@ -241,23 +226,17 @@ Commonly used for types"
 
  ;; --- Header & mode line -------------------------------------------
 
- `(mode-line ((t ( :foreground ,mindre-foreground
-		   :background ,mindre-background-dark-2
-                   :box (:style released-button :line-width 1
-				:color ,mindre-subtle
-				)
-		   ))))
+ `(mode-line ((t (:foreground ,mindre-foreground
+		  :background ,mindre-background-dark-2
+                  :box (:style released-button :line-width 1)))))
 
- `(mode-line-highlight ((t (:inherit nil :background nil
-				     :box nil))))
+ `(mode-line-highlight ((t (:inherit nil :background nil :box nil))))
  `(mode-line-buffer-id ((t (:weight regular :background nil))))
- `(mode-line-emphasis  ((t (:weight regular :background nil))))
- `(mode-line-inactive ((t ( :foreground "#535c65"
-			    :background ,mindre-background-dark-1
-			    :box ( :line-width 1
-				   ;:color ,mindre-background-dark-2
-				   :style released-button)
-			    ))))
+ `(mode-line-emphasis ((t (:weight regular :background nil))))
+ 
+ `(mode-line-inactive ((t (:foreground "#535c65"
+			   :background ,mindre-background-dark-1
+			   :box (:line-width 1 :style released-button)))))
 
  `(header-line ((t (:foreground ,mindre-foreground
 				:background ,mindre-subtle
