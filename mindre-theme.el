@@ -769,15 +769,11 @@ Commonly used for types"
  '(markdown-url-face                     ((t (:inherit mindre-salient))))
 
  ;; --- Terminal ----------------------------------------------------
- ;; TODO: Not yet decided on these
  '(term-bold                             ((t (:inherit mindre-strong))))
  '(term-color-black                      ((t (:inherit default))))
- '(term-color-blue                       ((t (:foreground "#0b58a0"
-							  :background "#0b58a0"))))
- '(term-color-cyan                       ((t (:foreground "#006678"
-							  :background "#006678"))))
- '(term-color-green                      ((t (:foreground "#00625D"
-							  :background "#00625D"))))
+ '(term-color-blue                       ((t (:inherit default))))
+ '(term-color-cyan                       ((t (:inherit default))))
+ '(term-color-green                      ((t (:inherit default))))
  '(term-color-magenta                    ((t (:foreground "#5e429f"
 							  :background "#5e429f"))))
  '(term-color-red                        ((t (:foreground "#C74B50"
