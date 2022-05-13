@@ -229,7 +229,7 @@ Commonly used for types"
 
  `(mode-line ((t (:foreground ,mindre-foreground
 		  :background ,mindre-background-dark-1
-                  :box (:style released-button :line-width 1)))))
+                  :box (:color ,mindre-faded :line-width 1)))))
 
  `(mode-line-highlight ((t (:inherit nil :background nil :box nil))))
  `(mode-line-buffer-id ((t (:weight regular :background nil))))
@@ -237,7 +237,7 @@ Commonly used for types"
  
  `(mode-line-inactive ((t (:foreground "#535c65"
 			   :background ,mindre-background-dark-2
-			   :box (:line-width 1 :style released-button)))))
+			   :box (:line-width 1 :color ,mindre-faded)))))
 
  `(header-line ((t (:foreground ,mindre-foreground
 				:background ,mindre-subtle
