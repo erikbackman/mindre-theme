@@ -68,7 +68,6 @@
   "Subtle color is used to suggest a physical area on the screen."
   :type 'color :group 'mindre)
 
-;; #5e6772
 (defcustom mindre-faded "#B0BEC5"
   "Faded face is for information that are less important."
   :type 'color :group 'mindre)
