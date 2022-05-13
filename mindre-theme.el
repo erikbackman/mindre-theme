@@ -792,9 +792,15 @@ Commonly used for types"
 
  ;; --- Sh ----------------------------------------------------
  `(sh-quoted-exec ((t (:foreground ,mindre-salient-alt))))
+
  ;; --- LaTeX ----------------------------------------------------
  `(font-latex-math-face ((t (:inherit (mindre-default fixed-pitch)))))
  `(font-latex-script-char-face ((t (:inherit mindre-default))))
+
+ ;; --- Geiser ----------------------------------------------------
+ `(geiser-font-lock-autodoc-current-arg ((t :inherit mindre-verbatim)))
+ `(geiser-font-lock-autodoc-identifier  ((t :inherit mindre-salient)))
+
  )
 
 ;;;###autoload
