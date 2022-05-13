@@ -169,7 +169,7 @@ Commonly used for types"
 (defvar mindre-after-load-hook nil
   "Hook run after theme has loaded.")
 
-(defcustom mindre-use-more-bold t
+(defcustom mindre-use-more-bold nil
   "Use more bold constructs.")
 
 (defun mindre ()
