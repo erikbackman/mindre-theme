@@ -78,7 +78,7 @@
 Commonly used for keywords."
   :type 'color :group 'mindre)
 
-(defcustom mindre-salient-alt "#2e627e"
+(defcustom mindre-salient-alt "#00625D"
   "Alt Salient color is used for information that are important.
 Commonly used for types"
   :type 'color :group 'mindre)
