@@ -9,7 +9,6 @@
    id="svg5"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    sodipodi:docname="mindre-logo.svg"
-   inkscape:export-filename="/home/ebn/Documents/mindre-logo.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -67,15 +66,13 @@
        height="40"
        x="0"
        y="2"
-       inkscape:export-filename="/home/ebn/Documents/mindre-logo2.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <text
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,-22.855389,-16.30826)"
        id="text3595"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3597);fill:#37474f;fill-opacity:1;stroke:none"
-       inkscape:export-filename="/home/ebn/Documents/mindre-logo2.png"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect3597);fill:#2e3338;fill-opacity:1;stroke:none"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          x="93.683594"
@@ -88,7 +85,6 @@
        transform="scale(0.26458333)"
        id="text215299"
        style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;white-space:pre;shape-inside:url(#rect215301)"
-       inkscape:export-filename="/home/ebn/Documents/mindre-logo2.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <text
@@ -97,7 +93,6 @@
        x="2.5561275"
        y="18.726492"
        id="text216033"
-       inkscape:export-filename="/home/ebn/Documents/mindre-logo2.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
@@ -106,23 +101,21 @@
          x="2.5561275"
          y="18.726492">/'mɪndrɛ/</tspan></text>
     <rect
-       style="fill:#2e3440;stroke-width:0.264583"
+       style="fill:#171a1c;stroke-width:0.264583"
        id="rect317399"
        width="30"
        height="4"
        x="38"
        y="4.6458335"
-       inkscape:export-filename="/home/ebn/Documents/mindre-logo2.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <rect
-       style="fill:#37474f;stroke-width:0.264583"
+       style="fill:#2e3338;stroke-width:0.264583"
        id="rect317401"
        width="30"
        height="4"
        x="38"
        y="9.6458321"
-       inkscape:export-filename="/home/ebn/Documents/mindre-logo2.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <rect
@@ -132,7 +125,6 @@
        height="4"
        x="38"
        y="14.645831"
-       inkscape:export-filename="/home/ebn/Documents/mindre-logo2.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <rect
@@ -142,7 +134,6 @@
        height="4"
        x="38"
        y="19.645836"
-       inkscape:export-filename="/home/ebn/Documents/mindre-logo2.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <rect
@@ -152,27 +143,24 @@
        height="4"
        x="70"
        y="4.6458335"
-       inkscape:export-filename="/home/ebn/Documents/mindre-logo2.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <rect
-       style="fill:#00625d;stroke-width:0.264583"
+       style="fill:#16524f;stroke-width:0.264583"
        id="rect317409"
        width="30"
        height="4"
        x="70"
        y="9.6458321"
-       inkscape:export-filename="/home/ebn/Documents/mindre-logo2.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <rect
-       style="fill:#5e429f;stroke-width:0.264583;fill-opacity:1"
+       style="fill:#5c3e99;stroke-width:0.264583;fill-opacity:1"
        id="rect317411"
        width="30"
        height="4"
        x="70"
        y="14.645831"
-       inkscape:export-filename="/home/ebn/Documents/mindre-logo2.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
     <text
@@ -180,7 +168,6 @@
        transform="matrix(0.26458333,0,0,0.26458333,-72.712104,19.854258)"
        id="text9614"
        style="font-style:normal;font-weight:normal;font-size:18.6667px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect9616);fill:#000000;fill-opacity:1;stroke:none"
-       inkscape:export-filename="/home/ebn/Documents/mindre-logo2.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan
          x="418.43945"
@@ -188,11 +175,11 @@
          id="tspan15889"><tspan
            style="font-family:'Sarasa Mono SC';-inkscape-font-specification:'Sarasa Mono SC';fill:#37474f"
            id="tspan15879">(</tspan><tspan
-           style="font-family:'Sarasa Mono SC';-inkscape-font-specification:'Sarasa Mono SC';fill:#5e429f"
+           style="font-family:'Sarasa Mono SC';-inkscape-font-specification:'Sarasa Mono SC';fill:#5c3e99"
            id="tspan15881">deftheme</tspan><tspan
            style="font-family:'Sarasa Mono SC';-inkscape-font-specification:'Sarasa Mono SC'"
            id="tspan15883"> </tspan><tspan
-           style="font-family:'Sarasa Mono SC';-inkscape-font-specification:'Sarasa Mono SC';fill:#161c20"
+           style="font-family:'Sarasa Mono SC';-inkscape-font-specification:'Sarasa Mono SC';fill:#2e3338"
            id="tspan15885">mindre</tspan><tspan
            style="font-family:'Sarasa Mono SC';-inkscape-font-specification:'Sarasa Mono SC'"
            id="tspan15887"> 
