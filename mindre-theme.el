@@ -180,6 +180,9 @@ Commonly used for types"
      (:foreground ,mindre-faded)))
   "Face used to dim parentheses.")
 
+(defun mindre--font-lock-add-paren ()
+  (font-lock-add-keywords nil '(("(\\|)" . 'paren-face))))
+
 (defvar mindre-after-load-hook nil
   "Hook run after theme has loaded.")
 
@@ -195,6 +198,10 @@ Commonly used for types"
   (set-foreground-color mindre-foreground)
   (set-background-color mindre-background)
 
+  (when 'mindre-use-faded-lisp-parens
+    (add-hook 'lisp-data-mode-hook 'mindre--font-lock-add-paren)
+    (add-hook 'scheme-mode-hook 'mindre--font-lock-add-paren))
+  
   (load-theme 'mindre t)
   (run-hooks 'mindre-after-load-hook))
 
