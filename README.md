@@ -77,6 +77,12 @@ color7   #ECEFF1
 color15  #F5F5F5
 ```
 
+# Customisations
+```lisp
+(setq mindre-use-more-bold nil ; bold face for variables, headings and such will
+	  mindre-use-facded-lisp-parens t)
+```
+
 # ~~Frequently~~ asked questions
 - **What fonts are used in the logo/screenshots?**
 
