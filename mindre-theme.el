@@ -95,7 +95,7 @@ Commonly used for types"
   "Default yellow color."
   :type 'color :group 'mindre)
 
-(defcustom mindre-warning "#EDB951"
+(defcustom mindre-warning "#d47500"
   "Default yellow color."
   :type 'color :group 'mindre)
 
@@ -289,7 +289,8 @@ Commonly used for types"
  '(read-multiple-choice-face ((t (:inherit mindre-strong))))
  '(nobreak-hyphen ((t (:inherit mindre-strong))))
  '(nobreak-space ((t (:inherit mindre-strong))))
- '(help-argument-name ((t (:inherit mindre-faded))))
+ '(help-argument-name ((t (:inherit mindre-verbatim))))
+ '(help-key-binding ((t :inherit mindre-verbatim)))
  '(tabulated-list-fake-header ((t (:inherit mindre-strong))))
  '(tool-bar ((t (:inherit mindre-faded-i))))
 
