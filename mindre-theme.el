@@ -776,7 +776,7 @@ Commonly used for types"
  '(term-color-green ((t (:inherit default))))
  '(term-color-magenta ((t (:foreground "#5e429f" :background "#5e429f "))))
  '(term-color-red ((t (:foreground "#C74B50" :background "#C74B50 "))))
- '(term-color-yellow ((t (:foreground "#F8B400" :background "#F8B400"))))
+ '(term-color-yellow ((t (:foreground "#d47500" :background "#F8B400"))))
  
  ;; --- Haskell ----------------------------------------------------
  `(haskell-constructor-face ((t (:foreground ,mindre-salient-alt))))
