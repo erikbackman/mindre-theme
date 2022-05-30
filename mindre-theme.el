@@ -181,7 +181,7 @@ Commonly used for types"
   "Face used to dim parentheses.")
 
 (defun mindre--font-lock-add-paren ()
-  (font-lock-add-keywords nil '(("(\\|)" . 'paren-face))))
+  (font-lock-add-keywords nil '(("(\\|)" . 'mindre-paren-face))))
 
 (defvar mindre-after-load-hook nil
   "Hook run after theme has loaded.")
@@ -199,8 +199,8 @@ Commonly used for types"
   (set-background-color mindre-background)
 
   (when 'mindre-use-faded-lisp-parens
-    (add-hook 'lisp-data-mode-hook 'mindre--font-lock-add-paren)
-    (add-hook 'scheme-mode-hook 'mindre--font-lock-add-paren))
+    (add-hook 'lisp-data-mode-hook #'mindre--font-lock-add-paren)
+    (add-hook 'scheme-mode-hook #'mindre--font-lock-add-paren))
   
   (load-theme 'mindre t)
   (run-hooks 'mindre-after-load-hook))
@@ -338,6 +338,10 @@ Commonly used for types"
  '(font-lock-builtin-face ((t (:inherit mindre-salient))))
  '(font-lock-type-face ((t (:inherit (mindre-salient-alt)))))
  '(font-lock-keyword-face ((t (:inherit mindre-salient))))
+
+ ;; --- Popper -------------------------------------------------------
+ `(popper-echo-area-buried ((t (:inherit mindre-default))))
+ `(popper-echo-dispatch-hint ((t (:inherit mindre-subtle))))
 
  ;; --- Custom edit --------------------------------------------------
  '(widget-field ((t (:inherit mindre-subtle))))
@@ -797,9 +801,7 @@ Commonly used for types"
  
  ;; --- Geiser ----------------------------------------------------
  `(geiser-font-lock-autodoc-current-arg ((t :inherit mindre-verbatim)))
- `(geiser-font-lock-autodoc-identifier ((t :inherit mindre-salient)))
- 
- )
+ `(geiser-font-lock-autodoc-identifier ((t :inherit mindre-salient))))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path) load-file-name)
