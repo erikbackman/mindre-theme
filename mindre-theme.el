@@ -796,8 +796,10 @@ Commonly used for types"
 
  ;; --- LaTeX ----------------------------------------------------
  `(font-latex-math-face ((t (:inherit (mindre-default fixed-pitch)))))
+ `(font-latex-bold-face ((t (:inherit (bold)))))
  `(font-latex-warning-face ((t (:inherit (mindre-note fixed-pitch)))))
  `(font-latex-script-char-face ((t (:inherit mindre-default))))
+ `(font-latex-sectioning-2-face ((t (:inherit bold :height 1.4))))
  
  ;; --- Geiser ----------------------------------------------------
  `(geiser-font-lock-autodoc-current-arg ((t :inherit mindre-verbatim)))
