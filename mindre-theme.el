@@ -271,6 +271,7 @@ Commonly used for types"
  '(warning ((t (:inherit mindre-warning))))
  '(error ((t (:inherit mindre-critical))))
  '(match ((t (:inherit mindre-strong))))
+ `(preview-face ((t (:inherit mindre-subtle))))
 
  ;; --- General ------------------------------------------------------
  '(buffer-menu-buffer ((t (:inherit mindre-strong))))
