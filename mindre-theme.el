@@ -207,6 +207,8 @@ Commonly used for types"
   (load-theme 'mindre t)
   (run-hooks 'mindre-after-load-hook))
 
+(make-obsolete 'mindre 'load-theme "mindre is deprecated, use load-theme instead.")
+
 ;; --- Faces ---------------------------------------------------------
 (let ((mindre-heading-1-height (if mindre-use-more-bold
 				   1.0
