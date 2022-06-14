@@ -16,12 +16,12 @@ usability and minimalism by almost being a monochrome theme but with a splash of
 1. Copy mindre-theme.el to `~/.emacs.d/themes`
 2. Add the following snippet to your init file
 
-```elisp
+```Emacs-Lisp
 (use-package mindre-theme
   :ensure nil
   :load-path "themes/"
   :config
-  (mindre))
+  (load-theme 'mindre t))
 ```
 
 # Installation with use-package and straight
@@ -29,7 +29,10 @@ Add the following snippet to your init file
 
 ```elisp
 (use-package mindre-theme
-  :straight (:host github :repo "erikbackman/mindre-theme"))
+  :ensure t
+  :straight (:host github :repo "erikbackman/mindre-theme")
+  :config
+  (load-theme 'mindre t))
 ```
 
 # Terminal colors
