@@ -252,10 +252,7 @@ Commonly used for types"
    `(mindre-block ((t (:background ,mindre-background-dark-1 :foreground ,mindre-foreground :extend t))))
 
    ;; --- Header & mode line -------------------------------------------
-   `(mode-line ((t (:foreground ,mindre-foreground
-				:background ,mindre-background-dark-1
-				:box (:color ,mindre-faded :line-width 1)))))
-   
+   `(mode-line ((t (:foreground ,mindre-foreground :background ,mindre-background-dark-1 :box (:color ,mindre-faded :line-width 1)))))
    `(mode-line-highlight ((t (:inherit nil :background nil :box nil))))
    `(mode-line-buffer-id ((t (:weight regular :background nil))))
    `(mode-line-emphasis ((t (:weight regular :background nil))))
