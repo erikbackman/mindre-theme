@@ -10,7 +10,7 @@ usability and minimalism by almost being a monochrome theme but with a splash of
 
 # Manual installation
 1. Copy mindre-theme.el to a path in your `custom-theme-load-path`.
-2. Add a `(load-theme mindre t)` to your init file (either ~/.emacs or ~/.emacs.d/init.el).
+2. Add a `(load-theme 'mindre t)` to your init file (either ~/.emacs or ~/.emacs.d/init.el).
 
 # Manual installation (use-package)
 1. Copy mindre-theme.el to `~/.emacs.d/themes`
