@@ -35,6 +35,12 @@ Add the following snippet to your init file
   (load-theme 'mindre t))
 ```
 
+# Customisations
+```lisp
+(setq mindre-use-more-bold nil ; bold face for variables, headings and such will
+      mindre-use-facded-lisp-parens t)
+```
+
 # Terminal colors
 
 **Kitty**
@@ -78,12 +84,6 @@ color14  #37474F
 # white
 color7   #ECEFF1
 color15  #F5F5F5
-```
-
-# Customisations
-```lisp
-(setq mindre-use-more-bold nil ; bold face for variables, headings and such will
-      mindre-use-facded-lisp-parens t)
 ```
 
 # ~~Frequently~~ asked questions
