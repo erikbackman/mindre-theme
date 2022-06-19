@@ -6,6 +6,10 @@ so why do we need our editor to look like a christmas tree?
 Mindre (which is the Swedish word for "less") tries to strike a good balance between
 usability and minimalism by almost being a monochrome theme but with a splash of color.
 
+I highly recommend using [Redshift](http://jonls.dk/redshift/) or something similar to adjust your
+the color temperature of your screen. Personally I have mine set to 3200K for both day and night
+(default is 3700K and 5500K respectively).
+
 **This is very much a work in progress and things may change drastically at any time.**
 
 # Manual installation
@@ -36,8 +40,9 @@ Add the following snippet to your init file
 ```
 
 # Customisations
-```lisp
-(setq mindre-use-more-bold nil ; bold face for variables, headings and such will
+
+```elisp
+(setq mindre-use-more-bold nil
       mindre-use-facded-lisp-parens t)
 ```
 
