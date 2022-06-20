@@ -285,7 +285,7 @@ Commonly used for types"
    ;; --- General ------------------------------------------------------
    '(buffer-menu-buffer ((t (:inherit mindre-strong))))
    '(minibuffer-prompt ((t (:inherit mindre-strong))))
-   '(isearch ((t (:inherit mindre-strong))))
+   `(isearch ((t (:inherit (mindre-strong highlight)))))
    '(isearch-fail ((t (:inherit mindre-faded))))
    '(show-paren-match ((t (:inherit nil :weight bold :foreground "#AB47BC"))))
    '(show-paren-mismatch ((t (:inherit mindre-critical))))
