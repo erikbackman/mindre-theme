@@ -306,7 +306,6 @@ Commonly used for types"
    '(tty-menu-selected-face ((t (:inherit mindre-salient-i))))
 
    ;; --- Eshell ----------------------------------------------------
-
    '(eshell-prompt ((t (:inherit mindre-default))))
 
    ;; --- ERC ----------------------------------------------------
@@ -390,8 +389,6 @@ Commonly used for types"
 
    ;; --- Vertico  --------------------------------------------------------
    `(vertico-current ((t (:inherit highlight))))
-
-   ;; --- Consult  --------------------------------------------------------
    
    ;; --- Buttons ------------------------------------------------------
    `(custom-button 
