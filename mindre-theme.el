@@ -19,10 +19,6 @@
 
 ;;; Commentary:
 ;;
-;; While studying mathematics I realized how much I appreciated the artistic
-;; aspect of solving problems with pen an paper and so I wanted an Emacs theme
-;; that had a similar look.
-;;
 ;; Mindre-theme should be be mostly monochrome with a few muted colors where
 ;; it makes sense.
 ;;
