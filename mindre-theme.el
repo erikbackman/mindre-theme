@@ -386,6 +386,7 @@ Commonly used for types"
 
    ;; --- Corfu  --------------------------------------------------------
    `(corfu-current ((t (:inherit highlight))))
+   `(orderless-match-face-0 ((t (:inherit mindre-salient))))
 
    ;; --- Vertico  --------------------------------------------------------
    `(vertico-current ((t (:inherit highlight))))
