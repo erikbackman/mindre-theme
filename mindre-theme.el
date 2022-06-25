@@ -91,6 +91,10 @@ Commonly used for types"
   "Default yellow color."
   :type 'color :group 'mindre)
 
+(defcustom mindre-link "#593E69"
+  "Link color."
+  :type 'color :group 'mindre)
+
 (defcustom mindre-warning "#d47500"
   "Default yellow color."
   :type 'color :group 'mindre)
@@ -594,7 +598,7 @@ Commonly used for types"
    `(org-level-6 ((t (:inherit mindre-strong))))
    `(org-level-7 ((t (:inherit mindre-strong))))
    `(org-level-8 ((t (:inherit mindre-strong))))
-   '(org-link ((t (:inherit mindre-salient))))
+   `(org-link ((t (:foreground ,mindre-link))))
    '(org-list-dt ((t (:inherit mindre-faded))))
    '(org-macro ((t (:inherit mindre-faded))))
    '(org-meta-line ((t (:inherit (mindre-faded fixed-pitch)))))
