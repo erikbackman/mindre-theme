@@ -598,7 +598,7 @@ Commonly used for types"
    `(org-level-6 ((t (:inherit mindre-strong))))
    `(org-level-7 ((t (:inherit mindre-strong))))
    `(org-level-8 ((t (:inherit mindre-strong))))
-   `(org-link ((t (:foreground ,mindre-link))))
+   `(org-link ((t (:inherit mindre-salient))))
    '(org-list-dt ((t (:inherit mindre-faded))))
    '(org-macro ((t (:inherit mindre-faded))))
    '(org-meta-line ((t (:inherit (mindre-faded fixed-pitch)))))
