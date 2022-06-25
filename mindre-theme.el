@@ -555,8 +555,14 @@ Commonly used for types"
    ;; --- Org ----------------------------------------------------------
    '(org-archived ((t (:inherit mindre-faded))))
    '(org-block ((t (:inherit (mindre-block fixed-pitch)))))
-   `(org-block-begin-line ((t (:inherit (mindre-faded fixed-pitch) :extend t))))
-   `(org-block-end-line ((t (:inherit (mindre-faded fixed-pitch) :extend t))))
+   
+   `(org-block-begin-line ((t (:inherit (mindre-faded fixed-pitch)
+					:foreground "#585c60"
+					:overline ,mindre-faded
+					:background ,mindre-subtle :extend t))))
+   `(org-block-end-line ((t (:inherit (mindre-faded fixed-pitch)
+				      :background ,mindre-subtle :extend t))))
+   
    '(org-checkbox ((t (:inherit (mindre-default fixed-pitch)))))
    '(org-checkbox-statistics-done ((t (:inherit (mindre-faded fixed-pitch)))))
    '(org-checkbox-statistics-todo ((t (:inherit (mindre-default fixed-pitch)))))
