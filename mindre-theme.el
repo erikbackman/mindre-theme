@@ -563,9 +563,13 @@ Commonly used for types"
    `(org-block-begin-line ((t (:inherit (mindre-faded fixed-pitch)
 					:foreground "#585c60"
 					:overline ,mindre-faded
-					:background ,mindre-subtle :extend t))))
+					:background ,mindre-subtle
+					:height 0.9
+					:extend t))))
    `(org-block-end-line ((t (:inherit (mindre-faded fixed-pitch)
-				      :background ,mindre-subtle :extend t))))
+				      :background ,mindre-subtle
+				      :height 0.9
+				      :extend t))))
    
    '(org-checkbox ((t (:inherit (mindre-default fixed-pitch)))))
    '(org-checkbox-statistics-done ((t (:inherit (mindre-faded fixed-pitch)))))
