@@ -317,6 +317,11 @@ Commonly used for types"
    '(tty-menu-enabled-face ((t (:inherit mindre-default-i))))
    '(tty-menu-selected-face ((t (:inherit mindre-salient-i))))
 
+   ;; --- whitespace-mode ----------------------------------------------------
+   `(whitespace-space ((t (:inherit mindre-default))))
+   `(whitespace-empty ((t (:inherit mindre-default :foreground ,mindre-warning))))
+   `(whitespace-newline ((t (:inherit mindre-faded))))
+
    ;; --- Eshell ----------------------------------------------------
    '(eshell-prompt ((t (:inherit mindre-default))))
 
@@ -325,6 +330,7 @@ Commonly used for types"
    '(erc-timestamp-face ((t (:inhert mindre-faded))))
    '(erc-notice-face ((t (:inherit mindre-salient))))
    '(erc-current-nick-face ((t (:inherit mindre-strong))))
+   '(erc-error-face ((t (:inherit mindre-critical-i))))
 
    ;; --- Dictionary ----------------------------------------------------
    `(dictionary-word-definition-face ((t (:inherit (mindre-default fixed-pitch)))))
