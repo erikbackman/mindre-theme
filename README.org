@@ -10,6 +10,9 @@ I highly recommend using [[http://jonls.dk/redshift/][Redshift]] or something
 similar to adjust the color temperature of your screen. Personally I have mine
 set to 3200K for both day and night (default is 3700K and 5500K respectively).
 
+* Screenshot
+#+html: <img src="../assets/mindre-screenshot.png"/>
+
 * Manual installation
 1. Copy mindre-theme.el to =~/.emacs.d/themes=
 2. Add the following snippet to your init file
