@@ -1,5 +1,8 @@
 #+html: <img src="../assets/mindre-logo.png"/>
 
+#+html: <a href="https://www.gnu.org/software/emacs/"><img alt="GNU Emacs" src="https://github.com/erikbackman/erikbackman/blob/master/emacs.svg?raw=true"/></a>
+
+* Introduction
 When putting down ideas or solving problems on paper we seldom use a lot of colors,
 so why do we need our editor to look like a christmas tree?
 
@@ -10,7 +13,6 @@ I highly recommend using [[http://jonls.dk/redshift/][Redshift]] or something
 similar to adjust the color temperature of your screen. Personally I have mine
 set to 3200K for both day and night (default is 3700K and 5500K respectively).
 
-* Screenshot
 #+html: <img src="../assets/mindre-screenshot.png"/>
 
 * Manual installation
