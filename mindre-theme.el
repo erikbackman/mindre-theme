@@ -170,11 +170,9 @@ Commonly used for types"
   :group nil)
 
 (defface mindre-paren-face
-  `((((class color) (background dark))
-     (:foreground "grey20"))
-    (((class color) (background light))
-     (:foreground "grey70")))
-  "Face used to dim parentheses.")
+  '((t (:foreground "grey70")))
+  "Face used to dim parentheses."
+  :group nil)
 
 (defun mindre--font-lock-add-paren ()
   (font-lock-add-keywords nil '(("(\\|)" . 'mindre-paren-face))))
