@@ -1,24 +1,29 @@
 ;;; mindre-theme.el --- Minimal, light theme -*- lexical-binding: t -*-
-;; ---------------------------------------------------------------------
-;; GNU Emacs / mindre
-;; Copyright (C) 2022 - Erik Bäckman
-;;
+
+;; Copyright (C) 2021, 2022  Free Software Foundation, Inc.
+
+;; Author: Erik Bäckman <contact@ebackman.net>
+;; Version: 0.1
+;; Package-Requires: ((emacs "26.1"))
+;; Keywords: faces
+;; Homepage: https://github.com/erikbackman/mindre-theme
+
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
 ;; (at your option) any later version.
-;;
+
 ;; This program is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;; GNU General Public License for more details.
-;;
+
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ;; ---------------------------------------------------------------------
 
 ;;; Commentary:
-;;
+
 ;; Mindre (which is the Swedish word for “less”) tries to strike a good balance
 ;; between usability and minimalism by almost being a monochrome theme but with
 ;; a splash of color.
