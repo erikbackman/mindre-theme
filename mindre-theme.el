@@ -19,8 +19,9 @@
 
 ;;; Commentary:
 ;;
-;; Mindre-theme should be be mostly monochrome with a few muted colors where
-;; it makes sense.
+;; Mindre (which is the Swedish word for “less”) tries to strike a good balance
+;; between usability and minimalism by almost being a monochrome theme but with
+;; a splash of color.
 ;;
 ;; Three colors are used to make certain language constructs stand out
 ;; enough for your eyes to notice them without being distracting.
@@ -31,25 +32,25 @@
 ;; 2. mindre-salient-alt (types)
 ;; 3. mindre-verbatim (strings)
 
-
 ;;; Code:
 
 (deftheme mindre
   "Mindre theme.")
 
 (defgroup mindre nil
-  "Mindre theme properties.")
-
-(defcustom mindre-background-dark-1 "#f2f3f5"
-  "Lighter dark background."
-  :type 'color :group 'mindre)
-
-(defcustom mindre-background-dark-2 "#e3e5e8"
-  "Default dark background."
-  :type 'color :group 'mindre)
+  "Mindre theme properties."
+  :group 'faces)
 
 (defcustom mindre-background "#F5F5F5"
   "Default background color."
+  :type 'color :group 'mindre)
+
+(defcustom mindre-background-2 "#f2f3f5"
+  "Alternative background used for UI elements."
+  :type 'color :group 'mindre)
+
+(defcustom mindre-background-3 "#e3e5e8"
+  "Alternative background used for UI elements."
   :type 'color :group 'mindre)
 
 (defcustom mindre-foreground "#2e3338"
@@ -154,11 +155,11 @@ Commonly used for types"
   :group nil)
 
 (defface mindre-warning nil
-  "Warning face"
+  "Warning face."
   :group nil)
 
 (defface mindre-note nil
-  "Note face"
+  "Note face."
   :group nil)
 
 (defface mindre-block nil
@@ -175,16 +176,19 @@ Commonly used for types"
   :group nil)
 
 (defun mindre--font-lock-add-paren ()
+  "Make Lisp parentheses faded."
   (font-lock-add-keywords nil '(("(\\|)" . 'mindre-paren-face))))
 
 (defvar mindre-after-load-hook nil
   "Hook run after theme has loaded.")
 
 (defcustom mindre-use-more-bold nil
-  "Use more bold constructs.")
+  "Use more bold constructs."
+  :type 'boolean :group 'mindre)
 
 (defcustom mindre-use-faded-lisp-parens t
-  "Use faded parenthesis in lisp modes.")
+  "Use faded parenthesis in Lisp modes."
+  :type 'boolean :group 'mindre)
 
 (defface mindre-heading-1 nil
   "Face for headings."
@@ -245,15 +249,15 @@ Commonly used for types"
    `(mindre-verbatim ((t (:foreground ,mindre-verbatim))))
 
    `(mindre-heading-1 ((t (:inherit mindre-strong :height ,mindre-heading-1-height))))
-   `(mindre-block ((t (:background ,mindre-background-dark-1 :foreground ,mindre-foreground :extend t))))
+   `(mindre-block ((t (:background ,mindre-background-2 :foreground ,mindre-foreground :extend t))))
 
    ;; --- Header & mode line -------------------------------------------
    `(mode-line ((t (:foreground ,mindre-foreground
-		    :background ,mindre-background-dark-1
+		    :background ,mindre-background-2
 		    :box (:color ,mindre-faded :line-width 1)))))
 
    `(mode-line-inactive ((t (:foreground "#535c65"
-			     :background ,mindre-background-dark-2
+			     :background ,mindre-background-3
 			     :box (:line-width 1 :color ,mindre-faded)))))
 
    `(mode-line-highlight ((t (:inherit nil :background nil :box nil))))
@@ -262,7 +266,7 @@ Commonly used for types"
 
 
    `(header-line ((t (:foreground ,mindre-foreground
-		      :background ,mindre-background-dark-1
+		      :background ,mindre-background-2
 		      :inherit nil
 		      :height 0.9
 		      :box nil))))
@@ -470,7 +474,7 @@ Commonly used for types"
    '(eglot-highlight-symbol-face ((t (:inherit underline))))
 
    ;; --- Eww ----------------------------------------------------
-   `(eww-form-submit ((t (:box (:style released-button) :background ,mindre-background-dark-2))))
+   `(eww-form-submit ((t (:box (:style released-button) :background ,mindre-background-3))))
 
    ;; --- Keycast ------------------------------------------------------
    `(keycast-key ((t :inherit nil :bold t)))
@@ -640,9 +644,9 @@ Commonly used for types"
    '(org-warning ((t (:inherit mindre-strong))))
 
    ;; --- Org modern ---------------------------------------------------
-   `(org-modern-date-active ((t (:inherit org-modern-done :background ,mindre-background-dark-2))))
-   `(org-modern-statistics ((t (:inherit org-modern-done :background ,mindre-background-dark-2))))
-   `(org-modern-priority ((t (:inherit org-modern-done :background ,mindre-background-dark-2))))
+   `(org-modern-date-active ((t (:inherit org-modern-done :background ,mindre-background-3))))
+   `(org-modern-statistics ((t (:inherit org-modern-done :background ,mindre-background-3))))
+   `(org-modern-priority ((t (:inherit org-modern-done :background ,mindre-background-3))))
 
    ;; --- Mu4e ---------------------------------------------------------
    '(mu4e-attach-number-face ((t (:inherit mindre-strong))))
