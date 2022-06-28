@@ -92,43 +92,43 @@ Commonly used for types"
   "Strong color is used for information of a structural nature."
   :type 'color :group 'mindre)
 
-;; TODO: Pick a better color for mindre-ok
 (defcustom mindre-ok "#537469"
-  "Default yellow color."
+  "Default green color."
   :type 'color :group 'mindre)
 
 (defcustom mindre-warning "#d47500"
-  "Default yellow color."
+  "Default orange color."
   :type 'color :group 'mindre)
 
 (defcustom mindre-error "#BF616A"
-  "Default yellow color."
+  "Default red color."
   :type 'color :group 'mindre)
 
 (defcustom mindre-critical "#BF616A"
-  "Critical face is for information that requires immediate action."
+  "Critical face for information that requires immediate action."
   :type 'color :group 'mindre)
 
 (defface mindre-critical nil
-  "Critical face is for information that requires immediate action."
+  "Critical face for information that requires immediate action."
   :group nil)
 
 (defface mindre-critical-i nil
-  "Critical face inversed." :group nil)
+  "Critical face inversed."
+  :group nil)
 
 (defface mindre-strong nil
-  "Strong face is used for information of a structural nature."
+  "Strong face for information of a structural nature."
   :group nil)
 
 (defface mindre-strong-i nil
   "Strong face inversed." :group nil)
 
 (defface mindre-salient nil
-  "Salient face is used for information that are important."
+  "Salient face for important information."
   :group nil)
 
 (defface mindre-salient-alt nil
-  "Alternative Salient face."
+  "Alternative salient face."
   :group nil)
 
 (defface mindre-salient-i nil
@@ -136,7 +136,7 @@ Commonly used for types"
   :group nil)
 
 (defface mindre-faded nil
-  "Faded face is for information that are less important."
+  "Faded face for less important information."
   :group nil)
 
 (defface mindre-faded-i nil
@@ -285,9 +285,6 @@ Commonly used for types"
    '(fringe ((t (:inherit mindre-faded))))
    '(hl-line ((t (:inherit mindre-subtle))))
    '(link ((t (:inherit mindre-salient))))
-   ;; TODO: Add option for turning mixed-fonts on/off
-					;'(fixed-pitch ((t (:inherit default))))
-					;'(fixed-pitch-serif ((t (:inherit default))))
 
    ;; --- Semantic -----------------------------------------------------
    '(shadow ((t (:inherit mindre-faded))))
@@ -302,7 +299,7 @@ Commonly used for types"
    '(minibuffer-prompt ((t (:inherit mindre-strong))))
    `(isearch ((t (:inherit (mindre-strong highlight)))))
    '(isearch-fail ((t (:inherit mindre-faded))))
-   '(show-paren-match ((t (:inherit nil :weight bold :foreground "#AB47BC"))))
+   '(show-paren-match ((t (:weight bold :foreground "#AB47BC"))))
    '(show-paren-mismatch ((t (:inherit mindre-critical))))
    '(lazy-highlight ((t (:inherit mindre-subtle))))
    '(trailing-whitespace ((t (:inherit mindre-subtle))))
@@ -779,8 +776,6 @@ Commonly used for types"
    '(rst-literal ((t (:inherit mindre-salient))))
    '(rst-reference ((t (:inherit mindre-salient))))
    '(rst-transition ((t (:inherit mindre-default))))
-
-   ;; --- Lisp ----------------------------------------------------
 
    ;; --- Markdown ----------------------------------------------------
    '(markdown-blockquote-face ((t (:inherit mindre-default))))
