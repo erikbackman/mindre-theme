@@ -208,7 +208,7 @@ Commonly used for types"
   "Load mindre theme."
   (interactive)
 
-  (when 'mindre-use-faded-lisp-parens
+  (when mindre-use-faded-lisp-parens
     (add-hook 'lisp-data-mode-hook #'mindre--font-lock-add-paren)
     (add-hook 'scheme-mode-hook #'mindre--font-lock-add-paren))
 
@@ -869,7 +869,7 @@ Commonly used for types"
 	       (file-name-as-directory (file-name-directory load-file-name))))
 
 ;;;###autoload
-(when 'mindre-use-faded-lisp-parens
+(when mindre-use-faded-lisp-parens
   (add-hook 'lisp-data-mode-hook #'mindre--font-lock-add-paren)
   (add-hook 'scheme-mode-hook #'mindre--font-lock-add-paren))
 
