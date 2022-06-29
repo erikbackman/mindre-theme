@@ -120,6 +120,11 @@ Commonly used for types"
   "Strong face for information of a structural nature."
   :group nil)
 
+(defface mindre-bold
+  '((t (:bold t :foreground "#000")))
+  "Bold face."
+  :group nil)
+
 (defface mindre-strong-i nil
   "Strong face inversed." :group nil)
 
@@ -265,7 +270,6 @@ Commonly used for types"
 			     :background ,mindre-background-3
 			     :box (:line-width 1 :color ,mindre-faded)))))
 
-   `(mode-line-highlight ((t (:inherit nil :background nil :box nil))))
    `(mode-line-buffer-id ((t (:weight regular :background nil))))
    `(mode-line-emphasis ((t (:weight regular :background nil))))
 
@@ -291,7 +295,7 @@ Commonly used for types"
    '(success ((t (:inherit mindre-salient))))
    '(warning ((t (:inherit mindre-warning))))
    '(error ((t (:inherit mindre-critical))))
-   '(match ((t (:inherit mindre-strong))))
+   '(match ((t (:inherit ,mindre-bold))))
    `(preview-face ((t (:inherit mindre-subtle))))
 
    ;; --- General ------------------------------------------------------
@@ -408,11 +412,16 @@ Commonly used for types"
 
    ;; --- Corfu  --------------------------------------------------------
    `(corfu-current ((t (:inherit highlight))))
-   `(orderless-match-face-0 ((t (:inherit mindre-salient))))
+   `(orderless-match-face-0 ((t (:inherit mindre-bold))))
+   `(orderless-match-face-1 ((t (:inherit mindre-bold))))
+   `(orderless-match-face-2 ((t (:inherit mindre-bold))))
 
    ;; --- Vertico  --------------------------------------------------------
    `(vertico-current ((t (:inherit highlight))))
 
+   ;; --- Consult  --------------------------------------------------------
+   `(consult-file ((t (:inherit highlight))))
+   
    ;; --- Buttons ------------------------------------------------------
    `(custom-button
      ((t (:foreground ,mindre-faded :background ,mindre-highlight :box nil))))
