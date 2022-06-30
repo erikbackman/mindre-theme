@@ -183,12 +183,12 @@ Commonly used for types"
 
 (defface mindre-button-hover
   `((t (:inherit mindre-button :background ,mindre-background-2)))
-  "Default button face."
+  "Hover button face."
   :group nil)
 
 (defface mindre-button-pressed
   `((t (:box (:style nil) :background ,mindre-background-3)))
-  "Default button face."
+  "Pressed button face."
   :group nil)
 
 (defface mindre-verbatim nil
