@@ -637,7 +637,7 @@ Commonly used for types"
    '(org-mode-line-clock-overrun ((t (:inherit mindre-faded))))
    '(org-priority ((t (:inherit mindre-faded))))
    '(org-property-value ((t (:inherit (mindre-faded fixed-pitch)))))
-   '(org-quote ((t (:inherit mindre-faded))))
+   '(org-quote ((t (:inherit mindre-default))))
    '(org-scheduled ((t (:inherit mindre-faded))))
    '(org-scheduled-previously ((t (:inherit mindre-faded))))
    '(org-scheduled-today ((t (:inherit mindre-faded))))
