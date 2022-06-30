@@ -555,9 +555,6 @@ Commonly used for types"
    '(orderless-match-face-2 ((t (:inherit mindre-bold))))
    '(orderless-match-face-3 ((t (:inherit mindre-bold))))
 
-   ;; --- Ido
-   '(ido-matches)
-
    ;; --- Flyspell ----------------------------------------------------
    '(flyspell-duplicate ((t (:inherit mindre-warning))))
    `(flyspell-incorrect ((t (:inherit mindre-strong :underline (:style wave :color ,mindre-error)))))
