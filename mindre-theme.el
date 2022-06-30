@@ -176,6 +176,21 @@ Commonly used for types"
   "Default block face."
   :group nil)
 
+(defface mindre-button
+  `((t (:box (:style released-button) :background ,mindre-background-3)))
+  "Default button face."
+  :group nil)
+
+(defface mindre-button-hover
+  `((t (:inherit mindre-button :background ,mindre-background-2)))
+  "Default button face."
+  :group nil)
+
+(defface mindre-button-pressed
+  `((t (:box (:style nil) :background ,mindre-background-3)))
+  "Default button face."
+  :group nil)
+
 (defface mindre-verbatim nil
   "Face used for things like strings."
   :group nil)
@@ -420,14 +435,11 @@ Commonly used for types"
    `(consult-file ((t (:inherit highlight))))
    
    ;; --- Buttons ------------------------------------------------------
-   `(custom-button
-     ((t (:foreground ,mindre-faded :background ,mindre-highlight :box nil))))
+   `(custom-button ((t (:inherit mindre-button))))
 
-   `(custom-button-mouse
-     ((t (:foreground ,mindre-foreground :background ,mindre-subtle :box nil))))
+   `(custom-button-mouse ((t (:inherit mindre-button-hover))))
 
-   `(custom-button-pressed
-     ((t (:foreground ,mindre-background :background ,mindre-foreground :box nil))))
+   `(custom-button-pressed ((t (:inherit mindre-button-pressed))))
 
    ;; --- Packages -----------------------------------------------------
    '(package-description ((t (:inherit mindre-default))))
@@ -542,6 +554,9 @@ Commonly used for types"
    '(orderless-match-face-1 ((t (:inherit mindre-bold))))
    '(orderless-match-face-2 ((t (:inherit mindre-bold))))
    '(orderless-match-face-3 ((t (:inherit mindre-bold))))
+
+   ;; --- Ido
+   '(ido-matches)
 
    ;; --- Flyspell ----------------------------------------------------
    '(flyspell-duplicate ((t (:inherit mindre-warning))))
