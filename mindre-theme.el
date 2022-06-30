@@ -412,9 +412,6 @@ Commonly used for types"
 
    ;; --- Corfu  --------------------------------------------------------
    `(corfu-current ((t (:inherit highlight))))
-   `(orderless-match-face-0 ((t (:inherit mindre-bold))))
-   `(orderless-match-face-1 ((t (:inherit mindre-bold))))
-   `(orderless-match-face-2 ((t (:inherit mindre-bold))))
 
    ;; --- Vertico  --------------------------------------------------------
    `(vertico-current ((t (:inherit highlight))))
@@ -541,10 +538,10 @@ Commonly used for types"
    '(outline-8 ((t (:inherit mindre-strong))))
 
    ;; --- Orderless ------------------------------------------------------
-   '(orderless-match-face-0 ((t (:inherit (mindre-strong bold)))))
-   '(orderless-match-face-1 ((t (:inherit (mindre-strong bold)))))
-   '(orderless-match-face-2 ((t (:inherit (mindre-strong bold)))))
-   '(orderless-match-face-3 ((t (:inherit (mindre-strong bold)))))
+   '(orderless-match-face-0 ((t (:inherit mindre-bold))))
+   '(orderless-match-face-1 ((t (:inherit mindre-bold))))
+   '(orderless-match-face-2 ((t (:inherit mindre-bold))))
+   '(orderless-match-face-3 ((t (:inherit mindre-bold))))
 
    ;; --- Flyspell ----------------------------------------------------
    '(flyspell-duplicate ((t (:inherit mindre-warning))))
