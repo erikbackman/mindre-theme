@@ -667,6 +667,7 @@ Commonly used for types"
    `(org-modern-date-active ((t (:inherit org-modern-done :background ,mindre-background-3))))
    `(org-modern-statistics ((t (:inherit org-modern-done :background ,mindre-background-3))))
    `(org-modern-priority ((t (:inherit org-modern-done :background ,mindre-background-3))))
+   `(org-modern-label ((t (:box (:color ,mindre-background :line-width (0 . -1))))))
 
    ;; --- Mu4e ---------------------------------------------------------
    '(mu4e-attach-number-face ((t (:inherit mindre-strong))))
