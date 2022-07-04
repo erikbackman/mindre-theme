@@ -303,7 +303,7 @@ Commonly used for types"
    '(region ((t (:inherit highlight))))
    '(fringe ((t (:inherit mindre-faded))))
    '(hl-line ((t (:inherit mindre-subtle))))
-   '(link ((t (:inherit mindre-salient))))
+   '(link ((t (:inherit mindre-salient :underline t))))
 
    ;; --- Semantic -----------------------------------------------------
    '(shadow ((t (:inherit mindre-faded))))
@@ -638,7 +638,7 @@ Commonly used for types"
    `(org-level-6 ((t (:inherit mindre-strong))))
    `(org-level-7 ((t (:inherit mindre-strong))))
    `(org-level-8 ((t (:inherit mindre-strong))))
-   `(org-link ((t (:inherit mindre-salient))))
+   `(org-link ((t (:inherit link))))
    '(org-list-dt ((t (:inherit mindre-faded))))
    '(org-macro ((t (:inherit mindre-faded))))
    '(org-meta-line ((t (:inherit (mindre-faded fixed-pitch) :height 0.9))))
