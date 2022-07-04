@@ -335,6 +335,10 @@ Commonly used for types"
    '(tabulated-list-fake-header ((t (:inherit mindre-strong))))
    '(tool-bar ((t (:inherit mindre-faded-i))))
 
+   ;; --- Pulse --------------------------------------------------------
+   `(pulse-highlight-face ((t (:inherit highlight))))
+   `(pulse-highlight-start-face ((t (:inherit highlight))))
+
    ;; --- TTY faces ----------------------------------------------------
    '(tty-menu-disabled-face ((t (:inherit mindre-faded-i))))
    '(tty-menu-enabled-face ((t (:inherit mindre-default-i))))
