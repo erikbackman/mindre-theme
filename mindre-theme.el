@@ -1,6 +1,6 @@
 ;;; mindre-theme.el --- Minimal, light theme -*- lexical-binding: t -*-
 
-;; Copyright (C) 2021, 2022  Free Software Foundation, Inc.
+;; Copyright (C) 2022 erikbackman
 
 ;; Author: Erik Bäckman <contact@ebackman.net>
 ;; Version: 0.1
