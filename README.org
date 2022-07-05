@@ -1,6 +1,7 @@
 #+html: <img src="../assets/mindre-logo.png"/>
 
 #+html: <a href="https://www.gnu.org/software/emacs/"><img alt="GNU Emacs" src="https://github.com/erikbackman/erikbackman/blob/master/emacs.svg?raw=true"/></a>
+#+html: <a href="https://melpa.org/#/mindre-theme"><img alt="MELPA" src="https://melpa.org/packages/mindre-theme-badge.svg"/></a>
 
 * Introduction
 When putting down ideas or solving problems on paper we seldom use a lot of colors,
@@ -15,33 +16,38 @@ set to 3200K for both day and night (default is 3700K and 5500K respectively).
 
 #+html: <img src="../assets/mindre-screenshot.png"/>
 
-* Manual installation
-1. Copy mindre-theme.el to =~/.emacs.d/themes=
-2. Add the following snippet to your init file
+* Installation
+*** Using =package.el=
 
-#+begin_src emacs-lisp
-  (use-package mindre-theme
-  :ensure nil
-  :load-path "themes/"
-  :config
-  (load-theme 'mindre t))
-#+end_src
-* Installation with use-package and straight
-Add the following snippet to your init file
+You can install =mindre-theme= from [[https://melpa.org][MELPA]] using =package.el=
 
-#+begin_src emacs-lisp
-  (use-package mindre-theme
-  :ensure t
-  :straight (:host github :repo "erikbackman/mindre-theme")
-  :config
-  (load-theme 'mindre t))
+#+begin_src
+M-x package-refresh-contents
+M-x package-install RET mindre-theme RET
 #+end_src
 
+Or with =use-package=:
+#+begin_src emacs-lisp
+(use-package mindre-theme
+    :ensure
+    :config
+    (load-theme 'mindre t))
+#+end_src
+
+*** Directly from this repo
+
+#+begin_src emacs-lisp
+(use-package mindre-theme
+    :ensure
+    :straight (:host github :repo "erikbackman/mindre-theme")
+    :config
+    (load-theme 'mindre t))
+#+end_src
 
 * Customisations
 #+begin_src emacs-lisp
-  (setq mindre-use-more-bold nil
-        mindre-use-facded-lisp-parens t)
+(setq mindre-use-more-bold nil
+    mindre-use-facded-lisp-parens t)
 #+end_src
 
 * Terminal colors
