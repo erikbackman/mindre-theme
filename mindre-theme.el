@@ -433,9 +433,6 @@ Commonly used for types"
    ;; --- Vertico  --------------------------------------------------------
    `(vertico-current ((t (:inherit highlight))))
 
-   ;; --- Consult  --------------------------------------------------------
-   `(consult-file ((t (:inherit highlight))))
-   
    ;; --- Buttons ------------------------------------------------------
    `(custom-button ((t (:inherit mindre-button))))
 
