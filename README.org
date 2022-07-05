@@ -54,3 +54,6 @@ Or with =use-package=:
 - *What fonts are used in the logo/screenshots?*
 
   Sarasa Mono (It's basically Iosevka) and CMU Concrete
+
+* Roadmap [0/1]
+- [ ] Higher contrast option.
