@@ -1,7 +1,5 @@
 ;;; mindre-theme.el --- Minimal, light theme -*- lexical-binding: t -*-
 
-;; Copyright (C) 2022 erikbackman
-
 ;; Author: Erik Bäckman <contact@ebackman.net>
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
@@ -856,7 +854,6 @@ Commonly used for types"
 
    ;; --- Haskell ----------------------------------------------------
    `(haskell-constructor-face ((t (:foreground ,mindre-salient-alt))))
-   `(font-lock-type-face ((t (:foreground ,mindre-salient))))
    `(haskell-pragma-face ((t (:foreground ,mindre-highlight))))
    `(haskell-operator-face ((t (:inherit mindre-default))))
 
