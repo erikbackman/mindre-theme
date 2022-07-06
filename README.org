@@ -47,7 +47,7 @@ Or with =use-package=:
 * Customisations
 #+begin_src emacs-lisp
 (setq mindre-use-more-bold nil
-    mindre-use-facded-lisp-parens t)
+      mindre-use-faded-lisp-parens t)
 #+end_src
 
 * Terminal colors
