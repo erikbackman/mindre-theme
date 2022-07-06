@@ -50,51 +50,6 @@ Or with =use-package=:
       mindre-use-faded-lisp-parens t)
 #+end_src
 
-* Terminal colors
-
-*Kitty*
-
-#+begin_src conf
-foreground            #37474F
-background            #F5F5F5
-selection_foreground  #37474F
-selection_background  #CFD8DC
-url_color             #5e429f
-cursor                #37474F
-
-# black
-color0   #2E3440
-color8   #4C566A
-
-# red
-color1   #BF616A
-color9   #BF616A
-
-# green
-color2   #00625D
-color10  #537469
-
-# yellow
-color3   #54433a
-color11  #54433a
-
-# blue
-color4  #37474F
-color12 #37474F
-
-# magenta
-color5   #5e429f
-color13  #5e429f
-
-# cyan
-color6   #37474F
-color14  #37474F
-
-# white
-color7   #ECEFF1
-color15  #F5F5F5
-#+end_src
-
 * +Frequently+ asked questions
 - *What fonts are used in the logo/screenshots?*
 
