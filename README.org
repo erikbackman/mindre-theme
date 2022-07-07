@@ -55,5 +55,6 @@ Or with =use-package=:
 
   Sarasa Mono (It's basically Iosevka) and CMU Concrete
 
-* Roadmap [0/1]
+* Roadmap [0/2]
+- [ ] Palette override.
 - [ ] Higher contrast option.
