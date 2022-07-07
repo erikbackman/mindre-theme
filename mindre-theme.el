@@ -163,6 +163,10 @@
   "Bar face used for borders."
   :group nil)
 
+(defface mindre-bar-inactive nil
+  "Bar face used for borders."
+  :group nil)
+
 (defface mindre-paren-face
   '((t (:foreground "grey70")))
   "Face used to dim parentheses."
