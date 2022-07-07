@@ -29,11 +29,11 @@
 ;; Three colors are used to make certain language constructs stand out
 ;; enough for your eyes to notice them without being distracting.
 ;; The colors (in order of importance) are:
-;; 1. mindre-salient
+;; 1. #5c3e99
 ;;    Preferably used for language constructs that acts as the beginning
 ;;    or end of a clause, such as if/then/else, when, where etc.
-;; 2. mindre-salient-alt (types)
-;; 3. mindre-verbatim (strings)
+;; 2. #16524F
+;; 3. #54433a (strings)
 
 ;;; Code:
 
@@ -88,18 +88,6 @@
   :group nil)
 
 (defface mindre-strong-i nil
-  "Strong face inversed."
-  :group nil)
-
-(defface mindre-salient nil
-  "Salient face for important information."
-  :group nil)
-
-(defface mindre-salient-alt nil
-  "Alternative salient face."
-  :group nil)
-
-(defface mindre-salient-i nil
   "Strong face inversed."
   :group nil)
 
@@ -241,10 +229,6 @@
     `(mindre-type ((t (:foreground ,green))))
     `(mindre-verbatim ((t (:foreground ,yellow-dark))))
 
-    `(mindre-salient ((t (:foreground ,purple))))
-    `(mindre-salient-alt ((t (:foreground ,green))))
-
-    `(mindre-salient-i ((t (:foreground ,bg-main :background ,green))))
     `(mindre-strong ((t ,(when mindre-use-more-bold '(:weight semibold)))))
     `(mindre-strong-i ((t (:foreground ,bg-main :background ,fg-main :weight bold))))
 
@@ -339,7 +323,7 @@
 
     ;; --- Dictionary ----------------------------------------------------
     `(dictionary-word-definition-face ((t (:inherit (mindre-default fixed-pitch)))))
-    `(dictionary-reference-face ((t (:inherit (mindre-salient fixed-pitch)))))
+    `(dictionary-reference-face ((t (:inherit (mindre-keyword fixed-pitch)))))
 
     ;; --- Windows divider ----------------------------------------------
     `(window-divider ((t (:foreground ,bg-main))))
@@ -499,7 +483,7 @@
     '(diff-removed ((t (:inherit mindre-faded))))
     '(diff-changed ((t (:inherit mindre-strong))))
     '(diff-added ((t (:inherit mindre-keyword))))
-    '(diff-refine-added ((t (:inherit (mindre-salient mindre-strong)))))
+    '(diff-refine-added ((t (:inherit (mindre-keyword mindre-strong)))))
     '(diff-refine-changed ((t (:inherit mindre-strong))))
     '(diff-refine-removed ((t (:inherit mindre-faded :strike-through t))))
 
@@ -559,7 +543,7 @@
     '(org-agenda-column-dateline ((t (:inherit mindre-faded))))
     '(org-agenda-current-time ((t (:inherit mindre-strong))))
     '(org-agenda-date ((t (:inherit mindre-keyword))))
-    '(org-agenda-date-today ((t (:inherit (mindre-salient mindre-strong)))))
+    '(org-agenda-date-today ((t (:inherit (mindre-keyword mindre-strong)))))
     '(org-agenda-date-weekend ((t (:inherit mindre-faded))))
     '(org-agenda-diary ((t (:inherit mindre-faded))))
     '(org-agenda-dimmed-todo-face ((t (:inherit mindre-faded))))
@@ -637,7 +621,7 @@
     '(org-tag-group ((t (:inherit mindre-faded))))
     '(org-target ((t (:inherit mindre-faded))))
     '(org-time-grid ((t (:inherit mindre-faded))))
-    '(org-todo ((t (:inherit (mindre-salient mindre-strong)))))
+    '(org-todo ((t (:inherit (mindre-keyword mindre-strong)))))
     '(org-upcoming-deadline ((t (:inherit mindre-default))))
     '(org-verbatim ((t (:inherit (mindre-verbatim fixed-pitch)))))
     '(org-verse ((t (:inherit mindre-faded))))
