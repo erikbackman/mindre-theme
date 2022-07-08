@@ -50,11 +50,16 @@ Or with =use-package=:
       mindre-use-faded-lisp-parens t)
 #+end_src
 
+* Release Notes
+*** 0.1.1
+- Fixed =mindre-use-faded-lisp-parens= not updating properly when set.
+
+* Roadmap [0/2]
+- [ ] Palette override.
+- [ ] Higher contrast option.
+
 * +Frequently+ asked questions
 - *What fonts are used in the logo/screenshots?*
 
   Sarasa Mono (It's basically Iosevka) and CMU Concrete
 
-* Roadmap [0/2]
-- [ ] Palette override.
-- [ ] Higher contrast option.
