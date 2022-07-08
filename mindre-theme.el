@@ -29,11 +29,12 @@
 ;; Three colors are used to make certain language constructs stand out
 ;; enough for your eyes to notice them without being distracting.
 ;; The colors (in order of importance) are:
-;; 1. #5c3e99
+;; 1. #5c3e99 (mindre-keyword)
 ;;    Preferably used for language constructs that acts as the beginning
 ;;    or end of a clause, such as if/then/else, when, where etc.
-;; 2. #16524F
-;; 3. #54433a (strings)
+;; 2. #16524F (mindre-type)
+;; 3. #54433a (mindre-verbatim)
+
 
 ;;; Code:
 
@@ -159,11 +160,11 @@
   :group nil)
 
 (defface mindre-bar nil
-  "Bar face used for borders."
+  "Face used for active mode-line and tab-bar"
   :group nil)
 
 (defface mindre-bar-inactive nil
-  "Bar face used for borders."
+  "Face used for inactive mode-line and tab-bar"
   :group nil)
 
 (defface mindre-paren-face
@@ -193,7 +194,7 @@
 (defun mindre--set-faded-lisp-parens (symbol value)
   "Mindre :set function for `mindre-use-faded-lisp-parens'.
 Takes care of adding or removing hooks when the
-`mindre-use-faded-lisp-parens' is customized."
+`mindre-use-faded-lisp-parens' variable is customized."
   (let ((hooks (mapcar (lambda (mode) (intern (format "%s-hook" mode)))
 		       mindre-faded-lisp-parens-modes)))
     (if value
