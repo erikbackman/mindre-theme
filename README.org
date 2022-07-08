@@ -29,7 +29,10 @@ M-x package-install RET mindre-theme RET
 Or with =use-package=:
 #+begin_src emacs-lisp
 (use-package mindre-theme
-    :ensure
+    :ensure t
+    :custom
+    (mindre-use-more-bold nil)
+    (mindre-use-faded-lisp-parens t)
     :config
     (load-theme 'mindre t))
 #+end_src
@@ -38,8 +41,11 @@ Or with =use-package=:
 
 #+begin_src emacs-lisp
 (use-package mindre-theme
-    :ensure
+    :ensure t
     :straight (:host github :repo "erikbackman/mindre-theme")
+    :custom
+    (mindre-use-more-bold nil)
+    (mindre-use-faded-lisp-parens t)
     :config
     (load-theme 'mindre t))
 #+end_src
