@@ -845,7 +845,7 @@ Takes care of adding or removing hooks when the
     '(term-color-yellow ((t (:foreground "#d47500" :background "#F8B400"))))
 
     ;; --- Haskell ----------------------------------------------------
-    `(haskell-constructor-face ((t (:inherit mindre-keyword))))
+    `(haskell-constructor-face ((t (:inherit mindre-type))))
     `(haskell-pragma-face ((t (:inherit font-lock-comment-face))))
     `(haskell-operator-face ((t (:inherit mindre-default))))
 
