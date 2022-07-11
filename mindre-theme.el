@@ -45,23 +45,24 @@
   "Mindre theme properties."
   :group 'faces)
 
-(defconst mindre-theme-colors-alist
-  '(;; Basic
-    (bg-main . "#F5F5F5")
-    (fg-main . "#2e3338")
-    (bg-active . "#f2f3f5")
-    (bg-inactive . "#e3e5e8")
-    (black . "#000000")
-    (black-alt . "#171A1C")
-    (gray . "#CFD8DC")
-    (gray-light . "#ECEFF1")
-    (gray-silver . "#B0BEC5")
-    (purple . "#5c3e99")
-    (green . "#16524F")
-    (green-faint . "#537469")
-    (yellow-dark . "#54433a")
-    (red . "#BF616A")
-    (orange . "#d47500")))
+(eval-and-compile
+  (defconst mindre-theme-colors-alist
+    '(;; Basic
+      (bg-main . "#F5F5F5")
+      (fg-main . "#2e3338")
+      (bg-active . "#f2f3f5")
+      (bg-inactive . "#e3e5e8")
+      (black . "#000000")
+      (black-alt . "#171A1C")
+      (gray . "#CFD8DC")
+      (gray-light . "#ECEFF1")
+      (gray-silver . "#B0BEC5")
+      (purple . "#5c3e99")
+      (green . "#16524F")
+      (green-faint . "#537469")
+      (yellow-dark . "#54433a")
+      (red . "#BF616A")
+      (orange . "#d47500"))))
 
 (defmacro mindre-with-color-variables (&rest body)
   (declare (indent 0))
