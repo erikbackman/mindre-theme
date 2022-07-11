@@ -59,6 +59,8 @@ Or with =use-package=:
 * Release Notes
 *** 0.1.1
 - Fixed =mindre-use-faded-lisp-parens= not updating properly when set.
+*** 0.1.2
+- Fixed certain faces inheriting default background color when they shouldn't.
 
 * Roadmap [0/2]
 - [ ] Palette override.

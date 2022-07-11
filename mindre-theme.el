@@ -1,7 +1,7 @@
 ;;; mindre-theme.el --- Minimal, light theme -*- lexical-binding: t -*-
 
 ;; Author: Erik Bäckman <contact@ebackman.net>
-;; Version: 0.1.1
+;; Version: 0.1.2
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: faces
 ;; Homepage: https://github.com/erikbackman/mindre-theme
@@ -249,7 +249,7 @@ Takes care of adding or removing hooks when the
     `(mindre-faded ((t (:foreground ,gray-silver))))
     `(mindre-faded-i ((t (:foreground ,bg-main :background ,gray-silver))))
 
-    `(mindre-default ((t (:foreground ,fg-main :background ,bg-main))))
+    `(mindre-default ((t (:foreground ,fg-main))))
 
     `(mindre-default-i ((t (:foreground ,bg-main :background ,fg-main))))
 
