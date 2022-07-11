@@ -476,11 +476,32 @@ Takes care of adding or removing hooks when the
     '(epa-validity-low ((t (:inherit mindre-faded))))
 
     ;; --- Dired --------------------------------------------------------
+    '(dired-header ((t (:inherit mindre-keyword))))
     '(dired-directory ((t (:inherit (mindre-strong bold)))))
     `(dired-symlink ((t (:slant italic))))
     '(dired-marked ((t (:inherit mindre-keyword))))
+    `(dired-flagged ((t (:foreground "#9E0000"))))
     `(dired-broken-symlink ((t (:slant italic :strike-through "#BF616A"))))
 
+    ;; --- Diredfl ------------------------------------------------------
+    `(diredfl-dir-heading ((t (:foreground ,purple))))
+    `(diredfl-file-name ((t (:inhert mindre-default))))
+    `(diredfl-write-priv ((t (:foreground ,fg-main))))
+    `(diredfl-read-priv ((t (:foreground ,fg-main))))
+    `(diredfl-exec-priv ((t (:foreground ,purple))))
+    `(diredfl-no-priv ((t (:inherit mindre-faded))))
+    `(diredfl-dir-priv ((t (:inherit (mindre-bold mindre-strong)))))
+    `(diredfl-date-time ((t (:foreground ,yellow-dark))))
+    `(diredfl-number ((t (:foreground ,fg-main))))
+    `(diredfl-file-suffix ((t (:foreground ,purple))))
+    `(diredfl-dir-name ((t (:foreground "#292617" :bold t))))
+    `(diredfl-deletion-file-name ((t (:background ,bg-inactive))))
+    `(diredfl-deletion ((t (:foreground "#9E0000" :bold t))))
+    `(diredfl-ignored-file-name ((t (:inherit mindre-faded))))
+    `(diredfl-flag-mark-line ((t (:background ,bg-inactive))))
+    `(diredfl-flag-mark ((t (:background ,bg-inactive))))
+    `(diredfl-symlink ((t (:slant italic))))
+    `(diredfl-rare-priv ((t (:foreground "#3f5b32"))))
     ;; --- Eglot --------------------------------------------------------
     `(eglot-mode-line ((t (:foreground ,fg-main))))
     `(eglot-mode-line-none-face ((t (:foreground ,fg-main))))
