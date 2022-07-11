@@ -1,7 +1,7 @@
 #+html: <img src="../assets/mindre-logo.png"/>
 
 #+html: <a href="https://www.gnu.org/software/emacs/"><img alt="GNU Emacs" src="https://github.com/erikbackman/erikbackman/blob/master/emacs.svg?raw=true"/></a>
-#+html: <a href="https://melpa.org/#/mindre-theme"><img alt="MELPA" srcb="https://melpa.org/packages/mindre-theme-badge.svg"/></a>
+#+html: <a href="https://melpa.org/#/mindre-theme"><img alt="MELPA" src="https://melpa.org/packages/mindre-theme-badge.svg"/></a>
 
 * Introduction
 When putting down ideas or solving problems on paper we seldom use a lot of colors,
