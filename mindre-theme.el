@@ -58,7 +58,10 @@
       (gray-light . "#ECEFF1")
       (gray-silver . "#B0BEC5")
       (purple . "#5c3e99")
+      (blue . "#23457f")
+      (blue-light . "#d9edf7")
       (green . "#16524F")
+      (green-light . "#3c763d")
       (green-faint . "#537469")
       (yellow-dark . "#54433a")
       (red . "#9E0000")
@@ -262,7 +265,7 @@ Takes care of adding or removing hooks when the
     `(mindre-strong-i ((t (:foreground ,bg-main :background ,fg-main :weight bold))))
 
     `(mindre-warning ((t (:foreground ,orange))))
-    `(mindre-note ((t (:foreground ,green-faint))))
+    `(mindre-note ((t (:foreground ,green-light))))
     `(mindre-error ((t (:foreground ,red))))
     `(mindre-critical ((t (:foreground ,bg-main :background ,red))))
     `(mindre-critical-i ((t (:foreground ,red))))
@@ -334,6 +337,8 @@ Takes care of adding or removing hooks when the
     '(tty-menu-disabled-face ((t (:inherit mindre-faded-i))))
     '(tty-menu-enabled-face ((t (:inherit mindre-default-i))))
     '(tty-menu-selected-face ((t (:inherit mindre-keyword-i))))
+
+    ;; --- Ansi faces ----------------------------------------------------
 
     ;; --- whitespace-mode ----------------------------------------------------
     `(whitespace-space ((t (:inherit mindre-default))))
@@ -584,7 +589,7 @@ Takes care of adding or removing hooks when the
     ;; --- Flymake ----------------------------------------------------
     `(flymake-error ((t (:underline (:style wave :color ,red)))))
     `(flymake-warning ((t (:underline (:style wave :color ,orange)))))
-    `(flymake-note ((t (:underline (:style wave :color ,green-faint)))))
+    `(flymake-note ((t (:underline (:style wave :color ,green-light)))))
     `(compilation-error ((t (:inherit mindre-error))))
     `(compilation-warning ((t (:foreground ,orange))))
     `(compilation-mode-line-run ((t (:inherit mindre-foreground))))
@@ -592,7 +597,7 @@ Takes care of adding or removing hooks when the
     ;; --- Flycheck ----------------------------------------------------
     `(flycheck-error ((t (:underline (:style wave :color ,red)))))
     `(flycheck-warning ((t (:underline (:style wave :color ,orange)))))
-    `(flycheck-info ((t (:underline (:style wave :color ,green-faint)))))
+    `(flycheck-info ((t (:underline (:style wave :color ,green-light)))))
 
     ;; --- Org agenda ---------------------------------------------------
     '(org-agenda-calendar-event ((t (:inherit mindre-default))))
