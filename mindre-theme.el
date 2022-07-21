@@ -605,9 +605,9 @@ Takes care of adding or removing hooks when the
     '(org-agenda-clocking ((t (:inherit mindre-faded))))
     '(org-agenda-column-dateline ((t (:inherit mindre-faded))))
     '(org-agenda-current-time ((t (:inherit mindre-strong))))
-    '(org-agenda-date ((t (:inherit mindre-keyword))))
+    '(org-agenda-date ((t (:inherit mindre-default))))
     '(org-agenda-date-today ((t (:inherit (mindre-keyword mindre-strong)))))
-    '(org-agenda-date-weekend ((t (:inherit mindre-faded))))
+    '(org-agenda-date-weekend ((t (:inherit mindre-critical-i))))
     '(org-agenda-diary ((t (:inherit mindre-faded))))
     '(org-agenda-dimmed-todo-face ((t (:inherit mindre-faded))))
     '(org-agenda-done ((t (:inherit mindre-faded))))
@@ -617,7 +617,7 @@ Takes care of adding or removing hooks when the
     '(org-agenda-filter-tags ((t (:inherit mindre-faded))))
     '(org-agenda-property-face ((t (:inherit mindre-faded))))
     '(org-agenda-restriction-lock ((t (:inherit mindre-faded))))
-    '(org-agenda-structure ((t (:inherit mindre-strong))))
+    '(org-agenda-structure ((t (:inherit mindre-bold))))
     `(org-dispatcher-highlight ((t (:inherit mindre-keyword :bold t))))
 
     ;; --- Org ----------------------------------------------------------
