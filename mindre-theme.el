@@ -57,6 +57,7 @@
       (gray . "#CFD8DC")
       (gray-light . "#ECEFF1")
       (gray-silver . "#B0BEC5")
+      (gray-dark . "#585c60")
       (purple . "#5c3e99")
       (blue . "#23457f")
       (blue-light . "#d9edf7")
@@ -195,6 +196,10 @@
   "List of modes for which faded parentheses should be enabled."
   :type '(symbol) :group 'mindre)
 
+(defcustom mindre-use-more-fading t
+  "Use more fading."
+  :type 'boolean :group 'mindre)
+
 (defun mindre--set-faded-lisp-parens (symbol value)
   "Mindre :set function for `mindre-use-faded-lisp-parens'.
 Takes care of adding or removing hooks when the
@@ -233,9 +238,9 @@ Takes care of adding or removing hooks when the
 (make-obsolete 'mindre 'load-theme "0.1")
 
 ;; --- Faces ---------------------------------------------------------
-(let ((mindre-heading-1-height (if mindre-use-more-bold 1.0 1.1)))
-
-  (mindre-with-color-variables
+(mindre-with-color-variables
+  (let ((mindre-heading-1-height (if mindre-use-more-bold 1.0 1.1))
+	(faded-color (if mindre-use-more-fading gray-silver gray-dark)))
     (custom-theme-set-faces
     'mindre
 
@@ -250,8 +255,8 @@ Takes care of adding or removing hooks when the
 
     `(mindre-subtle-i ((t (:foreground ,gray-light))))
 
-    `(mindre-faded ((t (:foreground ,gray-silver))))
-    `(mindre-faded-i ((t (:foreground ,bg-main :background ,gray-silver))))
+    `(mindre-faded ((t (:foreground ,faded-color))))
+    `(mindre-faded-i ((t (:foreground ,bg-main :background ,faded-color))))
 
     `(mindre-default ((t (:foreground ,fg-main))))
 
@@ -512,7 +517,7 @@ Takes care of adding or removing hooks when the
     `(diredfl-compressed-file-suffix ((t (:inherit mindre-type))))
     ; TODO: I don't know what these are..
     `(diredfl-link-priv ((t (:foreground ,orange))))
-;    `(diredfl-other-priv ((t ())))
+    ;`(diredfl-other-priv ((t ())))
     `(diredfl-tagged-autofile-name ((t (:background "#c6dad3"))))
 
     ;; --- Eglot --------------------------------------------------------
@@ -625,13 +630,13 @@ Takes care of adding or removing hooks when the
     '(org-block ((t (:inherit (mindre-block fixed-pitch)))))
 
     `(org-block-begin-line ((t (:inherit (mindre-faded fixed-pitch)
-					 :foreground "#585c60"
 					 :overline ,gray-silver
 					 :background ,gray-light
 					 :height 0.9
 					 :extend t))))
 
-    `(org-block-end-line ((t (:inherit (mindre-faded fixed-pitch)
+    `(org-block-end-line ((t (:inherit fixed-pitch
+				       :foreground ,gray-silver
 				       :background ,gray-light
 				       :height 0.9
 				       :extend t))))
