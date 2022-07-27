@@ -828,7 +828,7 @@ Takes care of adding or removing hooks when the
     ;; --- Markdown ----------------------------------------------------
     '(markdown-blockquote-face ((t (:inherit mindre-default))))
     '(markdown-bold-face ((t (:inherit mindre-strong))))
-    `(markdown-code-face ((t (:inherit mindre-block))))
+    `(markdown-code-face ((t (:inherit (fixed-pitch mindre-block)))))
     '(markdown-comment-face ((t (:inherit mindre-faded))))
     '(markdown-footnote-marker-face ((t (:inherit mindre-default))))
     '(markdown-footnote-text-face ((t (:inherit mindre-default))))
@@ -849,7 +849,7 @@ Takes care of adding or removing hooks when the
     '(markdown-html-entity-face ((t (:inherit mindre-default))))
     '(markdown-html-tag-delimiter-face ((t (:inherit mindre-default))))
     '(markdown-html-tag-name-face ((t (:inherit mindre-default))))
-    '(markdown-inline-code-face ((t (:inherit mindre-strong))))
+    '(markdown-inline-code-face ((t (:inherit (fixed-pitch mindre-strong)))))
     '(markdown-italic-face ((t (:inherit mindre-faded))))
     '(markdown-language-info-face ((t (:inherit mindre-default))))
     '(markdown-language-keyword-face ((t (:inherit mindre-faded))))
