@@ -877,12 +877,12 @@ Takes care of adding or removing hooks when the
     ;; --- Terminal ----------------------------------------------------
     '(term-bold ((t (:inherit mindre-strong))))
     '(term-color-black ((t (:inherit default))))
-    '(term-color-blue ((t (:inherit default))))
+    '(term-color-blue ((t (:foreground "#122340" :background "#122340"))))
     '(term-color-cyan ((t (:inherit default))))
-    '(term-color-green ((t (:inherit mindre-note))))
+    '(term-color-green ((t (:foreground "#124023" :background "#124023"))))
     '(term-color-magenta ((t (:foreground "#5e429f" :background "#5e429f "))))
-    '(term-color-red ((t (:foreground "#C74B50" :background "#C74B50 "))))
-    '(term-color-yellow ((t (:foreground "#d47500" :background "#F8B400"))))
+    '(term-color-red ((t (:foreground "#5d0000" :background "#5d0000 "))))
+    '(term-color-yellow ((t (:foreground "#54433a" :background "#54433a"))))
 
     ;; --- Haskell ----------------------------------------------------
     `(haskell-constructor-face ((t (:inherit mindre-type))))
