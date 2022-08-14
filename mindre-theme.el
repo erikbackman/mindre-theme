@@ -343,8 +343,18 @@ Takes care of adding or removing hooks when the
     '(tty-menu-enabled-face ((t (:inherit mindre-default-i))))
     '(tty-menu-selected-face ((t (:inherit mindre-keyword-i))))
 
-    ;; --- Ansi faces ----------------------------------------------------
+    ;; --- RE-builder ----------------------------------------------------
+    `(reb-match-1 ((t :inherit highlight)))
 
+    ;; --- Ansi faces ----------------------------------------------------
+    `(ansi-color-red ((t :foreground ,red)))
+    `(ansi-color-green ((t :foreground "#263237")))
+    `(ansi-color-blue ((t :foreground ,blue)))
+    `(ansi-color-bright-green ((t :foreground ,green)))
+    `(ansi-color-yellow ((t :foreground ,yellow-dark)))
+    `(ansi-color-bold ((t :inherit mindre-bold)))
+    `(ansi-color-cyan ((t :foreground ,gray-dark)))
+    
     ;; --- whitespace-mode ----------------------------------------------------
     `(whitespace-space ((t (:inherit mindre-default))))
     `(whitespace-empty ((t (:inherit mindre-default :foreground ,orange))))
