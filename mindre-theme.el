@@ -202,7 +202,7 @@
   "List of modes for which faded parentheses should be enabled."
   :type '(symbol) :group 'mindre)
 
-(defcustom mindre-use-more-fading t
+(defcustom mindre-use-more-fading nil
   "Use more fading."
   :type 'boolean :group 'mindre)
 
@@ -514,7 +514,7 @@ Takes care of adding or removing hooks when the
     '(epa-validity-low ((t (:inherit mindre-faded))))
 
     ;; --- Dired --------------------------------------------------------
-    `(dired-header ((t (:foreground "#463c65" :box (:background ,black)))))
+    `(dired-header ((t (:foreground "#463c65" :inherit mindre-bold))))
 
     '(dired-directory ((t (:inherit (mindre-bold)))))
     `(dired-symlink ((t (:slant italic))))
