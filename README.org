@@ -65,6 +65,19 @@ Or with =use-package=:
 - Add initial support for =diredfl=
 - Tweak dired faces
 - Byte-compile fix (syohex [[https://github.com/erikbackman/mindre-theme/pull/13][#13]])
+*** 0.1.4
+- Add support for the following packages:
+  + ediff
+  + speedbar
+- New customizations:
+  + =mindre-use-more-fading=
+    Defaults to =nil=. Note that with this new default, comments are less faded than before.
+  + =mindre-faded-lisp-parens-modes=
+    List of modes for which faded parentheses should be enabled. You still need to
+    set =mindre-use-faded-lisp-parens t= to enable faded parentheses.
+- Tweaks:
+  + Dired look and feel
+  + Terminal colors
 
 * Roadmap [0/2]
 - [ ] Palette override.
