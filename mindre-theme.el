@@ -60,8 +60,10 @@
       (gray-dark . "#585c60")
       (purple . "#5c3e99")
       (blue . "#23457f")
+      (blue-alt . "#0071bc")
       (blue-light . "#d9edf7")
       (green . "#16524F")
+      (green-mint . "#ddffdd")
       (green-light . "#3c763d")
       (green-faint . "#537469")
       (yellow-dark . "#54433a")
@@ -172,6 +174,10 @@
   "Face used for inactive mode-line and tab-bar"
   :group nil)
 
+(defface mindre-link nil
+  "Face used for links."
+  :group nil)
+
 (defface mindre-paren-face
   '((t (:foreground "grey70")))
   "Face used to dim parentheses."
@@ -274,6 +280,7 @@ Takes care of adding or removing hooks when the
     `(mindre-error ((t (:foreground ,red))))
     `(mindre-critical ((t (:foreground ,bg-main :background ,red))))
     `(mindre-critical-i ((t (:foreground ,red))))
+    `(mindre-link ((t (:foreground ,purple :underline t))))
 
     `(mindre-heading-1 ((t (:inherit mindre-strong :height ,mindre-heading-1-height))))
     `(mindre-block ((t (:background ,bg-active :foreground ,fg-main :extend t))))
@@ -302,7 +309,7 @@ Takes care of adding or removing hooks when the
     '(region ((t (:inherit highlight))))
     '(fringe ((t (:inherit mindre-faded))))
     '(hl-line ((t (:inherit mindre-subtle))))
-    '(link ((t (:inherit mindre-keyword :underline t))))
+    '(link ((t (:inherit mindre-link))))
 
     ;; --- Semantic -----------------------------------------------------
     '(shadow ((t (:inherit mindre-faded))))
@@ -317,6 +324,7 @@ Takes care of adding or removing hooks when the
     '(minibuffer-prompt ((t (:inherit mindre-strong))))
     `(isearch ((t (:inherit (mindre-strong highlight)))))
     '(isearch-fail ((t (:inherit mindre-faded))))
+    `(isearch-group-1 ((t (:foreground ,bg-main :background ,purple))))
     '(show-paren-match ((t (:weight bold :foreground "#AB47BC"))))
     '(show-paren-mismatch ((t (:inherit mindre-critical))))
     '(lazy-highlight ((t (:inherit mindre-subtle))))
@@ -354,7 +362,7 @@ Takes care of adding or removing hooks when the
     `(ansi-color-yellow ((t :foreground ,yellow-dark)))
     `(ansi-color-bold ((t :inherit mindre-bold)))
     `(ansi-color-cyan ((t :foreground ,gray-dark)))
-    
+
     ;; --- whitespace-mode ----------------------------------------------------
     `(whitespace-space ((t (:inherit mindre-default))))
     `(whitespace-empty ((t (:inherit mindre-default :foreground ,orange))))
@@ -386,6 +394,14 @@ Takes care of adding or removing hooks when the
     '(tab-bar-tab-inactive ((t (:inherit mindre-faded))))
     '(tab-line ((t (:inherit default))))
 
+    ;; --- Speedbar ------------------------------------------------------
+    `(speedbar-selected-face ((t (:inherit mindre-keyword))))
+    `(speedbar-file-face ((t (:inherit mindre-default))))
+    `(speedbar-directory-face ((t (:inherit (mindre-default mindre-bold)))))
+    `(speedbar-highlight-face ((t (:inherit mindre-button-hover :box nil))))
+    `(speedbar-tag-face ((t (:inherit mindre-default))))
+    `(speedbar-button-face ((t (:inherit mindre-button))))
+
     ;; --- Line numbers -------------------------------------------------
     '(line-number ((t (:inherit mindre-faded))))
     '(line-number-current-line ((t (:inherit default))))
@@ -403,6 +419,8 @@ Takes care of adding or removing hooks when the
     '(font-lock-builtin-face ((t (:inherit mindre-keyword))))
     '(font-lock-type-face ((t (:inherit mindre-type))))
     '(font-lock-keyword-face ((t (:inherit mindre-keyword))))
+
+    '(shr-h2 ((t :inherit mindre-bold)))
 
     ;; --- Popper -------------------------------------------------------
     `(popper-echo-area-buried ((t (:inherit mindre-default))))
@@ -496,7 +514,8 @@ Takes care of adding or removing hooks when the
     '(epa-validity-low ((t (:inherit mindre-faded))))
 
     ;; --- Dired --------------------------------------------------------
-    '(dired-header ((t (:inherit mindre-keyword))))
+    `(dired-header ((t (:foreground "#463c65" :box (:background ,black)))))
+
     '(dired-directory ((t (:inherit (mindre-bold)))))
     `(dired-symlink ((t (:slant italic))))
     '(dired-marked ((t (:inherit mindre-keyword))))
@@ -537,6 +556,7 @@ Takes care of adding or removing hooks when the
 
     ;; --- Eww ----------------------------------------------------
     `(eww-form-submit ((t (:box (:style released-button) :background ,bg-inactive))))
+    `(shr-link ((t (:foreground ,blue))))
 
     ;; --- Keycast ------------------------------------------------------
     `(keycast-key ((t :inherit nil :bold t)))
@@ -560,7 +580,7 @@ Takes care of adding or removing hooks when the
     '(diff-context ((t (:inherit mindre-default))))
     '(diff-removed ((t (:inherit mindre-faded))))
     '(diff-changed ((t (:inherit mindre-strong))))
-    '(diff-added ((t (:inherit mindre-keyword))))
+    `(diff-added ((t (:background ,green-mint))))
     '(diff-refine-added ((t (:inherit (mindre-keyword mindre-strong)))))
     '(diff-refine-changed ((t (:inherit mindre-strong))))
     '(diff-refine-removed ((t (:inherit mindre-faded :strike-through t))))
@@ -890,7 +910,7 @@ Takes care of adding or removing hooks when the
     '(term-color-blue ((t (:foreground "#122340" :background "#122340"))))
     '(term-color-cyan ((t (:inherit default))))
     '(term-color-green ((t (:foreground "#124023" :background "#124023"))))
-    '(term-color-magenta ((t (:foreground "#5e429f" :background "#5e429f "))))
+    '(term-color-magenta ((t (:foreground "#463c65" :background "#463c65"))))
     '(term-color-red ((t (:foreground "#5d0000" :background "#5d0000 "))))
     '(term-color-yellow ((t (:foreground "#54433a" :background "#54433a"))))
 
@@ -903,7 +923,7 @@ Takes care of adding or removing hooks when the
     `(nix-attribute-face ((t (:inherit mindre-default))))
 
     ;; --- Sh ----------------------------------------------------
-    `(sh-quoted-exec ((t (:inherit mindre-type))))
+    `(sh-quoted-exec ((t (:inherit mindre-default))))
 
     ;; --- LaTeX ----------------------------------------------------
     `(font-latex-math-face ((t (:inherit (mindre-default fixed-pitch)))))
