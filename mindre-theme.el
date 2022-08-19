@@ -290,8 +290,8 @@ Takes care of adding or removing hooks when the
     `(mindre-bar ((t (:foreground ,fg-main :inherit mindre-border))))
     `(mindre-bar-inactive ((t (:foreground "#535c65" :background ,bg-inactive :inherit mindre-border))))
 
-    `(mindre-button ((t (:box (:style nil) :background ,bg-inactive))))
-    `(mindre-button-pressed ((t (:box (:style nil) :background ,bg-inactive))))
+    `(mindre-button ((t (:box (:color ,gray-silver) :background ,bg-inactive))))
+    `(mindre-button-pressed ((t (:box (:color ,gray-dark) :background ,bg-inactive))))
     `(mindre-button-hover ((t (:inherit mindre-button :background ,bg-inactive))))
 
     ;; --- Header & mode line -------------------------------------------
