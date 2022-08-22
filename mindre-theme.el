@@ -68,6 +68,7 @@
       (green-faint . "#537469")
       (yellow-dark . "#54433a")
       (red . "#9E0000")
+      (red-faint . "#ffb7b6")
       (orange . "#d47500"))))
 
 (defmacro mindre-with-color-variables (&rest body)
@@ -575,10 +576,10 @@ Takes care of adding or removing hooks when the
     '(popup-tip-face ((t (:inherit mindre-strong-i))))
 
     ;; --- Diff ---------------------------------------------------------
-    '(diff-header ((t (:inherit mindre-faded))))
+    `(diff-header ((t (:inherit mindre-bold))))
     '(diff-file-header ((t (:inherit mindre-strong))))
     '(diff-context ((t (:inherit mindre-default))))
-    '(diff-removed ((t (:inherit mindre-faded))))
+    '(diff-removed ((t (:background "#ffb7b6"))))
     '(diff-changed ((t (:inherit mindre-strong))))
     `(diff-added ((t (:background ,green-mint))))
     '(diff-refine-added ((t (:inherit (mindre-keyword mindre-strong)))))
