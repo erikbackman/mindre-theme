@@ -281,7 +281,7 @@ Takes care of adding or removing hooks when the
     `(mindre-error ((t (:foreground ,red))))
     `(mindre-critical ((t (:foreground ,bg-main :background ,red))))
     `(mindre-critical-i ((t (:foreground ,red))))
-    `(mindre-link ((t (:foreground ,purple :underline t))))
+    `(mindre-link ((t (:foreground ,blue :underline t))))
 
     `(mindre-heading-1 ((t (:inherit mindre-strong :height ,mindre-heading-1-height))))
     `(mindre-block ((t (:background ,bg-active :foreground ,fg-main :extend t))))
