@@ -59,6 +59,12 @@ Or with =use-package=:
 #+end_src
 
 * Release Notes
+*** 0.1.5
+- Tweaks:
+  + Links now use a blue color instead of the default highlight color.
+  + Tags are now highlighted in notmuch instead of authors.
+  + Diff deletions are now better highlighted.
+  + Better looking buttons.
 *** 0.1.4
 - Add support for the following packages:
   + ediff
