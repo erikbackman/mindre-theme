@@ -428,8 +428,8 @@ Takes care of adding or removing hooks when the
     `(popper-echo-dispatch-hint ((t (:inherit mindre-subtle))))
 
     ;; --- Custom edit --------------------------------------------------
-    '(widget-field ((t (:inherit mindre-subtle))))
-    '(widget-button ((t (:inherit mindre-strong))))
+    '(widget-field ((t (:inherit (mindre-subtle mindre-bar)))))
+    '(widget-button ((t (:inherit (mindre-default) :weight semibold))))
     '(widget-single-line-field ((t (:inherit mindre-subtle))))
     '(custom-group-subtitle ((t (:inherit mindre-strong))))
     '(custom-group-tag ((t (:inherit mindre-strong))))
@@ -797,6 +797,7 @@ Takes care of adding or removing hooks when the
     `(notmuch-tree-match-tag-face ((t (:inherit mindre-verbatim))))
     `(notmuch-tree-no-match-face ((t (:inherit mindre-faded))))
     `(notmuch-tree-no-match-date-face ((t (:inherit mindre-default))))
+    `(notmuch-hello-logo-background ((t (:background ,bg-main))))
 
     ;; --- Elfeed -------------------------------------------------------
     '(elfeed-log-date-face ((t (:inherit mindre-faded))))
