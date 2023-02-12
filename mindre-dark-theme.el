@@ -700,8 +700,8 @@ Takes care of adding or removing hooks when the
     '(org-block ((t (:inherit (mindre-block fixed-pitch)))))
 
     `(org-block-begin-line ((t (:inherit (mindre-faded fixed-pitch)
-					 :overline "#282e32"
-					 :background "#0C0C0C"
+					 :overline "#2c2c2c"
+					 :background "#101010"
 					 :height 0.9
 					 :extend t))))
 
@@ -769,15 +769,15 @@ Takes care of adding or removing hooks when the
     '(org-warning ((t (:inherit mindre-critical-i))))
 
     ;; --- Org modern ---------------------------------------------------
-    `(org-modern-date-active ((t (:inherit org-modern-done :background ,bg-inactive))))
-    `(org-modern-statistics ((t (:inherit org-modern-done :background ,bg-inactive))))
+    `(org-modern-date-active ((t (:inherit (org-modern-done)))))
+    `(org-modern-statistics ((t (:inherit org-modern-done))))
     `(org-modern-priority ((t (:inherit org-modern-done :background ,bg-inactive))))
     `(org-modern-label ((t (:box (:color "#2c2c2c" :line-width (0 . -1))))))
     `(org-modern-done ((t (:inherit (mindre-boxed org-done mindre-bold)))))
     `(org-modern-todo ((t (:inherit (mindre-boxed org-todo mindre-bold)))))
     `(org-modern-tag ((t (:inherit mindre-boxed))))
-    `(org-modern-date-active ((t (:background ,gray-light :foreground ,black
-                                              :box (:color ,gray)))))
+    `(org-modern-time-inactive ((t (:inherit mindre-boxed :background "Gray10"))))
+    `(org-modern-date-inactive ((t (:inherit mindre-boxed))))
 
     ;; --- Mu4e ---------------------------------------------------------
     '(mu4e-attach-number-face ((t (:inherit mindre-strong))))
